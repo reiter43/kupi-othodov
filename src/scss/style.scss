@@ -1,0 +1,611 @@
+@import 'fonts.scss';
+@import './src/libs/normalize.scss';
+@import 'mixsins.scss';
+@import '../libs/smart-grid.scss';
+
+
+
+/*=============================================
+      ОБЩИЕ ПРАВИЛА
+  =============================================*/
+
+$ff-base: Rubik, Arial, sans-serif;
+
+$c-accent: #111111;
+$c-base: #ffffff;
+$c-normal: #B7000E;
+
+$gat: 20px;
+
+.clearfix:after {
+    @include clearfix;
+}
+
+.wrapper {
+    @include wrapper;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: $ff-base;
+    font-size: 20px;
+    line-height: 1.375;
+    font-weight: 400;
+    color: $c-accent
+}
+
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+// Кнопки
+.btn-call {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 22px 0 7px;
+    border: none;
+    background: $c-normal;
+    border-radius: 4px;
+    font-family: $ff-base;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: $c-base;
+    cursor: pointer;
+    transition: background ease 0.5s;
+
+    &:hover {
+        background: lighten($c-normal, 10%);
+    }
+
+    &:active {
+        background: darken($c-normal, 10%);
+    }
+
+    @media screen and (max-width: 890px) {
+        padding: 11px 20px 13px 20px;
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    @media screen and (max-width: 700px) {
+        padding: 0 22px 0 7px;
+    }
+
+    img {
+        @media screen and (max-width: 890px) {
+            display: none;
+        }
+
+        @media screen and (max-width: 700px) {
+            display: flex;
+        }
+    }
+}
+
+.hide {
+    display: none;
+}
+
+/*=============================================*/
+
+
+/*=============================================
+        ШАПКА
+=============================================*/
+.top-line {
+    max-width: calc(100% - 38px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 28px 0;
+
+    @include md-block {
+        max-width: calc(100% - 19px);
+        padding: $gat 0 28px 0;
+    }
+
+    @include sm-block {
+        max-width: calc(100% - 10px);
+    }
+
+    @include xs-block {
+        padding-bottom: 23px;
+    }
+
+    @include xxs-block {
+        max-width: calc(100% - 2px);
+        padding: 12px 0 15px 0;
+    }
+
+    &__block {
+        font-size: 17px;
+        line-height: 25px;
+        color: lighten($c-accent, 60%);
+
+        @include md-block {
+            font-size: 15px;
+        }
+    }
+
+    &__block1,
+    &__block4 {
+        &>div {
+            display: flex;
+        }
+    }
+
+    &__social-box {
+        margin-left: 12px;
+
+        .icon-viber {
+            @include md-block {
+                display: none;
+            }
+        }
+
+        .icon-viber.icon-viber--mob {
+            display: none;
+
+            @include md-block {
+                display: inline-block;
+            }
+        }
+    }
+
+    &__tel {
+        display: block;
+        font-size: 20px;
+        color: $c-accent;
+
+        @include md-block {
+            font-size: 17px;
+        }
+
+        @include xs-block {
+            font-size: 15px;
+            line-height: 24px;
+        }
+    }
+
+    &__email {
+        color: $c-normal;
+        font-size: 17px;
+
+        @include md-block {
+            font-size: 15px;
+        }
+    }
+
+    &__adress {
+        font-style: normal;
+    }
+
+    &__block4 {
+        display: none;
+    }
+}
+
+.logo {
+    display: block;
+
+    &__title {
+        text-align: center;
+        font-size: 15px;
+        line-height: 18px;
+        color: $c-accent;
+
+        @include md-block {
+            font-size: 13px;
+        }
+
+        @include xxs-block {
+            font-size: 9px;
+            line-height: 5px;
+        }
+    }
+}
+
+.nav-line {
+    padding: 0.5*$gat 0;
+    background: $c-accent;
+    position: relative;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.burger {
+    @include burger (20px, 15px, 20px, 2px, 6px, $c-base, transparent);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__burger {
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        P {
+            display: none;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 18px;
+            color: $c-base;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    &__item {
+        margin-left: 65px;
+
+        @include lg-block {
+            margin-left: 5vw;
+        }
+
+        @include md-block {
+            margin-left: 4vw;
+        }
+
+        @include sm-block {
+            margin-left: 3vw;
+        }
+    }
+
+    &__item:first-child {
+        position: relative;
+        margin-left: 12px;
+
+        span {
+            cursor: default;
+        }
+    }
+
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 22px;
+        line-height: 26px;
+        font-weight: 500;
+        color: $c-base;
+        transition: color ease 0.5s;
+
+        &:hover {
+            color: lighten($c-normal, 10%);
+        }
+
+        &.active {
+            color: darken($c-normal, 10%)
+        }
+
+        @include lg-block {
+            font-size: 1.6vw;
+        }
+
+        @include md-block {
+            font-size: 1.7vw;
+            line-height: 20px;
+        }
+
+        @include sm-block {
+            font-size: 1.95vw;
+            line-height: 18px;
+        }
+
+        &--drop {
+            width: 100%;
+            background: transparent;
+            border: none;
+        }
+
+        svg {
+            display: none;
+        }
+    }
+
+    &__submenu {
+        position: absolute;
+        left: -0.5*$gat;
+        top: 100%;
+        width: 265%;
+        padding: $gat 0.5*$gat $gat;
+        background: $c-accent;
+        list-style: none;
+        transition: opacity 0.5s ease-in;
+        @include invisual;
+
+        &--visial {
+            @include visual;
+        }
+    }
+
+    &__subitem {
+        svg {
+            display: none;
+        }
+    }
+
+    &__sublink {
+        font-size: 1.17vw;
+        line-height: 24px;
+        font-weight: 500;
+        color: $c-base;
+
+        &:hover {
+            color: lighten($c-normal, 10%);
+        }
+
+        &--disabled {
+            @include disa;
+        }
+
+        @include md-block {
+            font-size: 1.5vw;
+            line-height: 22px;
+        }
+
+        @include sm-block {
+            font-size: 14px;
+        }
+
+        span {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__btn--submenu {
+        display: none;
+    }
+
+    &__submenu2 {
+        padding-left: $gat;
+        list-style-type: none;
+        background: #EEEEEE;
+        transition: opacity 0.1s ease-in;
+        @include invisual;
+
+        &--visial {
+            @include visual;
+        }
+    }
+
+}
+
+/*=============================================*/
+
+
+/*=============================================
+        ОСНОВНОЙ КОНТЕНТ
+=============================================*/
+
+/*---------------------------------------------
+  Секция ...................
+---------------------------------------------*/
+
+
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция ..................
+---------------------------------------------*/
+
+
+/*----------------------------------------------*/
+
+/*=============================================*/
+
+
+/*=============================================
+        ПОДВАЛ
+=============================================*/
+
+
+
+/*=============================================*/
+
+
+/*=============================================
+        АДАПТИВ
+=============================================*/
+@media screen and (max-width: 890px) {
+
+    .top-line__block3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .top-line__block1,
+    .top-line__block2,
+    .top-line__block3 {
+        display: none;
+    }
+
+    .top-line__block4 {
+        display: block;
+    }
+
+    .nav__burger p {
+        display: block;
+        margin-left: 0.5*$gat;
+    }
+
+
+    .nav__list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: block;
+        width: 100%;
+        background: $c-accent;
+        transition: opacity 0.5s ease-in;
+        @include invisual;
+
+        &--visial {
+            @include visual;
+        }
+    }
+
+    .nav__item {
+        margin: 0;
+        padding: $gat 0 $gat $gat;
+        border-bottom: 1px solid rgba(119, 118, 118, 0.55);
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &--drop {
+            padding: $gat 0 0 0;
+        }
+    }
+
+    .nav__link {
+        font-size: 20px;
+        line-height: 24px;
+
+        svg {
+            display: block;
+            @include svg (24px, 12px, #CCCCCC);
+            margin-right: $gat;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &--drop {
+            margin: 0 0 $gat 0;
+            padding-left: $gat;
+
+            svg.active {
+                fill: $c-normal;
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .nav__submenu {
+        position: static;
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav__subitem {
+        background: $c-base;
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+        border-bottom: 1px solid rgba(119, 118, 118, 0.55);
+
+        // &:hover,
+        &:focus {
+            background: $c-normal;
+
+            .nav__sublink {
+                color: $c-base;
+            }
+        }
+        &:hover {
+            background: $c-normal;            
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        svg {
+            display: inline-block;
+            @include svg (24px, 12px, #CCCCCC);
+            margin-right: $gat;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        svg.active {
+            fill: $c-base;
+            transform: rotate(180deg);
+        }
+    }
+
+    .nav__sublink {
+        padding: $gat;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 125.19%;
+        color: $c-accent;
+
+        &:focus {
+            color: $c-base;
+        }
+
+        &--disabled {
+            @include disa;
+        }
+    }
+
+    .nav__btn--submenu {
+        display: inline-block;
+        background: transparent;
+        border: none;
+    }
+
+    .nav__subitem2 {
+        padding: 0.25*$gat 0;
+    }
+
+    .nav__link2 {
+        font-family: Roboto;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 20px;
+        color: $c-accent;
+
+        &:hover,
+        &:focus {
+            color: $c-normal
+        }
+
+        &--disabled {
+            @include disa;
+        }
+    }
+}
+
+@media screen and (max-width: 440px) {
+
+    .top-line__block4 .top-line__social-box {
+        display: none;
+    }
+
+    .logo__title {
+        font-size: 9px;
+        line-height: 10px;
+    }
+}

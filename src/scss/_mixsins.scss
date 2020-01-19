@@ -1,0 +1,282 @@
+//Очистка потока
+@mixin clearfix {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+//Расположение бэкграунда
+@mixin bgpos {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+//Позиционирование фона с наложением на картинку
+@mixin coverpos {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+// Центрирование
+@mixin centerer($horizontal: true, $vertical: true) {
+    position: absolute;
+
+    @if ($horizontal and $vertical) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @else if ($horizontal) {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    @else if ($vertical) {
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+    }
+}
+
+
+// Адаптивность фрэймов с видео
+@mixin fr {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+
+    &>img,
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+}
+
+
+//Горизонтальные линии у заголовка
+@mixin title ($w, $h, $c) {
+    overflow: hidden;
+
+    span {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: relative;
+        display: inline-block;
+        width: $w;
+        height: $h;
+        background-color: $c;
+        vertical-align: middle;
+    }
+
+    &:before {
+        left: -0.2%;
+        margin-left: -100%;
+    }
+
+    &:after {
+        right: -0.2%;
+        margin-right: -100%;
+    }
+}
+
+//Кнопка-гамбургер для меню
+
+@mixin burger ($widthButton, $heightButton, $widthLine, $heightLine, $gat, $colorLine, $colorButton) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: $widthButton;
+    height: $heightButton;
+    padding: 0;
+    border: none;
+    background: $colorButton;
+    cursor: pointer;
+
+    &__icon {
+        position: relative;
+        display: block;
+        width: $widthLine;
+        height: $heightLine;
+        border-radius: 3px;
+        background-color: $colorLine;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: -$gat;
+            content: '';
+            width: $widthLine;
+            height: $heightLine;
+            border-radius: 3px;
+            background-color: $colorLine;
+            transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+
+        }
+
+        &::after {
+            position: absolute;
+            left: 0;
+            top: $gat;
+            content: '';
+            width: $widthLine;
+            height: $heightLine;
+            border-radius: 3px;
+            background-color: $colorLine;
+            transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+        }
+
+        &.burger__icon--active {
+            background-color: transparent;
+        }
+
+        &.burger__icon--active::before {
+            transform: rotate(45deg);
+            top: 0;
+            transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+        }
+
+        &.burger__icon--active::after {
+            transform: rotate(-45deg);
+            top: 0;
+            transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+        }
+    }
+}
+
+@mixin gamburger ($widthButton, $heightButton, $widthLine, $heightLine, $gat, $colorLine, $colorButton) {
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: $widthButton;
+    height: $heightButton;
+    padding: 0;
+    background: $colorButton;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+
+    &__line {
+        width: $widthLine;
+        height: $heightLine;
+        margin-bottom: $gat;
+        background: $colorLine;
+        transition: all ease 0.3s;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &--active {
+        .burger__line {
+
+            &:first-child {
+                position: relative;
+                top: ($heightLine+$gat)/2;
+                transition: all ease 0.5s;
+                transform: rotate(45deg);
+            }
+
+            // &:nth-child(2) {
+            //   opacity: 0;
+            // }
+
+            &:last-child {
+                position: relative;
+                top: ($heightLine+$gat)/2*-1;
+                transition: all ease 0.5s;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+//Стилизация плейсхолдера
+@mixin input-placeholder {
+    ::-webkit-input-placeholder {
+        @content;
+    }
+
+    :-moz-placeholder {
+        /*Firefox 18-*/
+        @content;
+    }
+
+    ::-moz-placeholder {
+        /*Firefox 19+*/
+        @content;
+    }
+
+    :-ms-input-placeholder {
+        @content;
+    }
+}
+
+// Неуктивная ссылка
+@mixin disa {
+    pointer-events: none;
+    cursor: default;
+    color: #999;
+}
+
+// Скрытие элемента
+@mixin visual {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.1s ease-in;
+}
+
+// Показ элемента
+@mixin invisual {
+    height: auto;
+    overflow: visible;
+    opacity: 1;
+}
+
+//Адаптивность картинки
+@mixin img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+// Параметры svg
+@mixin svg ($width, $height, $fill) {
+    width: $width;
+    height: $height;
+    fill: $fill;
+}
+
+//---------------------------------------------
+
+
+//---------------------------------------------
+//		Функции
+//---------------------------------------------
+
+//Перевод пикселей в ремы
+@function rem($pxsize) {
+    @return ($pxsize/16px)+rem;
+}
