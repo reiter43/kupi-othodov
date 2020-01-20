@@ -45,6 +45,8 @@ burger.addEventListener('click', event => {
         } else {
             menu.classList.add('nav__list--visial');
         }
+
+        document.querySelector('.head__wrap').classList.toggle('head__wrap--active');
     }
 }
 );

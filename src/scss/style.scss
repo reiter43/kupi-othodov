@@ -30,6 +30,7 @@ html {
 }
 
 body {
+    width: 100%;
     font-family: $ff-base;
     font-size: 20px;
     line-height: 1.375;
@@ -45,18 +46,14 @@ li {
 }
 
 // Кнопки
-.btn-call {
+.btn-base {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 22px 0 7px;
     border: none;
     background: $c-normal;
-    border-radius: 4px;
     font-family: $ff-base;
     font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
     color: $c-base;
     cursor: pointer;
     transition: background ease 0.5s;
@@ -68,6 +65,13 @@ li {
     &:active {
         background: darken($c-normal, 10%);
     }
+}
+
+.btn-call {
+    padding: 0 22px 0 7px;
+    border-radius: 4px;
+    font-size: 15px;
+    line-height: 18px;
 
     @media screen and (max-width: 890px) {
         padding: 11px 20px 13px 20px;
@@ -79,7 +83,7 @@ li {
         padding: 0 22px 0 7px;
     }
 
-    img {
+    img {        
         @media screen and (max-width: 890px) {
             display: none;
         }
@@ -87,6 +91,22 @@ li {
         @media screen and (max-width: 700px) {
             display: flex;
         }
+
+        @include xxs-block {
+            margin-right: -3px;
+        }
+    }
+}
+
+.btn-cat {
+    margin: 0 auto;
+    padding: 20px 28px;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 20px;
+
+    img {
+        margin-right: 0.5*$gat;
     }
 }
 
@@ -401,15 +421,109 @@ li {
 =============================================*/
 
 /*---------------------------------------------
-  Секция ...................
+  Секция head
 ---------------------------------------------*/
+.head {
+    width: 100%;
+    text-align: center;
+    background-color: grey;
+    background: url(../img/images/bg-head-hd.jpg) no-repeat;
+    background-position: center 0;
+    background-size: cover;
 
+    @include md-block {
+        background-image: url(../img/images/bg-head-1000.jpg);
+    }
+
+    @include sm-block {
+        min-height: 382px;
+        background-size: cover;
+        background-image: url(../img/images/bg-head-768.jpg);
+    }
+
+    @include xs-block {
+        background-image: url(../img/images/bg-head-480.jpg);
+    }
+
+    @include xxs-block {
+        background-image: url(../img/images/bg-head-320.jpg);
+    }
+
+    &__wrap {
+        position: relative;
+        width: 100%;
+        padding-bottom: 49.6%;
+
+        @include sm-block {
+            padding-bottom: 0;
+        }
+
+        &--active {
+            z-index: -1;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 222px 0 531px 0;
+
+        @include lg-block {
+            padding-top: 150px;
+        }
+
+        @include md-block {
+            padding: 148px 0 157px 0;
+        }
+
+        @include sm-block {
+            padding: 90px 0 120px 0;
+        }
+        @include xxs-block {
+            padding-top: 80px;
+        }
+    }
+}
+
+h1 {
+    max-width: 565px;
+    margin: 0 auto 28px;
+    font-size: 48px;
+    line-height: 57px;
+    font-weight: 500;
+    text-align: center;
+    color: #FFFFFF;
+
+    @include md-block {
+        font-size: 42px;
+        line-height: 50px;
+    }
+
+    @include sm-block {
+        font-size: 36px;
+        line-height: 43px;
+    }
+
+    @include xs-block {
+        max-width: 423px;
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    @include xxs-block {
+        max-width: 281px;
+        margin-bottom: 23px;
+        font-size: 28px;
+        line-height: 33px;
+    }
+}
 
 
 /*----------------------------------------------*/
 
 /*---------------------------------------------
-  Секция ..................
+  Секция 
 ---------------------------------------------*/
 
 
@@ -435,6 +549,12 @@ li {
     .top-line__block3 {
         display: none;
     }
+
+    .head__content {
+        padding-top: 90px;
+    }
+
+
 }
 
 @media screen and (max-width: 700px) {
@@ -528,8 +648,9 @@ li {
                 color: $c-base;
             }
         }
+
         &:hover {
-            background: $c-normal;            
+            background: $c-normal;
         }
 
         div {
