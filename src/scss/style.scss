@@ -7,7 +7,7 @@
 
 /*=============================================
       ОБЩИЕ ПРАВИЛА
-  =============================================*/
+=============================================*/
 
 $ff-base: Rubik, Arial, sans-serif;
 
@@ -40,9 +40,37 @@ body {
 
 p,
 ul,
-li {
+li,
+figure,
+figcaption {
     margin: 0;
     padding: 0;
+}
+
+.title-section {
+    margin: 0 auto;
+    text-align: center;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 42px;
+    line-height: 49px;
+    font-weight: 700;
+    font-style: normal;
+    color: $c-accent;
+
+    @include sm-block {
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    @include xs-block {
+        font-size: 32px;
+        line-height: 37px;
+    }
+
+    @include xxs-block {
+        font-size: 28px;
+        line-height: 33px;
+    }
 }
 
 // Кнопки
@@ -527,7 +555,7 @@ h1 {
 ---------------------------------------------*/
 .slider {
     position: relative;
-    padding: 3.25*$gat 0 2.5*$gat;
+    padding: 3*$gat 0 2.5*$gat;
 
     @include md-block {
         padding-top: 2.25*$gat;
@@ -536,7 +564,7 @@ h1 {
 
     &__arrows {
         position: absolute;
-        top: 34%;
+        top: 33%;
         left: 50%;
         display: flex;
         justify-content: space-between;
@@ -608,7 +636,7 @@ h1 {
         margin-top: 1.25*$gat;
 
         @include xxs-block {
-            margin-top: 1.5*$gat;
+            margin-top: 1.25*$gat;
         }
     }
 
@@ -622,8 +650,9 @@ h1 {
         line-height: 140%;
         font-weight: 400;
         color: $c-accent;
-
+        
         @include xxs-block {
+            margin-bottom: 1.25*$gat;
             font-size: 17px;
             line-height: 140%;
         }
@@ -680,6 +709,129 @@ h1 {
 
 /*----------------------------------------------*/
 
+/*---------------------------------------------
+  Секция catalog
+---------------------------------------------*/
+.catalog {
+    padding: 77px 0 100px 0;
+    background: url(../img/images/bg-catalog.jpg) no-repeat;
+    background-size: cover;
+
+    @include md-block {
+        padding: 2*$gat 0 3*$gat 0;
+    }
+
+    @include xxs-block {
+        padding-bottom: 2*$gat;
+    }
+
+    &__content {
+        @include row-flex();
+        justify-content: center;
+        align-items: stretch;
+        margin-top: 2*$gat;
+
+        @include md-block {
+            margin-top: 1.5*$gat;
+        }
+    }
+}
+
+.card {
+    @include col();
+    @include size(3);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $gat;
+
+    &--none-xxs {
+        @include xxs-block {
+            display: none;
+        }
+    }
+
+    &__img {
+        @include img;
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 20px 24px 32px;
+        background: $c-base;
+        border-radius: 0 0 0.5*$gat 0.5*$gat;
+
+        @include xxs-block {
+            padding-bottom: 0.5*$gat;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        text-align: center;
+        font-size: 24px;
+        line-height: 140%;
+        font-weight: 400;
+        color: $c-accent;
+
+        @include md-block {
+            font-size: 20px;
+        }
+
+        @include xxs-block {
+            font-size: 15px;
+            line-height: 185%;
+        }
+
+        span {
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            color: lighten($c-accent, 60%);
+
+            @include xxs-block {
+                font-size: 12px;
+            }
+        }
+    }
+
+    a:hover h4 {
+        font-weight: 500;
+        color: $c-normal;
+    }
+
+    &__price {
+        margin-top: auto;
+        text-align: center;
+        line-height: 30px;
+        font-weight: 500;
+        color: #b7000e;
+
+        @include xxs-block {
+            margin-top: 37px;
+            font-size: 28px;
+            line-height: 33px;
+        }
+    }
+}
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция slider
+---------------------------------------------*/
+
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция slider
+---------------------------------------------*/
+
+
+/*----------------------------------------------*/
+
 /*=============================================*/
 
 
@@ -703,6 +855,14 @@ h1 {
 
     .head__content {
         padding-top: 90px;
+    }
+
+    .card {
+        @include size(4);
+    }
+
+    .card--none {
+        display: none;
     }
 }
 
@@ -866,6 +1026,10 @@ h1 {
             @include disa;
         }
     }
+
+    .card {
+        @include size(6);
+    }
 }
 
 @media screen and (max-width: 440px) {
@@ -877,5 +1041,9 @@ h1 {
     .logo__title {
         font-size: 9px;
         line-height: 10px;
+    }
+
+    .card {
+        @include size(13);
     }
 }

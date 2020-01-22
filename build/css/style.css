@@ -781,7 +781,7 @@ template {
 
 /*=============================================
       ОБЩИЕ ПРАВИЛА
-  =============================================*/
+=============================================*/
 
 .clearfix:after::after {
   display: block;
@@ -811,9 +811,22 @@ body {
 
 p,
 ul,
-li {
+li,
+figure,
+figcaption {
   margin: 0;
   padding: 0;
+}
+
+.title-section {
+  margin: 0 auto;
+  text-align: center;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 42px;
+  line-height: 49px;
+  font-weight: 700;
+  font-style: normal;
+  color: #111111;
 }
 
 .btn-base {
@@ -1270,12 +1283,12 @@ h1 {
 
 .slider {
   position: relative;
-  padding: 65px 0 50px;
+  padding: 60px 0 50px;
 }
 
 .slider__arrows {
   position: absolute;
-  top: 34%;
+  top: 33%;
   left: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1421,6 +1434,113 @@ h1 {
 
 /*----------------------------------------------*/
 
+/*---------------------------------------------
+  Секция catalog
+---------------------------------------------*/
+
+.catalog {
+  padding: 77px 0 100px 0;
+  background: url(../img/images/bg-catalog.jpg) no-repeat;
+  background-size: cover;
+}
+
+.catalog__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  margin-top: 40px;
+}
+
+.card {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(25% - 20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.card__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px 24px 32px;
+  background: #ffffff;
+  border-radius: 0 0 10px 10px;
+}
+
+.card__title {
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  line-height: 140%;
+  font-weight: 400;
+  color: #111111;
+}
+
+.card__title span {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #aaaaaa;
+}
+
+.card a:hover h4 {
+  font-weight: 500;
+  color: #b7000e;
+}
+
+.card__price {
+  margin-top: auto;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 500;
+  color: #b7000e;
+}
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция slider
+---------------------------------------------*/
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция slider
+---------------------------------------------*/
+
+/*----------------------------------------------*/
+
 /*=============================================*/
 
 /*=============================================
@@ -1524,6 +1644,18 @@ h1 {
     padding-top: 45px;
     padding-bottom: 60px;
   }
+
+  .catalog {
+    padding: 40px 0 60px 0;
+  }
+
+  .catalog__content {
+    margin-top: 30px;
+  }
+
+  .card__title {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 890px) {
@@ -1544,12 +1676,25 @@ h1 {
   .head__content {
     padding-top: 90px;
   }
+
+  .card {
+    width: calc(33.33333% - 20px);
+  }
+
+  .card--none {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .wrapper {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .title-section {
+    font-size: 36px;
+    line-height: 42px;
   }
 
   .top-line {
@@ -1784,12 +1929,21 @@ h1 {
     pointer-events: none;
     cursor: default;
   }
+
+  .card {
+    width: calc(50% - 20px);
+  }
 }
 
 @media screen and (max-width: 480px) {
   .wrapper {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .title-section {
+    font-size: 32px;
+    line-height: 37px;
   }
 
   .top-line {
@@ -1821,12 +1975,21 @@ h1 {
     font-size: 9px;
     line-height: 10px;
   }
+
+  .card {
+    width: calc(108.33333% - 20px);
+  }
 }
 
 @media screen and (max-width: 320px) {
   .wrapper {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .title-section {
+    font-size: 28px;
+    line-height: 33px;
   }
 
   .btn-call img {
@@ -1863,10 +2026,11 @@ h1 {
   }
 
   .slider__desc {
-    margin-top: 30px;
+    margin-top: 25px;
   }
 
   .slider__title {
+    margin-bottom: 25px;
     font-size: 17px;
     line-height: 140%;
   }
@@ -1878,6 +2042,33 @@ h1 {
 
   .owl-carousel .owl-dots {
     margin-top: 30px;
+  }
+
+  .catalog {
+    padding-bottom: 40px;
+  }
+
+  .card--none-xxs {
+    display: none;
+  }
+
+  .card__desc {
+    padding-bottom: 10px;
+  }
+
+  .card__title {
+    font-size: 15px;
+    line-height: 185%;
+  }
+
+  .card__title span {
+    font-size: 12px;
+  }
+
+  .card__price {
+    margin-top: 37px;
+    font-size: 28px;
+    line-height: 33px;
   }
 }
 /*# sourceMappingURL=style.css.map */

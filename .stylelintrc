@@ -4,7 +4,6 @@
   ],
   "rules": {    
     "order/properties-order": [
-
 		"content",
 
 		"position",
@@ -15,6 +14,7 @@
 		"bottom",
 		
 		"display",
+
 		"flex",
 		"flex-direction",
 		"flex-wrap",
@@ -25,6 +25,7 @@
 		"flex-basis",
 		"order",
 		"flex-pack",
+
 		"grid",
 		"grid-area",
 		"grid-auto-*",
@@ -141,6 +142,7 @@
 		"font-emphasize-position",
 		"font-emphasize-style",
 		"font-smooth",
+        "color",
 		"letter-spacing",
 		"word-spacing",
 		"text-outline",
@@ -151,8 +153,7 @@
 		"text-overflow-mode",
 		"text-shadow",
 		"word-wrap",
-		"word-break",			
-		"color",
+		"word-break",
 		
 		"tab-size",
 		"hyphens",
@@ -166,13 +167,16 @@
 		"nav-right",
 		"nav-down",
 		"nav-left",
+
 		"opacity",
+
 		"table-layout",
 		"empty-cells",
 		"caption-side",
 		"border-spacing",
 		"border-collapse",			
 		"box-decoration-break",
+
 		"transition",
 		"transition-duration",
 		"transition-delay",
@@ -180,6 +184,7 @@
 		"transition-property",
 		"transform",
 		"transform-origin",
+
 		"animation",
 		"animation-name",
 		"animation-duration",
@@ -190,8 +195,11 @@
 		"animation-direction",
 		"backface-visibility",
 		"will-change",
+
 		"cursor",
+
 		"user-select",
+
 		"outline",
 		"outline-width",
 		"outline-style",
@@ -236,7 +244,6 @@
         "number-no-trailing-zeros": [true, {
             "message": "Лишний (необязательный) нуль в дроби"
         }],
-
         "declaration-colon-space-after": ["always-single-line", {
             "message": "Следует ставить один пробел после двоеточия"
         }],
