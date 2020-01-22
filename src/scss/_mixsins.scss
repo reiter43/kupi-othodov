@@ -106,8 +106,8 @@
     width: $widthButton;
     height: $heightButton;
     padding: 0;
-    border: none;
     background: $colorButton;
+    border: none;
     cursor: pointer;
 
     &__icon {
@@ -115,31 +115,30 @@
         display: block;
         width: $widthLine;
         height: $heightLine;
-        border-radius: 3px;
         background-color: $colorLine;
+        border-radius: 3px;
 
         &::before {
-            position: absolute;
-            left: 0;
-            top: -$gat;
             content: '';
+            position: absolute;
+            top: -$gat;
+            left: 0;
             width: $widthLine;
             height: $heightLine;
-            border-radius: 3px;
             background-color: $colorLine;
+            border-radius: 3px;
             transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
-
         }
 
         &::after {
-            position: absolute;
-            left: 0;
-            top: $gat;
             content: '';
+            position: absolute;
+            top: $gat;
+            left: 0;
             width: $widthLine;
             height: $heightLine;
-            border-radius: 3px;
             background-color: $colorLine;
+            border-radius: 3px;
             transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
         }
 
@@ -148,15 +147,15 @@
         }
 
         &.burger__icon--active::before {
-            transform: rotate(45deg);
             top: 0;
             transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+            transform: rotate(45deg);
         }
 
         &.burger__icon--active::after {
-            transform: rotate(-45deg);
             top: 0;
             transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+            transform: rotate(-45deg);
         }
     }
 }
@@ -235,9 +234,9 @@
 
 // Неактивная ссылка
 @mixin disa {
+    color: #999;
     pointer-events: none;
     cursor: default;
-    color: #999;
 }
 
 // Скрытие элемента

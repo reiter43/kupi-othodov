@@ -13,7 +13,7 @@ $ff-base: Rubik, Arial, sans-serif;
 
 $c-accent: #111111;
 $c-base: #ffffff;
-$c-normal: #B7000E;
+$c-normal: #b7000e;
 
 $gat: 20px;
 
@@ -35,7 +35,7 @@ body {
     font-size: 20px;
     line-height: 1.375;
     font-weight: 400;
-    color: $c-accent
+    color: $c-accent;
 }
 
 p,
@@ -50,13 +50,13 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: none;
     background: $c-normal;
+    border: none;
     font-family: $ff-base;
     font-weight: 500;
     color: $c-base;
-    cursor: pointer;
     transition: background ease 0.5s;
+    cursor: pointer;
 
     &:hover {
         background: lighten($c-normal, 10%);
@@ -121,10 +121,10 @@ li {
         ШАПКА
 =============================================*/
 .top-line {
-    max-width: calc(100% - 38px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: calc(100% - 38px);
     padding: 30px 0 28px 0;
 
     @include md-block {
@@ -196,8 +196,8 @@ li {
     }
 
     &__email {
-        color: $c-normal;
         font-size: 17px;
+        color: $c-normal;
 
         @include md-block {
             font-size: 15px;
@@ -234,9 +234,9 @@ li {
 }
 
 .nav-line {
+    position: relative;
     padding: 0.5*$gat 0;
     background: $c-accent;
-    position: relative;
 
     &__wrapper {
         display: flex;
@@ -260,11 +260,11 @@ li {
         justify-content: space-between;
         align-items: center;
 
-        P {
+        p {
             display: none;
-            font-weight: 700;
             font-size: 15px;
             line-height: 18px;
+            font-weight: 700;
             color: $c-base;
         }
     }
@@ -315,7 +315,7 @@ li {
         }
 
         &.active {
-            color: darken($c-normal, 10%)
+            color: darken($c-normal, 10%);
         }
 
         @include lg-block {
@@ -345,8 +345,8 @@ li {
 
     &__submenu {
         position: absolute;
-        left: -0.5*$gat;
         top: 100%;
+        left: -0.5*$gat;
         width: 265%;
         padding: $gat 0.5*$gat $gat;
         background: $c-accent;
@@ -401,8 +401,8 @@ li {
 
     &__submenu2 {
         padding-left: $gat;
+        background: #eeeeee;
         list-style-type: none;
-        background: #EEEEEE;
         transition: opacity 0.1s ease-in;
         @include invisual;
 
@@ -410,7 +410,6 @@ li {
             @include visual;
         }
     }
-
 }
 
 /*=============================================*/
@@ -425,11 +424,11 @@ li {
 ---------------------------------------------*/
 .head {
     width: 100%;
-    text-align: center;
-    background-color: grey;
     background: url(../img/images/bg-head-hd.jpg) no-repeat;
+    background-color: #eee;
     background-position: center 0;
     background-size: cover;
+    text-align: center;
 
     @include md-block {
         background-image: url(../img/images/bg-head-1000.jpg);
@@ -437,8 +436,8 @@ li {
 
     @include sm-block {
         min-height: 382px;
-        background-size: cover;
         background-image: url(../img/images/bg-head-768.jpg);
+        background-size: cover;
     }
 
     @include xs-block {
@@ -490,11 +489,11 @@ li {
 h1 {
     max-width: 565px;
     margin: 0 auto 28px;
+    text-align: center;
     font-size: 48px;
     line-height: 57px;
     font-weight: 500;
-    text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
 
     @include md-block {
         font-size: 42px;
@@ -539,13 +538,13 @@ h1 {
         position: absolute;
         top: 34%;
         left: 50%;
-        transform: translateX(-50%);
         display: flex;
         justify-content: space-between;
-        max-width: 1536px;
         width: 100%;
+        max-width: 1536px;
         margin: 0 auto;
         padding: 0 $gat;
+        transform: translateX(-50%);
 
         @media screen and (max-width: 1450px) {
             display: none;
@@ -591,9 +590,9 @@ h1 {
         background: $c-normal;
         border-radius: 0 45px 0 0;
         font-family: $ff-base;
-        font-weight: 500;
         font-size: 17px;
         line-height: 140%;
+        font-weight: 500;
         color: $c-base;
         transition: background ease 0.5s;
 
@@ -620,8 +619,8 @@ h1 {
     &__title {
         margin: 0 0 $gat;
         font-size: 24px;
-        font-weight: 400;
         line-height: 140%;
+        font-weight: 400;
         color: $c-accent;
 
         @include xxs-block {
@@ -631,12 +630,12 @@ h1 {
     }
 
     &__subtitle {
-        margin-top: auto;
         display: inline-block;
+        margin-top: auto;
         color: lighten($c-accent, 60%);
 
         @include xxs-block {
-            margin-top: (-0.5)*$gat;
+            margin-top: (-0.5) *$gat;
             font-size: 15px;
         }
     }
@@ -647,13 +646,13 @@ h1 {
     align-items: stretch;
 }
 
-/* Пагинация слайдера
+/*Пагинация слайдера
 ------------------------------------------------*/
 .owl-carousel {
     .owl-dots {
         width: 100%;
         margin-top: 2*$gat;
-        margin-left: (-0.75)*$gat;
+        margin-left: (-0.75) *$gat;
         text-align: center;
 
         @include xxs-block {
@@ -664,9 +663,9 @@ h1 {
             display: inline-block;
             width: 10px;
             height: 10px;
-            border-radius: 50%;
             margin-left: 17px;
-            background-color: #EEEEEE;
+            background-color: #eeeeee;
+            border-radius: 50%;
             transition: all ease 0.5s;
 
             &.active {
@@ -678,6 +677,7 @@ h1 {
 }
 
 /*----------------------------------------------*/
+
 /*----------------------------------------------*/
 
 /*=============================================*/
@@ -786,8 +786,8 @@ h1 {
 
     .nav__subitem {
         background: $c-base;
-        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
         border-bottom: 1px solid rgba(119, 118, 118, 0.55);
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
 
         // &:hover,
         &:focus {
@@ -810,8 +810,8 @@ h1 {
 
         svg {
             display: inline-block;
-            @include svg (24px, 12px, #CCCCCC);
             margin-right: $gat;
+            @include svg (24px, 12px, #CCCCCC);
 
             &:hover {
                 cursor: pointer;
@@ -819,16 +819,16 @@ h1 {
         }
 
         svg.active {
-            fill: $c-base;
             transform: rotate(180deg);
+            fill: $c-base;
         }
     }
 
     .nav__sublink {
         padding: $gat;
-        font-weight: 400;
         font-size: 17px;
         line-height: 125.19%;
+        font-weight: 400;
         color: $c-accent;
 
         &:focus {
@@ -851,15 +851,15 @@ h1 {
     }
 
     .nav__link2 {
-        font-family: Roboto;
-        font-weight: 700;
+        font-family: Roboto, Arial, sans-serif;
         font-size: 17px;
         line-height: 20px;
+        font-weight: 700;
         color: $c-accent;
 
         &:hover,
         &:focus {
-            color: $c-normal
+            color: $c-normal;
         }
 
         &--disabled {
