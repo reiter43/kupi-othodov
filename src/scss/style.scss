@@ -83,7 +83,7 @@ li {
         padding: 0 22px 0 7px;
     }
 
-    img {        
+    img {
         @media screen and (max-width: 890px) {
             display: none;
         }
@@ -480,6 +480,7 @@ li {
         @include sm-block {
             padding: 90px 0 120px 0;
         }
+
         @include xxs-block {
             padding-top: 80px;
         }
@@ -523,10 +524,160 @@ h1 {
 /*----------------------------------------------*/
 
 /*---------------------------------------------
-  Секция 
+  Секция slider
 ---------------------------------------------*/
+.slider {
+    position: relative;
+    padding: 3.25*$gat 0 2.5*$gat;
 
+    @include md-block {
+        padding-top: 2.25*$gat;
+        padding-bottom: 3*$gat;
+    }
 
+    &__arrows {
+        position: absolute;
+        top: 34%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+        max-width: 1536px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 $gat;
+
+        @media screen and (max-width: 1450px) {
+            display: none;
+        }
+
+        button {
+            display: inline-block;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        svg {
+            @include svg(40px, 40px, $c-normal);
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: 0;
+
+        @include xxs-block {
+            padding-left: 0.25*$gat;
+        }
+
+        div {
+            position: relative;
+        }
+    }
+
+    &__img {
+        @include img();
+    }
+
+    &__accia {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: inline-block;
+        padding: 7px 45px 9px 27px;
+        background: $c-normal;
+        border-radius: 0 45px 0 0;
+        font-family: $ff-base;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 140%;
+        color: $c-base;
+        transition: background ease 0.5s;
+
+        &:hover {
+            background: lighten($c-normal, 10%);
+        }
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-top: 1.25*$gat;
+
+        @include xxs-block {
+            margin-top: 1.5*$gat;
+        }
+    }
+
+    a:hover h4 {
+        color: $c-normal;
+    }
+
+    &__title {
+        margin: 0 0 $gat;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 140%;
+        color: $c-accent;
+
+        @include xxs-block {
+            font-size: 17px;
+            line-height: 140%;
+        }
+    }
+
+    &__subtitle {
+        margin-top: auto;
+        display: inline-block;
+        color: lighten($c-accent, 60%);
+
+        @include xxs-block {
+            margin-top: (-0.5)*$gat;
+            font-size: 15px;
+        }
+    }
+}
+
+.owl-carousel .owl-stage {
+    display: flex;
+    align-items: stretch;
+}
+
+/* Пагинация слайдера
+------------------------------------------------*/
+.owl-carousel {
+    .owl-dots {
+        width: 100%;
+        margin-top: 2*$gat;
+        margin-left: (-0.75)*$gat;
+        text-align: center;
+
+        @include xxs-block {
+            margin-top: 1.5*$gat;
+        }
+
+        .owl-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-left: 17px;
+            background-color: #EEEEEE;
+            transition: all ease 0.5s;
+
+            &.active {
+                background-color: $c-normal;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+/*----------------------------------------------*/
 /*----------------------------------------------*/
 
 /*=============================================*/
@@ -553,8 +704,6 @@ h1 {
     .head__content {
         padding-top: 90px;
     }
-
-
 }
 
 @media screen and (max-width: 700px) {

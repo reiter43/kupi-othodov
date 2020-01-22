@@ -67,7 +67,7 @@ let settings = {
 		maxWidth: "1276px",
 		fields: "30px"
 	},
-	breakPoints: {	
+	breakPoints: {
 		lg: {
 			width: "1250px",
 			fields: "20px"
@@ -79,7 +79,7 @@ let settings = {
 		sm: {
 			width: "768px",
 			fields: "20px"
-		},		
+		},
 		xs: {
 			width: "480px",
 			fields: "20px"
@@ -105,9 +105,9 @@ gulp.task('styles', () => {
 			overrideBrowserslist: ['last 3 versions'],
 			cascade: false
 		}))
-		.pipe(cleanCSS({
-			level: 2
-		}))
+		// .pipe(cleanCSS({
+		// 	level: 2
+		// }))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./build/css'))
 		.pipe(browserSync.stream());
@@ -162,9 +162,9 @@ gulp.task('img-compress', () => {
 });
 
 gulp.task('webp', () => {
-    return gulp.src('./src/img/images/**')
-        .pipe(webp())
-        .pipe(gulp.dest('./build/img/images'))
+	return gulp.src('./src/img/images/**')
+		.pipe(webp())
+		.pipe(gulp.dest('./build/img/images'))
 });
 
 // Таск для создания SVG-спрайтов
