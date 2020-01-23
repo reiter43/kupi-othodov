@@ -844,28 +844,28 @@ figcaption {
   font-family: Rubik, Arial, sans-serif;
   font-weight: 500;
   color: #ffffff;
-  -webkit-transition: background ease 0.5s;
-  -o-transition: background ease 0.5s;
-  transition: background ease 0.5s;
+  -webkit-transition: background-color ease 0.5s;
+  -o-transition: background-color ease 0.5s;
+  transition: background-color ease 0.5s;
   cursor: pointer;
 }
 
 .btn-base:hover {
-  background: #ea0012;
+  background-color: #ea0012;
 }
 
 .btn-base:active {
   background: #84000a;
 }
 
-.btn-call {
+.btn-base--call {
   padding: 0 22px 0 7px;
   border-radius: 4px;
   font-size: 15px;
   line-height: 18px;
 }
 
-.btn-cat {
+.btn-base--cat {
   margin: 0 auto;
   padding: 20px 28px;
   border-radius: 6px;
@@ -873,12 +873,29 @@ figcaption {
   line-height: 20px;
 }
 
-.btn-cat img {
+.btn-base--cat img {
   margin-right: 10px;
+}
+
+.btn-base--form {
+  white-space: nowrap;
+  padding: 10px 7%;
+  border-radius: 4px;
+  font-size: 17px;
+  line-height: 20px;
 }
 
 .hide {
   display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
 }
 
 /*=============================================*/
@@ -1242,7 +1259,6 @@ figcaption {
 .head {
   width: 100%;
   background: url(../img/images/bg-head-hd.jpg) no-repeat;
-  background-color: #eee;
   background-position: center 0;
   background-size: cover;
   text-align: center;
@@ -1353,13 +1369,13 @@ h1 {
   line-height: 140%;
   font-weight: 500;
   color: #ffffff;
-  -webkit-transition: background ease 0.5s;
-  -o-transition: background ease 0.5s;
-  transition: background ease 0.5s;
+  -webkit-transition: background-color ease 0.5s;
+  -o-transition: background-color ease 0.5s;
+  transition: background-color ease 0.5s;
 }
 
 .slider__accia:hover {
-  background: #ea0012;
+  background-color: #ea0012;
 }
 
 .slider__desc {
@@ -1439,7 +1455,7 @@ h1 {
 ---------------------------------------------*/
 
 .catalog {
-  padding: 77px 0 100px 0;
+  padding: 77px 0;
   background: url(../img/images/bg-catalog.jpg) no-repeat;
   background-size: cover;
 }
@@ -1530,8 +1546,145 @@ h1 {
 /*----------------------------------------------*/
 
 /*---------------------------------------------
-  Секция slider
+  Секция order
 ---------------------------------------------*/
+
+.order {
+  padding: 100px 0;
+  background: url(../img/images/bg-order.jpg) no-repeat;
+  background-position: center 0;
+  background-size: cover;
+}
+
+.form {
+  padding: 41px 57px 65px 69px;
+  background: #111111;
+  border: 4px solid #ffffff;
+  border-radius: 10px;
+}
+
+.form__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 43px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 40px 0 20px;
+}
+
+.form__elem {
+  display: block;
+  border: none;
+  width: calc(100%/3 - 15px);
+  margin-right: 20px;
+  padding: 12px 10px 12px 24px;
+  background: #ffffff;
+  border-radius: 4px;
+  font-size: 17px;
+  line-height: 20px;
+  color: #111111;
+}
+
+.form ::-webkit-input-placeholder {
+  font-family: Rubik, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #CCCCCC;
+}
+
+.form :-moz-placeholder {
+  /*Firefox 18-*/
+  font-family: Rubik, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #CCCCCC;
+}
+
+.form ::-moz-placeholder {
+  /*Firefox 19+*/
+  font-family: Rubik, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #CCCCCC;
+}
+
+.form :-ms-input-placeholder {
+  font-family: Rubik, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #CCCCCC;
+}
+
+.form__sub {
+  opacity: 0;
+}
+
+.form__sub-label {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 17px;
+  line-height: 20px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.form__sub-label::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -40px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: #b7000e;
+  border-radius: 4px;
+}
+
+.form__sub-label::after {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 4px;
+  display: inline-block;
+  height: 11px;
+  width: 16px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.form__sub + .form__sub-label::after {
+  content: none;
+}
+
+.form__sub:checked + .form__sub-label::after {
+  content: '';
+}
+
+.form__sub:focus + .form__sub-label::before {
+  outline: #3b99fc auto 5px;
+}
 
 /*----------------------------------------------*/
 
@@ -1565,6 +1718,10 @@ h1 {
     padding-right: 20px;
   }
 
+  .btn-base--form {
+    padding: 10px 5%;
+  }
+
   .nav__item {
     margin-left: 5vw;
   }
@@ -1575,6 +1732,10 @@ h1 {
 
   .head__content {
     padding-top: 150px;
+  }
+
+  .form__sub-label {
+    max-width: 800px;
   }
 }
 
@@ -1656,16 +1817,30 @@ h1 {
   .card__title {
     font-size: 20px;
   }
+
+  .form {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  .form {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .form__sub-label {
+    max-width: 80vw;
+  }
 }
 
 @media screen and (max-width: 890px) {
-  .btn-call {
+  .btn-base--call {
     padding: 11px 20px 13px 20px;
     font-size: 13px;
     line-height: 15px;
   }
 
-  .btn-call img {
+  .btn-base--call img {
     display: none;
   }
 
@@ -1695,6 +1870,10 @@ h1 {
   .title-section {
     font-size: 36px;
     line-height: 42px;
+  }
+
+  .btn-base--form {
+    padding: 10px 2% 10px 1%;
   }
 
   .top-line {
@@ -1732,17 +1911,54 @@ h1 {
     font-size: 36px;
     line-height: 43px;
   }
+
+  .order {
+    background-image: none;
+    padding: 60px 0;
+  }
+
+  .form__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
 
 @media screen and (max-width: 700px) {
-  .btn-call {
+  .btn-base--call {
     padding: 0 22px 0 7px;
   }
 
-  .btn-call img {
+  .btn-base--call img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .btn-base--form {
+    padding: 10px 7%;
+  }
+
+  .form div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .form__elem {
+    width: 80%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .form__sub-label {
+    max-width: 68vw;
   }
 
   .top-line__block1,
@@ -1946,6 +2162,11 @@ h1 {
     line-height: 37px;
   }
 
+  .btn-base--form {
+    width: 100%;
+    padding: 10px 30% 10px 20%;
+  }
+
   .top-line {
     padding-bottom: 23px;
   }
@@ -1964,9 +2185,31 @@ h1 {
     font-size: 32px;
     line-height: 38px;
   }
+
+  .form__title {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .form__elem {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 440px) {
+  .btn-base--form {
+    padding: 10px 20% 10px 10%;
+  }
+
+  .order {
+    padding: 0;
+  }
+
+  .form__sub-label {
+    max-width: 60vw;
+    font-size: 15px;
+  }
+
   .top-line__block4 .top-line__social-box {
     display: none;
   }
@@ -1978,6 +2221,15 @@ h1 {
 
   .card {
     width: calc(108.33333% - 20px);
+  }
+
+  .order .wrapper {
+    padding: 0;
+  }
+
+  .form {
+    border: none;
+    border-radius: 0;
   }
 }
 
@@ -1992,8 +2244,12 @@ h1 {
     line-height: 33px;
   }
 
-  .btn-call img {
+  .btn-base--call img {
     margin-right: -3px;
+  }
+
+  .btn-base--form {
+    padding: 12px 20% 10px 15%;
   }
 
   .top-line {
@@ -2069,6 +2325,30 @@ h1 {
     margin-top: 37px;
     font-size: 28px;
     line-height: 33px;
+  }
+
+  .form {
+    padding-bottom: 50px;
+  }
+
+  .form__title {
+    padding: 0 25px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .form div {
+    margin-top: 20px;
+    margin-bottom: 32px;
+  }
+
+  .form__elem {
+    padding: 20px 10px 20px 25px;
+    text-align: center;
+  }
+
+  .form__sub-label {
+    margin-left: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */

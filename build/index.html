@@ -268,7 +268,7 @@
                             <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
                         </ul>
                     </nav>
-                    <button class="btn-base btn-call">
+                    <button class="btn-base btn-base--call">
                         <img src="img/images/smartphone.png" alt="" aria-hidden="true">
                         Обратный звонок
                     </button>
@@ -282,7 +282,7 @@
             <div class="head__wrap">
                 <div class="head__content">
                     <h1>Главный поставщик полимерных отходов</h1>
-                    <button class="btn-base btn-cat">
+                    <button class="btn-base btn-base--cat">
                         <img src="img/images/arrow-right.png" alt="" aria-hidden="true">
                         Перейти в каталог
                     </button>
@@ -381,7 +381,9 @@
                             <img src="img/images/card-1.png" srcset="img/images/card-1-2x.png 2x" alt="Отходы ПВХ" class="card__img">
                         </picture>
                         <figcaption class="card__desc">
-                            <a href="#"> <h4 class="card__title">Отходы ПВХ<span>PET 01</span></h4></a>  
+                            <a href="#">
+                                <h4 class="card__title">Отходы ПВХ<span>PET 01</span></h4>
+                            </a>
                             <p class="card__price">от 11 ₽/кг</p>
                         </figcaption>
                     </figure>
@@ -458,6 +460,32 @@
                 </div>
             </div>
 
+        </section>
+
+        <section class="order">
+            <div class="wrapper">
+                <form class="form">
+                    <h3 class="form__title">Заказать обратный звонок</h3>
+                    <!-- Hidden Required Fields -->
+                    <input type="hidden" name="project_name" value="http://f0315577.xsph.ru/kupi-othodov">
+                    <input type="hidden" name="admin_email" value="43reiter@gmail.com">
+                    <!-- <input type="hidden" name="email_from" value="info@f0315577.xsph.ru"> -->
+                    <input type="hidden" name="form_subject" value="Сайт Полимерные отходы. Заказ обратного звонка с формы на главной">
+                    <!-- END Hidden Required Fields -->
+                    <div>
+                        <label for="form__tel--call" class="visually-hidden">Телефон(обязательное поле)</label>
+                        <input id="form__tel--call" type="tel" class="form__elem form__elem-tel" name="Телефон" placeholder="Телефон" required>
+                        <label for="forml__email--cal" class="visually-hidden">Электронная почта(обязательное поле)</label>
+                        <input id="forml__email--cal" type="email" class="form__elem" name="Электронная почта" placeholder="Электронная почта" required>
+                        <button class="btn-base btn-base--form">
+                            <img src="img/images/smartphone.png" alt="" aria-hidden="true">
+                            Отправить заявку
+                        </button>
+                    </div>
+                    <input id="form__sub" type="checkbox" class="form__sub" name="Рассылка">
+                    <label for="form__sub" class="form__sub-label">Подписаться на рассылку и узнать 12 способов экономии своих средств и получить наш фирменный календарь</label>
+                </form>
+            </div>
         </section>
 
 
