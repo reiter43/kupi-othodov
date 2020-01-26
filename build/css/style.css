@@ -824,7 +824,7 @@ figcaption {
   font-family: Roboto, Arial, sans-serif;
   font-size: 42px;
   line-height: 49px;
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
   color: #111111;
 }
@@ -878,9 +878,9 @@ figcaption {
 }
 
 .btn-base--form {
-  white-space: nowrap;
   padding: 10px 7%;
   border-radius: 4px;
+  white-space: nowrap;
   font-size: 17px;
   line-height: 20px;
 }
@@ -891,11 +891,11 @@ figcaption {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
   overflow: hidden;
+  clip: rect(0 0 0 0);
 }
 
 /*=============================================*/
@@ -1565,10 +1565,10 @@ h1 {
 
 .form__title {
   margin: 0;
-  font-weight: 500;
+  text-align: center;
   font-size: 36px;
   line-height: 43px;
-  text-align: center;
+  font-weight: 500;
   color: #ffffff;
 }
 
@@ -1584,11 +1584,11 @@ h1 {
 
 .form__elem {
   display: block;
-  border: none;
-  width: calc(100%/3 - 15px);
+  width: calc(100% / 3 - 15px);
   margin-right: 20px;
   padding: 12px 10px 12px 24px;
   background: #ffffff;
+  border: none;
   border-radius: 4px;
   font-size: 17px;
   line-height: 20px;
@@ -1597,40 +1597,40 @@ h1 {
 
 .form ::-webkit-input-placeholder {
   font-family: Rubik, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 17px;
   line-height: 20px;
-  color: #CCCCCC;
+  font-weight: 400;
+  font-style: normal;
+  color: #cccccc;
 }
 
 .form :-moz-placeholder {
   /*Firefox 18-*/
   font-family: Rubik, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 17px;
   line-height: 20px;
-  color: #CCCCCC;
+  font-weight: 400;
+  font-style: normal;
+  color: #cccccc;
 }
 
 .form ::-moz-placeholder {
   /*Firefox 19+*/
   font-family: Rubik, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 17px;
   line-height: 20px;
-  color: #CCCCCC;
+  font-weight: 400;
+  font-style: normal;
+  color: #cccccc;
 }
 
 .form :-ms-input-placeholder {
   font-family: Rubik, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 17px;
   line-height: 20px;
-  color: #CCCCCC;
+  font-weight: 400;
+  font-style: normal;
+  color: #cccccc;
 }
 
 .form__sub {
@@ -1660,13 +1660,13 @@ h1 {
 }
 
 .form__sub-label::after {
-  content: "";
+  content: '';
   position: absolute;
-  left: -32px;
   top: 4px;
+  left: -32px;
   display: inline-block;
-  height: 11px;
   width: 16px;
+  height: 11px;
   border-left: 2px solid;
   border-bottom: 2px solid;
   -webkit-transform: rotate(-45deg);
@@ -1689,7 +1689,136 @@ h1 {
 /*----------------------------------------------*/
 
 /*---------------------------------------------
-  Секция slider
+  Секция menegers
+---------------------------------------------*/
+
+.menegers {
+  padding: 58px 0 115px;
+}
+
+.menegers__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-top: 37px;
+}
+
+.menegers__item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(33.33333% - 20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menegers picture {
+  width: 44%;
+}
+
+.menegers__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.menegers__desc {
+  max-width: 163px;
+  margin-left: 20px;
+  padding-top: 5px;
+}
+
+.menegers__name {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #111111;
+}
+
+.menegers__profession {
+  display: block;
+  margin-top: 13px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #aaaaaa;
+}
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция pluses
+---------------------------------------------*/
+
+.pluses__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.pluses__item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(33.33333% - 20px);
+  margin-bottom: 100px;
+}
+
+.pluses__item--btn {
+  margin-bottom: 54px;
+}
+
+.pluses__img {
+  display: inline-block;
+}
+
+.pluses__desc {
+  max-width: 336px;
+  margin-top: 7px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.pluses__desc span {
+  display: block;
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #aaaaaa;
+}
+
+.pluses__btn {
+  margin: 15px 0 0;
+}
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция menegers
+---------------------------------------------*/
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция menegers
 ---------------------------------------------*/
 
 /*----------------------------------------------*/
@@ -1819,17 +1948,35 @@ h1 {
   }
 
   .form {
-    padding-left: 34px;
-    padding-right: 34px;
-  }
-
-  .form {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 40px 35px;
   }
 
   .form__sub-label {
     max-width: 80vw;
+  }
+
+  .menegers {
+    padding-bottom: 88px;
+  }
+
+  .menegers__name {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .menegers__profession {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .pluses__desc {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .pluses__desc span {
+    font-size: 15px;
+    line-height: 18px;
   }
 }
 
@@ -1842,6 +1989,35 @@ h1 {
 
   .btn-base--call img {
     display: none;
+  }
+
+  .menegers {
+    padding-bottom: 65px;
+  }
+
+  .menegers__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .pluses__item {
+    width: calc(50% - 20px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 70px;
+  }
+
+  .pluses__desc {
+    margin-left: 20px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .pluses__btn {
+    margin-left: 20px;
   }
 
   .top-line__block3 {
@@ -1870,6 +2046,10 @@ h1 {
   .title-section {
     font-size: 36px;
     line-height: 42px;
+  }
+
+  .title-section--menegers {
+    max-width: 336px;
   }
 
   .btn-base--form {
@@ -1913,13 +2093,22 @@ h1 {
   }
 
   .order {
-    background-image: none;
     padding: 60px 0;
+    background-image: none;
+  }
+
+  .form {
+    padding: 40px 20px;
   }
 
   .form__title {
     font-size: 32px;
     line-height: 38px;
+  }
+
+  .pluses__desc span {
+    font-size: 17px;
+    line-height: 18px;
   }
 }
 
@@ -1959,6 +2148,32 @@ h1 {
 
   .form__sub-label {
     max-width: 68vw;
+  }
+
+  .menegers__item {
+    width: calc(100% - 20px);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .menegers__name {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .menegers__profession {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .pluses__item {
+    width: calc(100% - 20px);
   }
 
   .top-line__block1,
@@ -2194,6 +2409,20 @@ h1 {
   .form__elem {
     width: 100%;
   }
+
+  .menegers {
+    padding-top: 71px;
+    padding-bottom: 58px;
+  }
+
+  .menegers__content {
+    margin-top: 13px;
+  }
+
+  .pluses__desc {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 @media screen and (max-width: 440px) {
@@ -2208,6 +2437,35 @@ h1 {
   .form__sub-label {
     max-width: 60vw;
     font-size: 15px;
+  }
+
+  .menegers__name {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .menegers__profession {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .pluses__item {
+    margin-bottom: 29px;
+  }
+
+  .pluses__item--btn {
+    margin-bottom: 40px;
+  }
+
+  .pluses__item:first-child {
+    margin-bottom: 32px;
+  }
+
+  .pluses__btn {
+    margin-left: -43px;
+    margin-top: 23px;
+    padding-left: 49px;
+    padding-right: 42px;
   }
 
   .top-line__block4 .top-line__social-box {
@@ -2242,6 +2500,10 @@ h1 {
   .title-section {
     font-size: 28px;
     line-height: 33px;
+  }
+
+  .title-section--menegers {
+    max-width: 240px;
   }
 
   .btn-base--call img {
@@ -2332,9 +2594,12 @@ h1 {
   }
 
   .form__title {
-    padding: 0 25px;
     font-size: 24px;
     line-height: 28px;
+  }
+
+  .form__title--call {
+    padding: 0 25px;
   }
 
   .form div {
@@ -2343,12 +2608,42 @@ h1 {
   }
 
   .form__elem {
-    padding: 20px 10px 20px 25px;
+    padding: 20px 0;
     text-align: center;
   }
 
   .form__sub-label {
     margin-left: 25px;
+  }
+
+  .menegers__item {
+    margin-bottom: -16px;
+  }
+
+  .menegers__desc {
+    margin-left: 10px;
+  }
+
+  .pluses__item {
+    margin-left: 15px;
+    margin-right: 0;
+  }
+
+  .pluses__item--btn {
+    margin-left: 20px;
+  }
+
+  .pluses__item--btn .pluses__desc {
+    margin-left: 33px;
+  }
+
+  .pluses__desc {
+    margin-top: 1px;
+    margin-left: 23px;
+  }
+
+  .pluses__btn {
+    margin-left: -52px;
   }
 }
 /*# sourceMappingURL=style.css.map */
