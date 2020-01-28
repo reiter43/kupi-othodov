@@ -81,6 +81,10 @@ figcaption {
             max-width: 240px;
         }
     }
+
+    &--dipploms {
+        color: $c-base;
+    }
 }
 
 // Кнопки
@@ -88,8 +92,8 @@ figcaption {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: $c-normal;
     border: none;
+    background: $c-normal;
     font-family: $ff-base;
     font-weight: 500;
     color: $c-base;
@@ -149,8 +153,8 @@ figcaption {
 
     &--form {
         padding: 10px 7%;
-        border-radius: 4px;
         white-space: nowrap;
+        border-radius: 4px;
         font-size: 17px;
         line-height: 20px;
 
@@ -177,6 +181,27 @@ figcaption {
 
         @include xxs-block {
             padding: 12px 20% 10px 15%;
+        }
+    }
+}
+
+.btn-control {
+    display: inline-block;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    svg {
+        @include svg(40px, 40px, $c-normal);
+
+        &:hover {
+            fill: lighten($c-normal, 10%);
+        }
+    }
+
+    &--white {
+        svg {
+            fill: $c-base;
         }
     }
 }
@@ -414,8 +439,8 @@ figcaption {
 
         &--drop {
             width: 100%;
-            background: transparent;
             border: none;
+            background: transparent;
         }
 
         svg {
@@ -504,10 +529,10 @@ figcaption {
 ---------------------------------------------*/
 .head {
     width: 100%;
+    text-align: center;
     background: url(../img/images/bg-head-hd.jpg) no-repeat;
     background-position: center 0;
     background-size: cover;
-    text-align: center;
 
     @include md-block {
         background-image: url(../img/images/bg-head-1000.jpg);
@@ -613,31 +638,11 @@ h1 {
         padding-bottom: 3*$gat;
     }
 
-    &__arrows {
-        position: absolute;
+    &__container-controls {
         top: 33%;
-        left: 50%;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        max-width: 1536px;
-        margin: 0 auto;
-        padding: 0 $gat;
-        transform: translateX(-50%);
 
         @media screen and (max-width: 1450px) {
             display: none;
-        }
-
-        button {
-            display: inline-block;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-        }
-
-        svg {
-            @include svg(40px, 40px, $c-normal);
         }
     }
 
@@ -666,8 +671,8 @@ h1 {
         bottom: 0;
         display: inline-block;
         padding: 7px 45px 9px 27px;
-        background: $c-normal;
         border-radius: 0 45px 0 0;
+        background: $c-normal;
         font-family: $ff-base;
         font-size: 17px;
         line-height: 140%;
@@ -721,6 +726,18 @@ h1 {
     }
 }
 
+.container-controls {
+    position: absolute;
+    left: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1536px;
+    margin: 0 auto;
+    padding: 0 $gat;
+    transform: translateX(-50%);
+}
+
 .owl-carousel .owl-stage {
     display: flex;
     align-items: stretch;
@@ -744,8 +761,8 @@ h1 {
             width: 10px;
             height: 10px;
             margin-left: 17px;
-            background-color: #eeeeee;
             border-radius: 50%;
+            background-color: #eeeeee;
             transition: all ease 0.5s;
 
             &.active {
@@ -810,8 +827,8 @@ h1 {
         flex-direction: column;
         height: 100%;
         padding: 20px 24px 32px;
-        background: $c-base;
         border-radius: 0 0 0.5*$gat 0.5*$gat;
+        background: $c-base;
 
         @include xxs-block {
             padding-bottom: 0.5*$gat;
@@ -890,9 +907,9 @@ h1 {
 
 .form {
     padding: 41px 57px 65px 69px;
-    background: $c-accent;
     border: 4px solid $c-base;
     border-radius: 10px;
+    background: $c-accent;
 
     @include md-block {
         padding: 2*$gat 1.75*$gat;
@@ -958,9 +975,9 @@ h1 {
         width: calc(100% / 3 - 15px);
         margin-right: $gat;
         padding: 12px 10px 12px 24px;
-        background: $c-base;
         border: none;
         border-radius: 4px;
+        background: $c-base;
         font-size: 17px;
         line-height: 20px;
         color: $c-accent;
@@ -990,6 +1007,7 @@ h1 {
         color: #cccccc;
     }
 
+    // Кастомный чекбокс
     &__sub {
         opacity: 0;
     }
@@ -1032,8 +1050,8 @@ h1 {
             display: inline-block;
             width: 30px;
             height: 30px;
-            background: $c-normal;
             border-radius: 4px;
+            background: $c-normal;
         }
 
         &::after {
@@ -1063,6 +1081,7 @@ h1 {
     }
 }
 
+/*----------------------------------------------*/
 
 /*----------------------------------------------*/
 
@@ -1070,27 +1089,32 @@ h1 {
   Секция menegers
 ---------------------------------------------*/
 .menegers {
-    padding: 58px 0 115px;
+    padding: 2.9*$gat 0 5.75*$gat;
 
     @include md-block {
-        padding-bottom: 88px;
+        padding-top: 2*$gat;
+        padding-bottom: 4.5*$gat;
     }
 
     @media screen and (max-width: 890px) {
-        padding-bottom: 65px;
+        padding-bottom: 3.25*$gat;
+    }
+
+    @include sm-block {
+        padding-top: 0;
     }
 
     @include xs-block {
-        padding-top: 71px;
-        padding-bottom: 58px;
+        padding-top: 3.55*$gat;
+        padding-bottom: 2.9*$gat;
     }
 
     &__content {
         @include row-flex();
-        margin-top: 37px;
+        margin-top: 1.85*$gat;
 
         @include xs-block {
-            margin-top: 13px;
+            margin-top: 0.65*$gat;
         }
     }
 
@@ -1107,11 +1131,11 @@ h1 {
             @include size(12);
             flex-direction: row;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: $gat;
         }
 
         @include xxs-block {
-            margin-bottom: -16px;
+            margin-bottom: (-0.8) *$gat;
         }
     }
 
@@ -1121,17 +1145,21 @@ h1 {
 
     &__img {
         @include img;
-        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.15);
         border-radius: 10px;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+
+        @include xs-block {
+            box-shadow: none;
+        }
     }
 
     &__desc {
         max-width: 163px;
         margin-left: $gat;
-        padding-top: 5px;
+        padding-top: 0.25*$gat;
 
         @include xxs-block {
-            margin-left: 10px;
+            margin-left: 0.5*$gat;
         }
     }
 
@@ -1159,10 +1187,10 @@ h1 {
 
     &__profession {
         display: block;
-        margin-top: 13px;
+        margin-top: 0.65*$gat;
         font-size: 17px;
-        font-weight: 400;
         line-height: 22px;
+        font-weight: 400;
         color: lighten($c-accent, 60%);
 
         @include md-block {
@@ -1189,6 +1217,10 @@ h1 {
 ---------------------------------------------*/
 .pluses {
 
+    @include xxs-block {
+        padding-bottom: $gat;
+    }
+
     &__content {
         @include row-flex();
     }
@@ -1196,12 +1228,12 @@ h1 {
     &__item {
         @include col();
         @include size(4);
-        margin-bottom: 100px;
+        margin-bottom: 4.75*$gat;
 
         @media screen and (max-width: 890px) {
             @include size(6);
             display: flex;
-            margin-bottom: 70px;
+            margin-bottom: 3.5*$gat;
         }
 
         @media screen and (max-width: 700px) {
@@ -1209,28 +1241,28 @@ h1 {
         }
 
         @media screen and (max-width: 440px) {
-            margin-bottom: 29px;
+            margin-bottom: 1.45*$gat;
         }
 
         @include xxs-block {
-            margin-left: 15px;
             margin-right: 0;
+            margin-left: 0.75*$gat;
         }
 
         &--btn {
-            margin-bottom: 54px;
+            margin-bottom: 2.7*$gat;
 
             @media screen and (max-width: 440px) {
-                margin-bottom: 40px;
+                margin-bottom: 2*$gat;
             }
 
             @include xxs-block {
-                margin-left: 20px;
+                margin-left: $gat;
             }
 
             .pluses__desc {
                 @include xxs-block {
-                    margin-left: 33px;
+                    margin-left: 1.65*$gat;
                 }
             }
         }
@@ -1238,7 +1270,7 @@ h1 {
 
     &__item:first-child {
         @media screen and (max-width: 440px) {
-            margin-bottom: 32px;
+            margin-bottom: 1.6*$gat;
         }
     }
 
@@ -1248,10 +1280,10 @@ h1 {
 
     &__desc {
         max-width: 336px;
-        margin-top: 7px;
+        margin-top: 0.35*$gat;
         font-size: 24px;
-        font-weight: 500;
         line-height: 28px;
+        font-weight: 500;
 
         @include md-block {
             font-size: 20px;
@@ -1259,7 +1291,7 @@ h1 {
         }
 
         @media screen and (max-width: 890px) {
-            margin-left: 20px;
+            margin-left: $gat;
             font-size: 24px;
             line-height: 28px;
         }
@@ -1271,15 +1303,15 @@ h1 {
 
         @include xxs-block {
             margin-top: 1px;
-            margin-left: 23px;
+            margin-left: 1.15*$gat;
         }
 
         span {
             display: block;
             margin-top: 0.5*$gat;
             font-size: 17px;
-            font-weight: 400;
             line-height: 18px;
+            font-weight: 400;
             color: lighten($c-accent, 60%);
 
             @include md-block {
@@ -1295,21 +1327,21 @@ h1 {
     }
 
     &__btn {
-        margin: 15px 0 0;
+        margin: $gat 0 0;
 
         @media screen and (max-width: 890px) {
-            margin-left: 20px;
+            margin-left: $gat;
         }
 
         @media screen and (max-width: 440px) {
-            margin-left: -43px;
-            margin-top: 23px;
-            padding-left: 49px;
-            padding-right: 42px;
+            margin-top: 1.15*$gat;
+            margin-left: (-2.15) *$gat;
+            padding-right: 2.1*$gat;
+            padding-left: 2.5*$gat;
         }
 
         @include xxs-block {
-            margin-left: -52px;
+            margin-left: (-2.6) *$gat;
         }
     }
 }
@@ -1317,10 +1349,75 @@ h1 {
 /*----------------------------------------------*/
 
 /*---------------------------------------------
-  Секция menegers
+  Секция dipploms
 ---------------------------------------------*/
+.dipploms {
+    position: relative;
+    height: 490px;
+    padding-top: 70px;
+    background: url(../img/images/bg-dipplom.png) no-repeat center bottom;
+    background-color: $c-accent;
 
+    @include md-block {
+        height: 418px;
+        padding-top: 3*$gat;
+        background: url(../img/images/bg-dipplom-1000.png) no-repeat center bottom;
+        background-color: $c-accent;
+    }
 
+    @include sm-block {
+        background-image: url(../img/images/bg-dipplom-768.png);
+    }
+
+    @include xxs-block {
+        height: 323px;
+        padding-top: 2.3*$gat;
+        background-image: url(../img/images/bg-dipplom-320.png);
+    }
+
+    &__container-controls {
+        top: 61%;
+    }
+
+    &__container {
+        margin: 4.5*$gat auto 0;
+
+        @include md-block {
+            width: 82%;
+            margin-top: 1.65*$gat;
+        }
+
+        @include sm-block {
+            width: 69%;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        padding: 0 4*$gat;
+
+        @include md-block {
+            padding: 0 0.7*$gat;
+        }
+
+        @media screen and (max-width: 580px) {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 440px) {
+            width: 100%;
+        }
+
+        @include xxs-block {
+            padding: 0 0.3*$gat;
+        }
+    }
+
+    &__img {
+        @include img;
+    }
+}
 /*----------------------------------------------*/
 
 /*---------------------------------------------
@@ -1443,8 +1540,8 @@ h1 {
     }
 
     .nav__subitem {
-        background: $c-base;
         border-bottom: 1px solid rgba(119, 118, 118, 0.55);
+        background: $c-base;
         box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
 
         // &:hover,
@@ -1500,8 +1597,8 @@ h1 {
 
     .nav__btn--submenu {
         display: inline-block;
-        background: transparent;
         border: none;
+        background: transparent;
     }
 
     .nav__subitem2 {

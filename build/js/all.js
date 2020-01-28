@@ -10,12 +10,11 @@ animateIn:!1},e.prototype.swap=function(){if(1===this.core.settings.items&&a.sup
 $(document).ready(function () {
 
     //Инициализация слайдера owl-carousel в секции slider
-    var owl = $(".slider__container");
-    owl.owlCarousel({
+    var owlSlider = $("#slider");
+    owlSlider.owlCarousel({
         items: 3,
         margin: 20,
         loop: true,
-        dots: false,
         smartSpeed: 800,
         nav: false,
         dots: true,
@@ -26,7 +25,7 @@ $(document).ready(function () {
             },
             600: {
                 items: 2,
-            },            
+            },
             1010: {
                 items: 3,
             },
@@ -36,13 +35,47 @@ $(document).ready(function () {
         }
     });
 
-    owl.owlCarousel();
+    owlSlider.owlCarousel();
 
-    $(".slider__arrow-left").click(function () {
-        owl.trigger("next.owl.carousel");
+    $("#slider__arrow-left").click(function () {
+        owlSlider.trigger("next.owl.carousel");
     });
-    $(".slider__arrow-rigth").click(function () {
-        owl.trigger("prev.owl.carousel");
+    $("#slider__arrow-rigth").click(function () {
+        owlSlider.trigger("prev.owl.carousel");
+    });
+
+    //Инициализация слайдера owl-carousel в секции dipploms
+    var owlDipploms = $("#slider--dipploms");
+    owlDipploms.owlCarousel({
+        // center: true,
+        items: 3,
+        // margin: 20,
+        loop: true,
+        dots: false,
+        smartSpeed: 800,
+        nav: false,
+        lazyLoad: true,
+        // autoWidth: true,
+        responsive: {
+            1: {
+                items: 1,
+            },
+            580: {
+                items: 2,
+            },
+            769: {
+                items: 3,
+            },
+        }   
+    });
+
+    owlDipploms.owlCarousel();
+
+    $("#dipploms__arrow-left").click(function () {
+        owlDipploms.trigger("next.owl.carousel");
+    });
+    $("#dipploms__arrow-rigth").click(function () {
+        owlDipploms.trigger("prev.owl.carousel");
     });
 });
 

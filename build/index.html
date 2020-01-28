@@ -291,13 +291,13 @@
         </section>
 
         <section class="slider">
-            <div class="slider__arrows">
-                <button class="slider__arrow-left" aria-label="Стрелка перелистывания слайдера назад" aria-controls="slider">
+            <div class="container-controls  slider__container-controls">
+                <button id="slider__arrow-left" class="btn-control" aria-label="Стрелка перелистывания слайдера назад" aria-controls="slider">
                     <svg>
                         <use xlink:href="img/svg/sprite.svg#left"></use>
                     </svg>
                 </button>
-                <button class="slider__arrow-rigth" aria-label="Стрелка перелистывания слайдера вперед" aria-controls="slider">
+                <button id="slider__arrow-rigth" class="btn-control" aria-label="Стрелка перелистывания слайдера вперед" aria-controls="slider">
                     <svg>
                         <use xlink:href="img/svg/sprite.svg#next"></use>
                     </svg>
@@ -583,6 +583,50 @@
                         </div>                        
                         <figcaption class="pluses__desc">Сезонные акции и скидки постоянным клиентам</figcaption>
                     </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="dipploms">
+            <div class="container-controls dipploms__container-controls">
+                <button id="dipploms__arrow-left" class="btn-control btn-control--white" aria-label="Стрелка перелистывания слайдера назад" aria-controls="slider-dipploms">
+                    <svg>
+                        <use xlink:href="img/svg/sprite.svg#left"></use>
+                    </svg>
+                </button>
+                <button id="dipploms__arrow-rigth" class="btn-control btn-control--white" aria-label="Стрелка перелистывания слайдера вперед" aria-controls="slider-dipploms">
+                    <svg>
+                        <use xlink:href="img/svg/sprite.svg#next"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="wrapper">
+                <h2 class="title-section title-section--dipploms">Нас благодарят</h2>
+                <div id="slider--dipploms" class="dipploms__container owl-carousel">
+                    <div class="dipploms__item">
+                        <picture>
+                            <source srcset="img/images/dipplom-1.webp 1x, img/images/dipplom-1-2x.webp 2x" type="image/webp">
+                            <img src="img/image/dipplom-1.jpg" srcset="img/images/dipplom-1-2x.jpg 2x" alt="Благодарность от фирмы" class="dipploms__img">
+                        </picture>
+                    </div>
+                    <div class="dipploms__item">
+                        <picture>
+                            <source srcset="img/images/dipplom-1.webp 1x, img/images/dipplom-1-2x.webp 2x" type="image/webp">
+                            <img src="img/image/dipplom-1.jpg" srcset="img/images/dipplom-1-2x.jpg 2x" alt="Благодарность от фирмы" class="dipploms__img">
+                        </picture>
+                    </div>
+                    <div class="dipploms__item">
+                        <picture>
+                            <source srcset="img/images/dipplom-1.webp 1x, img/images/dipplom-1-2x.webp 2x" type="image/webp">
+                            <img src="img/image/dipplom-1.jpg" srcset="img/images/dipplom-1-2x.jpg 2x" alt="Благодарность от фирмы" class="dipploms__img">
+                        </picture>
+                    </div>
+                    <div class="dipploms__item">
+                        <picture>
+                            <source srcset="img/images/dipplom-1.webp 1x, img/images/dipplom-1-2x.webp 2x" type="image/webp">
+                            <img src="img/image/dipplom-1.jpg" srcset="img/images/dipplom-1-2x.jpg 2x" alt="Благодарность от фирмы" class="dipploms__img">
+                        </picture>
+                    </div>
                 </div>
             </div>
         </section>
