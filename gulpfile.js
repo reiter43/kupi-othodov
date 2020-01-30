@@ -50,6 +50,7 @@ let varScriptsJ = [
 ];
 
 let varScripts = [
+	'./src/libs/lazySizes/*js',
 	'./src/js/script/*.js',
 	'./src/js/script/script.js'
 ];
@@ -156,7 +157,7 @@ gulp.task('del', () => {
 
 // Таск для сжатия изображений и конвертации в WebP
 gulp.task('img-compress1', () => {
-	return gulp.src('./src/img/images/**/*.*')		
+	return gulp.src('./src/img/images/**/*.{jpg,png,svg}')		
 		.pipe(cache(imagemin([
 			imgCompress({
 				loops: 4,
@@ -177,7 +178,7 @@ gulp.task('img-compress1', () => {
 });
 
 gulp.task('img-compress2', () => {
-	return gulp.src('./src/img/images/**/*.*')
+	return gulp.src('./src/img/images/**/*.{jpg,png}')
 		.pipe(imageResize({ percentage: 200 }))
 		.pipe(cache(imagemin([
 			imgCompress({
@@ -204,13 +205,13 @@ gulp.task('img-compress', gulp.parallel('img-compress1', 'img-compress2'));
 
 
 gulp.task('webp1', () => {
-	return gulp.src('./src/img/images/**')
+	return gulp.src('./src/img/images/**/*.{jpg,png}')
 		.pipe(webp())
 		.pipe(gulp.dest('./build/img/images'))
 });
 
 gulp.task('webp2', () => {
-	return gulp.src('./src/img/images/**{jpg,png}')
+	return gulp.src('./src/img/images/**/*.{jpg,png}')
 	.pipe(imageResize({ percentage: 200 }))
 		.pipe(webp())
 		.pipe(rename(function (path) { path.basename += "-2x" }))

@@ -92,3 +92,6 @@ window.addEventListener("DOMContentLoaded", function () {
 		input.addEventListener("keydown", mask, false)
 	});
 });
+
+
+
