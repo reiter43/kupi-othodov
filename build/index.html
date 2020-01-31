@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/images/favicon-16x16.png">
-    <link rel="manifest" href="img/images/site.webmanifest">
+    <!-- <link rel="manifest" href="img/images/site.webmanifest"> -->
     <link rel="mask-icon" href="img/images/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -93,7 +93,7 @@
                             <p id="burger-title">Меню</p>
                         </div>
                         <ul id="menu-base" class="nav__list nav__list--visial" role="menubar" aria-label="Основное меню сайта">
-                            <li class="nav__item nav__item--drop">
+                            <li class="nav__item nav__item--drop" role="none">
                                 <button class="nav__link nav__link--drop" aria-label="Вкладка каталог" aria-expanded="false" aria-haspopup="true">
                                     Каталог
                                     <svg class="svg__drop">
@@ -101,9 +101,9 @@
                                     </svg>
                                 </button>
                                 <ul class="nav__submenu nav__submenu--visial" role="menu" aria-label="Каталог">
-                                    <li class="nav__subitem">
+                                    <li class="nav__subitem" role="none">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1"><span>Отходы ПВХ</span></a>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы ПВХ</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -111,7 +111,7 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem">
+                                    <li class="nav__subitem" role="none">
                                         <div>
                                             <a href="#" class="nav__sublink" tabindex="-1"><span>Отходы АБС</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
@@ -121,9 +121,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem">
+                                    <li class="nav__subitem" role="none">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1"><span>Отходы ПС</span></a>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы ПС</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -131,9 +131,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem">
+                                    <li class="nav__subitem" role="none">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1"><span>Отходы ПК</span></a>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы ПК</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -141,9 +141,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem">
+                                    <li class="nav__subitem" role="none">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1"><span>Стрэйч пленка</span></a>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Стрэйч пленка</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -151,7 +151,7 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem">
+                                    <li class="nav__subitem" role="none">
                                         <div>
                                             <a href="#" class="nav__sublink" tabindex="-1"><span>Отходы ПНД</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список Отходы ПНД" aria-expanded="false" aria-haspopup="true">
@@ -161,29 +161,29 @@
                                             </button>
                                         </div>
                                         <ul class="nav__submenu2 nav__submenu2--visial" role="menu" aria-label="Отходы ПНД">
-                                            <li class=" nav__subitem2">
-                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1">Отходы ПНД</a>
+                                            <li class=" nav__subitem2" role="none">
+                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Отходы ПНД</a>
                                             </li>
-                                            <li class="nav__subitem2">
-                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1">Отходы ПНД вкладыша</a>
+                                            <li class="nav__subitem2" role="none">
+                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Отходы ПНД вкладыша</a>
                                             </li>
-                                            <li class="nav__subitem2">
-                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1">Вырубка ПНД</a>
+                                            <li class="nav__subitem2" role="none">
+                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Вырубка ПНД</a>
                                             </li>
-                                            <li class="nav__subitem2">
-                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1">Отходы ПНД ящиков</a>
+                                            <li class="nav__subitem2" role="none">
+                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Отходы ПНД ящиков</a>
                                             </li>
-                                            <li class="nav__subitem2">
-                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1">Б/у ПНД трубы</a>
+                                            <li class="nav__subitem2" role="none">
+                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Б/у ПНД трубы</a>
                                             </li>
-                                            <li class="nav__subitem2">
-                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1">Отходы ПНД тары</a>
+                                            <li class="nav__subitem2" role="none">
+                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Отходы ПНД тары</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="nav__subitem">
+                                    <li class="nav__subitem" role="none">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1"><span>Отходы полиофелина</span></a>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы полиофелина</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -191,9 +191,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem">
+                                    <li class="nav__subitem" role="none">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1"><span>Полиэфелиновая пленка</span></a>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Полиэфелиновая пленка</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -201,9 +201,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem">
+                                    <li class="nav__subitem" role="none">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1"><span>Отходы ПП</span></a>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы ПП</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -211,9 +211,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem">
+                                    <li class="nav__subitem" role="none">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1"><span>Отходы ПЭТ</span></a>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы ПЭТ</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -221,9 +221,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem">
+                                    <li class="nav__subitem" role="none">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1"><span>Отходы пленки</span></a>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы пленки</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -231,9 +231,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem">
+                                    <li class="nav__subitem" role="none">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1"><span>Отходы пластика</span></a>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы пластика</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -241,9 +241,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem">
+                                    <li class="nav__subitem" role="none">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1"><span>Отходы микс</span></a>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы микс</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -251,9 +251,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem">
+                                    <li class="nav__subitem" role="none">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1"><span>Отходы полиамида</span></a>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы полиамида</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -261,9 +261,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem">
+                                    <li class="nav__subitem" role="none">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1"><span>Отходы Эва (Сэвилен)</span></a>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы Эва (Сэвилен)</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -273,11 +273,11 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav__item"><a href="#" class="nav__link active">О компании</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Новости</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Акции</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Доставка</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                            <li class="nav__item" role="none"><a href="#" class="nav__link active" role="menuitem">О компании</a></li>
+                            <li class="nav__item" role="none"><a href="#" class="nav__link" role="menuitem">Новости</a></li>
+                            <li class="nav__item" role="none"><a href="#" class="nav__link" role="menuitem">Акции</a></li>
+                            <li class="nav__item" role="none"><a href="#" class="nav__link" role="menuitem">Доставка</a></li>
+                            <li class="nav__item" role="none"><a href="#" class="nav__link" role="menuitem">Контакты</a></li>
                         </ul>
                     </nav>
                     <button class="btn-base btn-base--call">
@@ -489,11 +489,11 @@
         </section>
 
         <section class="order">
-            <div id="form" class="wrapper">
-                <form class="form">
+            <div  class="wrapper">
+                <form id="form" class="form">
                     <h3 class="form__title form__title--call">Заказать обратный звонок</h3>
                     <!-- Hidden Required Fields -->
-                    <input type="hidden" name="project_name" value="http://f0315577.xsph.ru/kupi-othodov">
+                    <input type="hidden" name="project_name" value="http://f0315577.xsph.ru/othodov">
                     <input type="hidden" name="admin_email" value="43reiter@gmail.com">
                     <!-- <input type="hidden" name="email_from" value="info@f0315577.xsph.ru"> -->
                     <input type="hidden" name="form_subject" value="Сайт Полимерные отходы. Заказ обратного звонка с формы на главной">

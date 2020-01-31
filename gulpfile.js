@@ -120,9 +120,9 @@ gulp.task('styles', () => {
 			overrideBrowserslist: ['last 3 versions'],
 			cascade: false
 		}))
-		// .pipe(cleanCSS({
-		// 	level: 2
-		// }))
+		.pipe(cleanCSS({
+			level: 2
+		}))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./build/css'))
 		.pipe(browserSync.stream());
@@ -133,7 +133,7 @@ gulp.task('styles', () => {
 gulp.task('scripts', () => {
 	return gulp.src(varScriptsJ)
 		.pipe(concat('all.js'))
-		// .pipe(uglify())
+		.pipe(uglify())
 		.pipe(gulp.dest('./build/js'))
 		.pipe(browserSync.stream());
 });
@@ -145,7 +145,7 @@ gulp.task('scriptsCustom', () => {
 			presets: ['@babel/env']
 		}))
 		.pipe(concat('scripts.js'))
-		// .pipe(uglify())
+		.pipe(uglify())
 		.pipe(gulp.dest('./build/js'))
 		.pipe(browserSync.stream());
 });

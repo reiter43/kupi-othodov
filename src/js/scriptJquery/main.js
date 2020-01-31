@@ -68,6 +68,9 @@ $(document).ready(function () {
     $("#dipploms__arrow-rigth").click(function () {
         owlDipploms.trigger("prev.owl.carousel");
     });
+
+    $('button.owl-dot').attr("aria-label", "Кнопки пагинации");
+    $('#slider--dipploms > .owl-nav.disabled > button, #slider > .owl-nav.disabled > button').removeAttr('role');
 });
 
 

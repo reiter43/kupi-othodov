@@ -30,7 +30,7 @@
 // }); 	
 
 
-// // Аякс-запрос формы обратной связи
+// Аякс-запрос формы обратной связи
 let form = document.querySelector('#form');
 
 form.onsubmit = function (event) { 
@@ -45,7 +45,7 @@ form.onsubmit = function (event) {
     xhttp.onreadystatechange = function () { 
         if (this.readyState == 4 && this.status == 200) {
             form.reset();             
-            alert('Спасибо за обращение! <br> В ближайшее время мы с вами свяжемся', 5000);
+            alert('Спасибо за обращение! <br> В ближайшее время мы с вами свяжемся');
         }
     }    
 }
@@ -91,6 +91,9 @@ window.addEventListener("DOMContentLoaded", function () {
 		input.addEventListener("keydown", mask, false)
 	});
 });
+
+// document.querySelector('button.owl-dot').setAttribute("aria-label", "Кнопки пагинации");
+// console.log(document.querySelector('button.owl-dot'));
 
 
 

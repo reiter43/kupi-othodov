@@ -4,12 +4,25 @@
     font-weight: 700;
     font-style: normal;
     src: local('Roboto Bold'),
- local('Roboto-Bold'),
-        url('../fonts/Roboto/roboto-v20-cyrillic-700.woff2') format('woff2'),
+        local('Roboto-Bold'),
+        url('../fonts/roboto/roboto-v20-cyrillic-700.woff2') format('woff2'),
         /* Chrome 26+, Opera 23+, Firefox 39+ */
         url('../fonts/Roboto/roboto-v20-cyrillic-700.woff') format('woff');
-
+    font-display: swap;
     /*Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+*/
+}
+
+/* roboto-500 - cyrillic */
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    src: local('Roboto Medium'), local('Roboto-Medium'),
+        url('../fonts/roboto/roboto-v20-cyrillic-500.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto/roboto-v20-cyrillic-500.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
 }
 
 /*rubik-regular - cyrillic*/
@@ -18,12 +31,13 @@
     font-weight: 400;
     font-style: normal;
     src: local('Rubik'),
- local('Rubik-Regular'),
+        local('Rubik-Regular'),
         url('../fonts/rubik/rubik-v9-cyrillic-regular.woff2') format('woff2'),
         /* Chrome 26+, Opera 23+, Firefox 39+ */
         url('../fonts/rubik/rubik-v9-cyrillic-regular.woff') format('woff');
 
     /*Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+*/
+    font-display: swap;
 }
 
 /*rubik-500 - cyrillic*/
@@ -32,12 +46,13 @@
     font-weight: 500;
     font-style: normal;
     src: local('Rubik Medium'),
- local('Rubik-Medium'),
+        local('Rubik-Medium'),
         url('../fonts/rubik/rubik-v9-cyrillic-500.woff2') format('woff2'),
         /* Chrome 26+, Opera 23+, Firefox 39+ */
         url('../fonts/rubik/rubik-v9-cyrillic-500.woff') format('woff');
 
     /*Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+*/
+    font-display: swap;
 }
 
 /*rubik-700 - cyrillic*/
@@ -46,10 +61,11 @@
     font-weight: 700;
     font-style: normal;
     src: local('Rubik Bold'),
- local('Rubik-Bold'),
+        local('Rubik-Bold'),
         url('../fonts/rubik/rubik-v9-cyrillic-700.woff2') format('woff2'),
         /* Chrome 26+, Opera 23+, Firefox 39+ */
         url('../fonts/rubik/rubik-v9-cyrillic-700.woff') format('woff');
 
     /*Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+*/
+    font-display: swap;
 }
