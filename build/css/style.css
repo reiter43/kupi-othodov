@@ -818,6 +818,10 @@ figcaption {
   padding: 0;
 }
 
+address {
+  font-style: normal;
+}
+
 .title-section {
   margin: 0 auto;
   text-align: center;
@@ -1938,7 +1942,7 @@ h1 {
   width: calc(41.66667% - 20px);
 }
 
-.footer__block3 h6 {
+.footer__block3 p {
   max-width: 503px;
   margin: 0 0 15px 0;
   font-size: 20px;
@@ -2132,7 +2136,7 @@ h1 {
     width: calc(50% - 20px);
   }
 
-  .footer__block3 h6 {
+  .footer__block3 p {
     font-size: 17px;
     line-height: 20px;
   }
@@ -2314,7 +2318,7 @@ h1 {
     width: calc(58.33333% - 20px);
   }
 
-  .footer__block3 h6 {
+  .footer__block3 p {
     max-width: 463px;
   }
 
@@ -3162,7 +3166,7 @@ h1 {
     padding: 0 6px;
   }
 
-  .footer__block3 h6 {
+  .footer__block3 p {
     max-width: 225px;
   }
 }

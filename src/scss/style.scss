@@ -47,6 +47,10 @@ figcaption {
     padding: 0;
 }
 
+address {
+    font-style: normal;
+}
+
 .title-section {
     margin: 0 auto;
     text-align: center;
@@ -1552,7 +1556,7 @@ h1 {
             @include size-lg(12);
         }
 
-        h6 {
+        p {
             max-width: 503px;
             margin: 0 0 0.75*$gat 0;
             font-size: 20px;
