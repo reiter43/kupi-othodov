@@ -385,21 +385,24 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 //     }
 // }); 	
 // // Аякс-запрос формы обратной связи
-// let form = document.querySelector('#form');
-// form.onsubmit = function (event) { 
-//     event.preventDefault();
-//     let formData = new FormData(form);    
-//     let xhttp = new XMLHttpRequest(); 
-//     xhttp.open('POST', 'mail.php'); 
-//     xhttp.send(formData); 
-//     xhttp.onreadystatechange = function () { 
-//         if (this.readyState == 4 && this.status == 200) {
-//             form.reset();             
-//             chips('Спасибо за обращение! <br> В ближайшее время мы с вами свяжемся', 5000);
-//         }
-//     }    
-// }
-//Скрипт для маски ввода телефона
+var form = document.querySelector('#form');
+
+form.onsubmit = function (event) {
+  event.preventDefault();
+  var formData = new FormData(form);
+  var xhttp = new XMLHttpRequest();
+  xhttp.open('POST', 'mail.php');
+  xhttp.send(formData);
+
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      form.reset();
+      alert('Спасибо за обращение! <br> В ближайшее время мы с вами свяжемся', 5000);
+    }
+  };
+}; //Скрипт для маски ввода телефона
+
+
 window.addEventListener("DOMContentLoaded", function () {
   [].forEach.call(document.querySelectorAll('.form__elem-tel'), function (input) {
     var keyCode;
