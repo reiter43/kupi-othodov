@@ -1012,7 +1012,7 @@ h1 {
     @include input-placeholder {
         font-family: $ff-base;
         font-size: 17px;
-        line-height: 20px;
+        line-height: 17px;
         font-weight: 400;
         font-style: normal;
         color: #cccccc;
@@ -1751,6 +1751,13 @@ h1 {
         }
     }
 
+    &__mode {
+        font-size: 17px;
+        line-height: 20px;
+        font-weight: 400;
+        color: lighten($c-accent, 60%);
+    }
+
     &__copy {
         padding: 1.5*$gat 0;
         background: $c-accent;
@@ -1775,14 +1782,6 @@ h1 {
         line-height: 14px;
     }
 }
-
-.mode {
-    font-size: 17px;
-    line-height: 20px;
-    font-weight: 400;
-    color: lighten($c-accent, 60%);
-}
-
 
 /*=============================================*/
 
