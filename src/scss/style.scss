@@ -93,9 +93,7 @@ address {
 
 // Кнопки
 .btn-base {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+   
     border: none;
     background: $c-normal;
     font-family: $ff-base;
@@ -110,6 +108,12 @@ address {
 
     &:active {
         background: darken($c-normal, 10%);
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &--call {
