@@ -42,8 +42,10 @@ burger.addEventListener('click', event => {
 
         if (document.querySelector('.burger__icon').classList.contains('burger__icon--active')) {
             menu.classList.remove('nav__list--visial');
+            menu.style.zIndex = "10";
         } else {
             menu.classList.add('nav__list--visial');
+            menu.style.zIndex = "0";
         }
 
         document.querySelector('.head__wrap').classList.toggle('head__wrap--active');

@@ -1878,6 +1878,13 @@ h1 {
                 transform: rotate(180deg);
             }
         }
+
+        &--btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
     }
 
     .nav__submenu {
