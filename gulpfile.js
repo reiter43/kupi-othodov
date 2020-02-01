@@ -117,7 +117,7 @@ gulp.task('styles', () => {
 		.pipe(gcmq())
 		.pipe(autoprefixer({
 			grid: true,
-			overrideBrowserslist: ['last 3 versions'],
+			overrideBrowserslist: ['last 10 versions'],
 			cascade: false
 		}))
 		.pipe(cleanCSS({
