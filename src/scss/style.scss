@@ -1615,6 +1615,7 @@ h1 {
 
             p {
                 margin-left: 1.25*$gat;
+                margin-bottom: 0;
 
                 @media screen and (max-width: 440px) {
                     margin-left: 0;
@@ -1770,7 +1771,7 @@ h1 {
     }
 
     @media screen and (max-width: 440px) {
-        font-size: 18.6px;
+        font-size: 18px;
         line-height: 14px;
     }
 }
