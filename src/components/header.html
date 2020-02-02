@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="keywords" content="Отходы, полимеры, пластмасса, продажа">
+    <meta name="description" content="Продажа полимерных отходов">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/images/favicon-16x16.png">
+    <!-- <link rel="manifest" href="img/images/site.webmanifest"> -->
+    <link rel="mask-icon" href="img/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>@title</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <address class="top-line">
+                <a href="#" class="logo">
+                    <picture>
+                        <source media="(max-width: 440px)" srcset="img/images/logo-320.webp 1x, img/images/logo-320-2x.webp 2x" type="image/webp">
+                        <source media="(max-width: 1000px)" srcset="img/images/logo-1000.webp 1x, img/images/logo-1000-2x.webp 2x" type="image/webp">
+                        <source media="(max-width: 440px)" srcset="img/images/logo-320.png 1x, img/images/logo-320-2x.png 2x">
+                        <source media="(max-width: 1000px)" srcset="img/images/logo-1000.png 1x, img/images/logo-1000-2x.png 2x">
+                        <source srcset="img/images/logo-hd.webp 1x, img/images/logo-hd-2x.webp 2x" type="image/webp">
+                        <img src="img/images/logo-hd.png" srcset="img/images/logo-hd-2x.png 2x" alt="Логотип компании" class="logo__img">
+                    </picture>
+                    <p class="logo__title">Продажа полимерных отходов</p>
+                </a>
+                <div class="top-line__block top-line__block1">
+                    <div>
+                        <a href="tel:+7968800XXXX" class="tel">+7 968 800 XX XX</a>
+                        <div class="social-box">
+                            <a href="whatsapp://send?phone=+7968800XXXX" class="icon-watsapp">
+                                <img src="img/images/watsapp.png" alt="Иконка звонка ватсап">
+                            </a>
+                            <a href="viber://chat?number=+7968800XXXX" class="icon-viber">
+                                <img src="img/images/viber.png" alt="Иконка звонка вайбер">
+                            </a>
+                            <a href="viber://add?number=+796880044XX" class="icon-viber icon-viber--mob">
+                                <img src="img/images/viber.png" alt="Иконка звонка вайбер">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="adress">МО г.Подольск, Домодедовское шоссе 00</p>
+                </div>
+                <div class="top-line__block top-line__block2">
+                    <a href="tel:+7495542XXXX" class="tel">+7 495 542-XX-XX</a>
+                    <a href="mailto:info@kupi-xxxxxxx.ru" class="email">info@kupi-xxxxxxx.ru</a>
+                </div>
+                <div class="top-line__block top-line__block3">
+                    <a href="tel:8800700XXXX" class="tel">8 800 700-XX-XX</a>
+                    <p class="top-line__mode">работаем с 9 до 18</p>
+                </div>
+                <div class="top-line__block4">
+                    <div>
+                        <a href="tel:+7968800XXXX" class="tel">+7 968 800 XX XX</a>
+                        <div class="social-box">
+                            <a href="whatsapp://send?phone=+7968800XXXX" class="icon-watsapp">
+                                <img src="img/images/watsapp.png" alt="Иконка звонка ватсап">
+                            </a>
+                            <a href="viber://chat?number=+7968800XXXX" class="icon-viber">
+                                <img src="img/images/viber.png" alt="Иконка звонка вайбер">
+                            </a>
+                            <a href="viber://add?number=+796880044XX" class="icon-viber icon-viber--mob">
+                                <img src="img/images/viber.png" alt="Иконка звонка вайбер">
+                            </a>
+                        </div>
+                    </div>
+                    <a href="tel:+74955422086" class="tel">+7 495 542-20-86</a>
+                </div>
+            </address>
+        </div>
+        <div class="nav-line">
+            <div class="wrapper">
+                <div class="nav-line__wrapper">
+                    <nav class="nav" aria-label="Основное меню сайта">
+                        <div class="nav__burger" aria-hidden="true">
+                            <button class="burger" aria-expanded="false" aria-controls="menu-base" aria-labelledby="burger-title">
+                                <span class="burger__icon"></span>
+                            </button>
+                            <p id="burger-title">Меню</p>
+                        </div>
+                        <ul id="menu-base" class="nav__list nav__list--visial" role="menubar" aria-label="Основное меню сайта">
+                            <li class="nav__item nav__item--drop" role="none">
+                                <button class="nav__link nav__link--drop" aria-label="Вкладка каталог" aria-expanded="false" aria-haspopup="true">
+                                    <span class="nav__link--btn">
+                                        Каталог
+                                        <svg class="svg__drop">
+                                            <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="nav__submenu nav__submenu--visial" role="menu" aria-label="Каталог">
+                                    <li class="nav__subitem" role="none">
+                                        <div>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы ПВХ</span></a>
+                                            <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
+                                                <svg class="svg__drop2">
+                                                    <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="nav__subitem" role="none">
+                                        <div>
+                                            <a href="#" class="nav__sublink" tabindex="-1"><span>Отходы АБС</span></a>
+                                            <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
+                                                <svg class="svg__drop2">
+                                                    <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="nav__subitem" role="none">
+                                        <div>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы ПС</span></a>
+                                            <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
+                                                <svg class="svg__drop2">
+                                                    <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="nav__subitem" role="none">
+                                        <div>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы ПК</span></a>
+                                            <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
+                                                <svg class="svg__drop2">
+                                                    <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="nav__subitem" role="none">
+                                        <div>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Стрэйч пленка</span></a>
+                                            <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
+                                                <svg class="svg__drop2">
+                                                    <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="nav__subitem" role="none">
+                                        <div>
+                                            <a href="#" class="nav__sublink" tabindex="-1"><span>Отходы ПНД</span></a>
+                                            <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список Отходы ПНД" aria-expanded="false" aria-haspopup="true">
+                                                <svg class="svg__drop2">
+                                                    <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <ul class="nav__submenu2 nav__submenu2--visial" role="menu" aria-label="Отходы ПНД">
+                                            <li class=" nav__subitem2" role="none">
+                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Отходы ПНД</a>
+                                            </li>
+                                            <li class="nav__subitem2" role="none">
+                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Отходы ПНД вкладыша</a>
+                                            </li>
+                                            <li class="nav__subitem2" role="none">
+                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Вырубка ПНД</a>
+                                            </li>
+                                            <li class="nav__subitem2" role="none">
+                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Отходы ПНД ящиков</a>
+                                            </li>
+                                            <li class="nav__subitem2" role="none">
+                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Б/у ПНД трубы</a>
+                                            </li>
+                                            <li class="nav__subitem2" role="none">
+                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Отходы ПНД тары</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav__subitem" role="none">
+                                        <div>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы полиофелина</span></a>
+                                            <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
+                                                <svg class="svg__drop2">
+                                                    <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="nav__subitem" role="none">
+                                        <div>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Полиэфелиновая пленка</span></a>
+                                            <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
+                                                <svg class="svg__drop2">
+                                                    <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="nav__subitem" role="none">
+                                        <div>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы ПП</span></a>
+                                            <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
+                                                <svg class="svg__drop2">
+                                                    <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="nav__subitem" role="none">
+                                        <div>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы ПЭТ</span></a>
+                                            <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
+                                                <svg class="svg__drop2">
+                                                    <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="nav__subitem" role="none">
+                                        <div>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы пленки</span></a>
+                                            <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
+                                                <svg class="svg__drop2">
+                                                    <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="nav__subitem" role="none">
+                                        <div>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы пластика</span></a>
+                                            <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
+                                                <svg class="svg__drop2">
+                                                    <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="nav__subitem" role="none">
+                                        <div>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы микс</span></a>
+                                            <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
+                                                <svg class="svg__drop2">
+                                                    <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="nav__subitem" role="none">
+                                        <div>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы полиамида</span></a>
+                                            <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
+                                                <svg class="svg__drop2">
+                                                    <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="nav__subitem" role="none">
+                                        <div>
+                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы Эва (Сэвилен)</span></a>
+                                            <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
+                                                <svg class="svg__drop2">
+                                                    <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__item" role="none"><a href="#" class="nav__link" role="menuitem">О компании</a></li>
+                            <li class="nav__item" role="none"><a href="#" class="nav__link" role="menuitem">Новости</a></li>
+                            <li class="nav__item" role="none"><a href="#" class="nav__link" role="menuitem">Акции</a></li>
+                            <li class="nav__item" role="none"><a href="#" class="nav__link" role="menuitem">Доставка</a></li>
+                            <li class="nav__item" role="none"><a href="#" class="nav__link" role="menuitem">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <button class="btn-base btn-base--call">
+                        <span class="btn-base__content">
+                            <img src="img/images/smartphone.png" alt="" aria-hidden="true">
+                            Обратный звонок
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>

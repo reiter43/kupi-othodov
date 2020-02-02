@@ -40,6 +40,7 @@ body {
 
 p,
 ul,
+ol,
 li,
 figure,
 figcaption {
@@ -50,6 +51,10 @@ figcaption {
 address {
     font-style: normal;
 }
+
+
+/* Заголовки 
+---------------------------------------------*/
 
 .title-section {
     margin: 0 auto;
@@ -91,9 +96,13 @@ address {
     }
 }
 
-// Кнопки
+/*--------------------------------------------*/
+
+
+/* Кнопки
+---------------------------------------------*/
 .btn-base {
-   
+
     border: none;
     background: $c-normal;
     font-family: $ff-base;
@@ -213,6 +222,62 @@ address {
         }
     }
 }
+
+/*--------------------------------------------*/
+
+/* Хлебные крошки 
+---------------------------------------------*/
+.breadcrumbs {
+    margin: 0 auto;
+    padding: 21px 0;
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    &__item {        
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    &__item+&__item {
+        position: relative;
+        margin-left: 60px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            display: inline-block;
+            width: 1px;
+            height: 100%;
+            background-color: lighten($c-accent, 60%);
+            transform: rotate(20deg);
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        color: $c-accent;
+
+        &--disabled {
+            @include disa;
+            color: $c-accent;
+        }
+    }
+
+    &__link.active {
+        color: $c-normal;
+    }
+}
+
+
+
+
+/*--------------------------------------------*/
 
 .hide {
     display: none;
@@ -1650,29 +1715,33 @@ h1 {
             background: #f79a38;
 
             svg {
-                @include svg(14px, 22px, $c-base); }
+                @include svg(14px, 22px, $c-base);
+            }
         }
 
         &--vk {
             background: #7294c7;
 
             svg {
-                @include svg(21px, 12px, $c-base); }
+                @include svg(21px, 12px, $c-base);
+            }
         }
 
         &--fb {
             background: #4e6297;
-            
+
 
             svg {
-                @include svg(17px, 17px, $c-base); }
+                @include svg(17px, 17px, $c-base);
+            }
         }
 
         &--in {
             background: linear-gradient(43.94deg, #eea054 16.16%, #d64763 50.11%, #b62a99 83.68%);
 
             svg {
-                @include svg(17px, 17px, $c-base); }
+                @include svg(17px, 17px, $c-base);
+            }
         }
 
         &:hover {
@@ -1784,6 +1853,8 @@ h1 {
 }
 
 /*=============================================*/
+
+@import 'catalog.scss';
 
 
 /*=============================================

@@ -1,0 +1,24 @@
+@include('./components/header.html', {
+"title": "Каталог"
+})
+
+<main>
+
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link active">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link active">Каталог</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link breadcrumbs__link--disabled">Отходы ПНД</a></li>
+        </ol>
+    </nav>
+
+    <section class="slider">
+        @include('./components/slider.html')
+    </section>
+
+
+</main>
+
+@include('./components/footer.html', {
+"jQ": "js/all.js"
+})

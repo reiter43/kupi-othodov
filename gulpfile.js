@@ -6,6 +6,8 @@ const rename = require("gulp-rename");
 
 const browserSync = require('browser-sync').create();
 
+const fileinclude = require('gulp-file-include');
+
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
@@ -40,13 +42,13 @@ let varStyles = [
 ];
 
 let varScriptsJ = [
-	'./src/libs/jQuery/jquery.min.js',
-	'./src/libs/owlcarousel/owl.carousel.min.js',
+	'./src/libs/jQuery/*.js',
+	'./src/libs/owlcarousel/*.js',
 	// './src/libs/slick/*.js',
 	// './src/libs/pageToScroll/*.js',
 	// './src/libs/lazyLoad/*js',
 	// './src/libs/magneficPopap/*.js',
-	'./src/js/scriptJquery/main.js'
+	'./src/js/scriptJquery/*.js'
 ];
 
 let varScripts = [
@@ -58,7 +60,8 @@ let varScripts = [
 let varDel = [
 	'build/css/*',
 	'build/js/*',
-	'build/img/*'
+	'build/img/*',
+	'build/*.html',
 ];
 
 let settings = {
@@ -108,6 +111,17 @@ let settings = {
 
 
 
+//Таск обработки разметки
+gulp.task('html', () => {
+	return gulp.src('./src/*.html')
+	.pipe(fileinclude({
+		prefix: '@',
+		basepath: '@file'
+	  }))
+	.pipe(gulp.dest('./build'))
+	.pipe(browserSync.stream());
+})
+
 //Таск для обработки стилей
 gulp.task('styles', () => {
 	return gulp.src(varStyles)
@@ -117,7 +131,7 @@ gulp.task('styles', () => {
 		.pipe(gcmq())
 		.pipe(autoprefixer({
 			grid: true,
-			overrideBrowserslist: ['last 10 versions'],
+			overrideBrowserslist: ['last 3 versions'],
 			cascade: false
 		}))
 		.pipe(cleanCSS({
@@ -205,13 +219,13 @@ gulp.task('img-compress', gulp.parallel('img-compress1', 'img-compress2'));
 
 
 gulp.task('webp1', () => {
-	return gulp.src('./src/img/images/**/*.{jpg,png}')
+	return gulp.src('./src/img/images/**/[^bg-]*.{jpg,png}')
 		.pipe(webp())
 		.pipe(gulp.dest('./build/img/images'))
 });
 
 gulp.task('webp2', () => {
-	return gulp.src('./src/img/images/**/*.{jpg,png}')
+	return gulp.src('./src/img/images/**/[^bg-]*.{jpg,png}')
 	.pipe(imageResize({ percentage: 200 }))
 		.pipe(webp())
 		.pipe(rename(function (path) { path.basename += "-2x" }))
@@ -275,17 +289,12 @@ gulp.task('watch', () => {
 	gulp.watch('./src/js/**/*.js', gulp.series('scripts', gulp.parallel('scriptsCustom')))
 	// gulp.watch('./src/js/script/*.js', gulp.series('scriptsCustom', ))
 	//При изменении HTML запустить синхронизацию
-	gulp.watch("./build/*.html").on('change', browserSync.reload);
+	gulp.watch('./src/**/*.html', gulp.series('html'));
 });
 
 
 
 //Таск по умолчанию. Запускает сборку
-gulp.task('default', gulp.series('del', gulp.parallel('styles', 'scripts', 'scriptsCustom', 'img-compress', 'webp', 'svg'), 'watch'));
-
-
-
-
-
+gulp.task('default', gulp.series('del', 'html', gulp.parallel('styles', 'scripts', 'scriptsCustom', 'img-compress', 'webp', 'svg'), 'watch'));
 
 
