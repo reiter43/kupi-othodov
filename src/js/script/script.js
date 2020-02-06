@@ -31,24 +31,27 @@
 
 
 // Аякс-запрос формы обратной связи
-let form = document.querySelector('#form');
+if (window.location.pathname == "/othodov/" || window.location.pathname == "/othodov/index.html" || window.location.pathname == "/") {
+	let form = document.querySelector('#form');
 
-form.onsubmit = function (event) { 
-    event.preventDefault();
+	form.onsubmit = function (event) {
+		event.preventDefault();
 
-    let formData = new FormData(form);    
+		let formData = new FormData(form);
 
-    let xhttp = new XMLHttpRequest(); 
-    xhttp.open('POST', 'mail.php'); 
-    xhttp.send(formData); 
+		let xhttp = new XMLHttpRequest();
+		xhttp.open('POST', 'mail.php');
+		xhttp.send(formData);
 
-    xhttp.onreadystatechange = function () { 
-        if (this.readyState == 4 && this.status == 200) {
-            form.reset();             
-            alert('Спасибо за обращение! <br> В ближайшее время мы с вами свяжемся');
-        }
-    }    
+		xhttp.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200) {
+				form.reset();
+				alert('Спасибо за обращение! <br> В ближайшее время мы с вами свяжемся');
+			}
+		}
+	}
 }
+
 
 //Скрипт для маски ввода телефона
 window.addEventListener("DOMContentLoaded", function () {

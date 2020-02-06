@@ -14,17 +14,19 @@ if (document.documentElement.clientWidth <= 700) {
 
 // Показ/скрытие субменю при наведении мыши
 
-btnCatalog.addEventListener("mouseenter", showSub, false);
-btnCatalog.addEventListener("mouseleave", hideSub, false);
+if (window.location.pathname != "/catalog.html" || (window.location.pathname == "/catalog.html" && document.documentElement.clientWidth <= 890) ) {
+    btnCatalog.addEventListener("mouseenter", showSub, false);
+    btnCatalog.addEventListener("mouseleave", hideSub, false);
 
-function showSub(e) {
-    if (document.documentElement.clientWidth > 700) {
-        submenu.classList.remove('nav__submenu--visial');
+    function showSub(e) {
+        if (document.documentElement.clientWidth > 700) {
+            submenu.classList.remove('visual');
+        }
     }
-}
-function hideSub(e) {
-    if (document.documentElement.clientWidth > 700) {
-        submenu.classList.add('nav__submenu--visial');
+    function hideSub(e) {
+        if (document.documentElement.clientWidth > 700) {
+            submenu.classList.add('visual');
+        }
     }
 }
 
@@ -101,7 +103,7 @@ btnCatLink.addEventListener('click', event => {
         btnCatLink.setAttribute("aria-expanded", "false")
     }
 
-    submenu.classList.toggle('nav__submenu--visial');
+    submenu.classList.toggle('visual');
     document.querySelector('.svg__drop').classList.toggle('active');
 
     let sublinks = document.querySelectorAll('.nav__sublink');
@@ -136,18 +138,57 @@ btnCatLink.addEventListener('click', event => {
 })
 
 
-// Показ субменю при получении фокуса табированием
+// // Показ субменю при получении фокуса табированием
 
-if (document.documentElement.clientWidth > 700) {
+// if (document.documentElement.clientWidth > 700) {
 
-    // document.querySelector('.nav__link--drop').addEventListener('focus', event => {
-    //     document.querySelector('.nav__submenu').classList.remove('nav__submenu--visial');
-    // });
-    // document.querySelector('.nav__link--drop').addEventListener('click', event => {
-    //     document.querySelector('.nav__submenu').classList.remove('nav__submenu--visial');
-    // });
-    // document.querySelector('.nav__link--drop').addEventListener('blur', event => {
-    //     document.querySelector('.nav__submenu').classList.add('nav__submenu--visial');
-    // });
-}
+//     // document.querySelector('.nav__link--drop').addEventListener('focus', event => {
+//     //     document.querySelector('.nav__submenu').classList.remove('visual');
+//     // });
+//     // document.querySelector('.nav__link--drop').addEventListener('click', event => {
+//     //     document.querySelector('.nav__submenu').classList.remove('visual');
+//     // });
+//     // document.querySelector('.nav__link--drop').addEventListener('blur', event => {
+//     //     document.querySelector('.nav__submenu').classList.add('visual');
+//     // });
+// }
+
+// Страница каталог
+// Показ/скрытие субменю при наведении мыши
+
+document.querySelectorAll('.nav-catalog__item-content>button').forEach(elem => {
+    elem.addEventListener('click', event => {
+        event.preventDefault();
+
+        let submenuCat = elem.parentElement.parentElement.querySelector('.nav-catalog__submenu')
+        
+        if (submenuCat) {
+            submenuCat.classList.toggle('visual');
+            if (elem.getAttribute("aria-expanded") == "false") {
+                elem.setAttribute("aria-expanded", "true");
+            } else {
+                elem.setAttribute("aria-expanded", "false")
+            }
+            if (submenuCat.classList.contains('visual')) {
+                submenuCat.querySelectorAll('.nav-catalog__sublink ').forEach(link => {
+                    link.setAttribute("tabindex", "-1");
+                })
+            }
+            else {
+                submenuCat.querySelectorAll('.nav-catalog__sublink ').forEach(link => {
+                    link.setAttribute("tabindex", "0");
+                })
+            }
+        }
+    })
+})
+
+
+
+
+
+
+
+
+
 

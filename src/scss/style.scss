@@ -53,7 +53,7 @@ address {
 }
 
 
-/* Заголовки 
+/*Заголовки 
 ---------------------------------------------*/
 
 .title-section {
@@ -94,15 +94,27 @@ address {
     &--dipploms {
         color: $c-base;
     }
+
+    &--h3 {
+        margin: 0;
+        text-align: left;
+        font-family: $ff-base;
+        font-size: 32px;
+        line-height: 38px;
+
+        @include xs-block {
+            font-size: 28px;
+            line-height: 33px;
+        }
+    }
 }
 
 /*--------------------------------------------*/
 
 
-/* Кнопки
+/*Кнопки
 ---------------------------------------------*/
 .btn-base {
-
     border: none;
     background: $c-normal;
     font-family: $ff-base;
@@ -200,6 +212,30 @@ address {
             padding: 12px 20% 10px 15%;
         }
     }
+
+    &--shipments {
+        display: inline-block;
+        padding: 17px 20px 20px 29px;
+        border: 2px solid $c-normal;
+        border-radius: 10px;
+        background: $c-base;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 20px;
+        line-height: 23px;
+        font-weight: 400;
+        color: $c-accent;
+
+        &:hover {
+            color: $c-base;
+        }
+
+        svg {
+            margin-left: 12px;
+            stroke: $c-normal;
+            stroke-width: 2px;
+            @include svg(20px, 20px, $c-base);
+        }
+    }
 }
 
 .btn-control {
@@ -225,7 +261,8 @@ address {
 
 /*--------------------------------------------*/
 
-/* Хлебные крошки 
+
+/*Хлебные крошки 
 ---------------------------------------------*/
 .breadcrumbs {
     margin: 0 auto;
@@ -238,7 +275,7 @@ address {
         list-style-type: none;
     }
 
-    &__item {        
+    &__item {
         font-size: 15px;
         line-height: 18px;
     }
@@ -246,6 +283,10 @@ address {
     &__item+&__item {
         position: relative;
         margin-left: 60px;
+
+        @media screen and (max-width: 440px) {
+            margin-left: 40px;
+        }
 
         &::before {
             content: '';
@@ -256,26 +297,27 @@ address {
             height: 100%;
             background-color: lighten($c-accent, 60%);
             transform: rotate(20deg);
+
+            @media screen and (max-width: 440px) {
+                left: -20px;
+            }
         }
     }
 
     &__link {
         display: inline-block;
         color: $c-accent;
+    }
 
-        &--disabled {
-            @include disa;
-            color: $c-accent;
-        }
+    &__link.disabled {
+        @include disa;
+        color: $c-accent;
     }
 
     &__link.active {
         color: $c-normal;
     }
 }
-
-
-
 
 /*--------------------------------------------*/
 
@@ -290,6 +332,13 @@ address {
     margin: -1px;
     overflow: hidden;
     clip: rect(0 0 0 0);
+}
+
+.visual {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.1s ease-in;
 }
 
 /*=============================================*/
@@ -523,19 +572,19 @@ address {
 
     &__submenu {
         position: absolute;
+        z-index: 10;
         top: 100%;
         left: -0.5*$gat;
-        z-index: 10;
         width: 265%;
         padding: $gat 0.5*$gat $gat;
         background: $c-accent;
         list-style: none;
         transition: opacity 0.5s ease-in;
         @include invisual;
+    }
 
-        &--visial {
-            @include visual;
-        }
+    &__submenu.visual {
+        @include visual;
     }
 
     &__subitem {
@@ -554,10 +603,6 @@ address {
             color: lighten($c-normal, 10%);
         }
 
-        &--disabled {
-            @include disa;
-        }
-
         @include md-block {
             font-size: 1.5vw;
             line-height: 22px;
@@ -572,6 +617,10 @@ address {
                 cursor: pointer;
             }
         }
+    }
+
+    &__sublink.disabled {
+        @include disa;
     }
 
     &__btn--submenu {
@@ -1221,8 +1270,8 @@ h1 {
 
     &__img {
         @include img;
-        background-color: #eee;
         border-radius: 10px;
+        background-color: #eee;
         box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
 
         @include xs-block {
@@ -1679,8 +1728,8 @@ h1 {
             }
 
             p {
-                margin-left: 1.25*$gat;
                 margin-bottom: 0;
+                margin-left: 1.25*$gat;
 
                 @media screen and (max-width: 440px) {
                     margin-left: 0;
@@ -2013,10 +2062,6 @@ h1 {
         &:focus {
             color: $c-base;
         }
-
-        &--disabled {
-            @include disa;
-        }
     }
 
     .nav__btn--submenu {
@@ -2040,10 +2085,10 @@ h1 {
         &:focus {
             color: $c-normal;
         }
+    }
 
-        &--disabled {
-            @include disa;
-        }
+    .nav__link2.disabled {
+        @include disa;
     }
 
     .card {

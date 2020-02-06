@@ -27,7 +27,7 @@
     <header class="header">
         <div class="wrapper">
             <address class="top-line">
-                <a href="#" class="logo">
+                <a href="/" class="logo">
                     <picture>
                         <source media="(max-width: 440px)" srcset="img/images/logo-320.webp 1x, img/images/logo-320-2x.webp 2x" type="image/webp">
                         <source media="(max-width: 1000px)" srcset="img/images/logo-1000.webp 1x, img/images/logo-1000-2x.webp 2x" type="image/webp">
@@ -93,7 +93,7 @@
                             <p id="burger-title">Меню</p>
                         </div>
                         <ul id="menu-base" class="nav__list nav__list--visial" role="menubar" aria-label="Основное меню сайта">
-                            <li class="nav__item nav__item--drop" role="none">
+                            <li class="nav__item nav__item--drop" role="none presentation">
                                 <button class="nav__link nav__link--drop" aria-label="Вкладка каталог" aria-expanded="false" aria-haspopup="true">
                                     <span class="nav__link--btn">
                                         Каталог
@@ -102,10 +102,11 @@
                                         </svg>
                                     </span>
                                 </button>
-                                <ul class="nav__submenu nav__submenu--visial" role="menu" aria-label="Каталог">
-                                    <li class="nav__subitem" role="none">
+                                <ul class="nav__submenu visual" role="menu" aria-label="Каталог">
+                                    <li class="nav__subitem" role="none presentation">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы ПВХ</span></a>
+                                            <a href="#" class="nav__sublink disabled" tabindex="-1" role="menuitem"><span>Отходы ПВХ</span>
+                                            </a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -113,7 +114,7 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem" role="none">
+                                    <li class="nav__subitem" role="none presentation">
                                         <div>
                                             <a href="#" class="nav__sublink" tabindex="-1"><span>Отходы АБС</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
@@ -123,9 +124,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem" role="none">
+                                    <li class="nav__subitem" role="none presentation">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы ПС</span></a>
+                                            <a href="#" class="nav__sublink disabled" tabindex="-1" role="menuitem"><span>Отходы ПС</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -133,9 +134,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem" role="none">
+                                    <li class="nav__subitem" role="none presentation">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы ПК</span></a>
+                                            <a href="#" class="nav__sublink disabled" tabindex="-1" role="menuitem"><span>Отходы ПК</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -143,9 +144,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem" role="none">
+                                    <li class="nav__subitem" role="none presentation">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Стрэйч пленка</span></a>
+                                            <a href="#" class="nav__sublink disabled" tabindex="-1" role="menuitem"><span>Стрэйч пленка</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -153,9 +154,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem" role="none">
+                                    <li class="nav__subitem" role="none presentation">
                                         <div>
-                                            <a href="./catalog.html" class="nav__sublink" target="blanck" tabindex="-1"><span>Отходы ПНД</span></a>
+                                            <a href="./catalog.html" class="nav__sublink" tabindex="-1"><span>Отходы ПНД</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список Отходы ПНД" aria-expanded="false" aria-haspopup="true">
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -163,29 +164,29 @@
                                             </button>
                                         </div>
                                         <ul class="nav__submenu2 nav__submenu2--visial" role="menu" aria-label="Отходы ПНД">
-                                            <li class=" nav__subitem2" role="none">
-                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Отходы ПНД</a>
+                                            <li class=" nav__subitem2" role="none presentation">
+                                                <a href="#" class="nav__link2 disabled" tabindex="-1" role="menuitem">Отходы ПНД</a>
                                             </li>
-                                            <li class="nav__subitem2" role="none">
-                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Отходы ПНД вкладыша</a>
+                                            <li class="nav__subitem2" role="none presentation">
+                                                <a href="#" class="nav__link2 disabled" tabindex="-1" role="menuitem">Отходы ПНД вкладыша</a>
                                             </li>
-                                            <li class="nav__subitem2" role="none">
-                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Вырубка ПНД</a>
+                                            <li class="nav__subitem2" role="none presentation">
+                                                <a href="#" class="nav__link2 disabled" tabindex="-1" role="menuitem">Вырубка ПНД</a>
                                             </li>
-                                            <li class="nav__subitem2" role="none">
-                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Отходы ПНД ящиков</a>
+                                            <li class="nav__subitem2" role="none presentation">
+                                                <a href="#" class="nav__link2 disabled" tabindex="-1" role="menuitem">Отходы ПНД ящиков</a>
                                             </li>
-                                            <li class="nav__subitem2" role="none">
-                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Б/у ПНД трубы</a>
+                                            <li class="nav__subitem2" role="none presentation">
+                                                <a href="#" class="nav__link2 disabled" tabindex="-1" role="menuitem">Б/у ПНД трубы</a>
                                             </li>
-                                            <li class="nav__subitem2" role="none">
-                                                <a href="#" class="nav__link2 nav__link2--disabled" tabindex="-1" role="menuitem">Отходы ПНД тары</a>
+                                            <li class="nav__subitem2" role="none presentation">
+                                                <a href="#" class="nav__link2 disabled" tabindex="-1" role="menuitem">Отходы ПНД тары</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="nav__subitem" role="none">
+                                    <li class="nav__subitem" role="none presentation">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы полиофелина</span></a>
+                                            <a href="#" class="nav__sublink disabled" tabindex="-1" role="menuitem"><span>Отходы полиофелина</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -193,9 +194,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem" role="none">
+                                    <li class="nav__subitem" role="none presentation">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Полиэфелиновая пленка</span></a>
+                                            <a href="#" class="nav__sublink disabled" tabindex="-1" role="menuitem"><span>Полиэфелиновая пленка</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -203,9 +204,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem" role="none">
+                                    <li class="nav__subitem" role="none presentation">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы ПП</span></a>
+                                            <a href="#" class="nav__sublink disabled" tabindex="-1" role="menuitem"><span>Отходы ПП</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -213,9 +214,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem" role="none">
+                                    <li class="nav__subitem" role="none presentation">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы ПЭТ</span></a>
+                                            <a href="#" class="nav__sublink disabled" tabindex="-1" role="menuitem"><span>Отходы ПЭТ</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -223,9 +224,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem" role="none">
+                                    <li class="nav__subitem" role="none presentation">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы пленки</span></a>
+                                            <a href="#" class="nav__sublink disabled" tabindex="-1" role="menuitem"><span>Отходы пленки</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -233,9 +234,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem" role="none">
+                                    <li class="nav__subitem" role="none presentation">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы пластика</span></a>
+                                            <a href="#" class="nav__sublink disabled" tabindex="-1" role="menuitem"><span>Отходы пластика</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -243,9 +244,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem" role="none">
+                                    <li class="nav__subitem" role="none presentation">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы микс</span></a>
+                                            <a href="#" class="nav__sublink disabled" tabindex="-1" role="menuitem"><span>Отходы микс</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -253,9 +254,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem" role="none">
+                                    <li class="nav__subitem" role="none presentation">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы полиамида</span></a>
+                                            <a href="#" class="nav__sublink disabled" tabindex="-1" role="menuitem"><span>Отходы полиамида</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -263,9 +264,9 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="nav__subitem" role="none">
+                                    <li class="nav__subitem" role="none presentation">
                                         <div>
-                                            <a href="#" class="nav__sublink nav__sublink--disabled" tabindex="-1" role="menuitem"><span>Отходы Эва (Сэвилен)</span></a>
+                                            <a href="#" class="nav__sublink disabled" tabindex="-1" role="menuitem"><span>Отходы Эва (Сэвилен)</span></a>
                                             <button class="nav__btn--submenu" tabindex="-1" aria-label="Раскрывающийся список" aria-expanded="false" aria-haspopup="true" disabled>
                                                 <svg class="svg__drop2">
                                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
@@ -275,11 +276,11 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav__item" role="none"><a href="#" class="nav__link" role="menuitem">О компании</a></li>
-                            <li class="nav__item" role="none"><a href="#" class="nav__link" role="menuitem">Новости</a></li>
-                            <li class="nav__item" role="none"><a href="#" class="nav__link" role="menuitem">Акции</a></li>
-                            <li class="nav__item" role="none"><a href="#" class="nav__link" role="menuitem">Доставка</a></li>
-                            <li class="nav__item" role="none"><a href="#" class="nav__link" role="menuitem">Контакты</a></li>
+                            <li class="nav__item" role="none presentation"><a href="#" class="nav__link" role="menuitem">О компании</a></li>
+                            <li class="nav__item" role="none presentation"><a href="#" class="nav__link" role="menuitem">Новости</a></li>
+                            <li class="nav__item" role="none presentation"><a href="#" class="nav__link" role="menuitem">Акции</a></li>
+                            <li class="nav__item" role="none presentation"><a href="#" class="nav__link" role="menuitem">Доставка</a></li>
+                            <li class="nav__item" role="none presentation"><a href="#" class="nav__link" role="menuitem">Контакты</a></li>
                         </ul>
                     </nav>
                     <button class="btn-base btn-base--call">
@@ -293,467 +294,469 @@
         </div>
     </header>
 
-    <main>
-        <section class="head">
-            <div class="head__wrap">
-                <div class="head__content">
-                    <h1>Главный поставщик полимерных отходов</h1>
-                    <button class="btn-base btn-base--cat">
+<main>
+    <section class="head">
+        <div class="head__wrap">
+            <div class="head__content">
+                <h1>Главный поставщик полимерных отходов</h1>
+                <button class="btn-base btn-base--cat">
+                    <span class="btn-base__content">
+                        <img src="img/images/arrow-right.png" alt="" aria-hidden="true">
+                        Перейти в каталог
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="slider">
+        <div class="container-controls  slider__container-controls">
+    <button id="slider__arrow-left" class="btn-control" aria-label="Стрелка перелистывания слайдера назад" aria-controls="slider">
+        <svg>
+            <use xlink:href="img/svg/sprite.svg#left"></use>
+        </svg>
+    </button>
+    <button id="slider__arrow-rigth" class="btn-control" aria-label="Стрелка перелистывания слайдера вперед" aria-controls="slider">
+        <svg>
+            <use xlink:href="img/svg/sprite.svg#next"></use>
+        </svg>
+    </button>
+</div>
+<div class="wrapper">
+    <div id="slider" class="slider__container owl-carousel">
+        <figure class="slider__item">
+            <div>
+                <picture>
+                    <source data-srcset="img/images/slide-1.webp 1x, img/images/slide-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhEwALAIAAAP///wAAACH5BAEAAAEALAAAAAATAAsAAAIMjI+py+0Po5y02nsLADs=" type="image/webp">
+                    <img data-src="img/images/slide-1.png" data-srcset="img/images/slide-1-2x.png 2x" src="data:image/gif;base64,R0lGODlhEwALAIAAAP///wAAACH5BAEAAAEALAAAAAATAAsAAAIMjI+py+0Po5y02nsLADs=" alt="Груда ПНД тары (канистры, бутылки и др.)" class="slider__img lazyload">
+                </picture>
+                <a href="#" class="slider__accia">Акция</a>
+            </div>
+            <figcaption class="slider__desc">
+                <a href="#">
+                    <h4 class="slider__title">В продажу поступила ПНД тара </h4>
+                </a>
+                <small class="slider__subtitle">ПНД канистры различных цветов будут отсортированы и спресованы... </small>
+            </figcaption>
+        </figure>
+        <figure class="slider__item">
+            <div>
+                <picture>
+                    <source data-srcset="img/images/slide-2.webp 1x, img/images/slide-2-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhEwALAIAAAP///wAAACH5BAEAAAEALAAAAAATAAsAAAIMjI+py+0Po5y02nsLADs=" type="image/webp">
+                    <img data-src="img/images/slide-2.png" data-rcset="img/images/slide-2-2x.png 2x" src="data:image/gif;base64,R0lGODlhEwALAIAAAP///wAAACH5BAEAAAEALAAAAAATAAsAAAIMjI+py+0Po5y02nsLADs=" alt="Различные литники из ПВХ" class="slider__img lazyload">
+                </picture>
+                <a href="#" class="slider__accia">Акция</a>
+            </div>
+            <figcaption class="slider__desc">
+                <a href="#">
+                    <h4 class="slider__title">Акция на литники ПВХ</h4>
+                </a>
+                <small class="slider__subtitle">На этот товар действует скидка 10% при покупке...</small>
+            </figcaption>
+        </figure>
+        <figure class="slider__item">
+            <div>
+                <picture>
+                    <source data-srcset="img/images/slide-3.webp 1x, img/images/slide-3-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhEwALAIAAAP///wAAACH5BAEAAAEALAAAAAATAAsAAAIMjI+py+0Po5y02nsLADs=" type="image/webp">
+                    <img data-src="img/images/slide-3.png" data-srcset="img/images/slide-3-2x.png 2x" src="data:image/gif;base64,R0lGODlhEwALAIAAAP///wAAACH5BAEAAAEALAAAAAATAAsAAAIMjI+py+0Po5y02nsLADs=" alt="Отходы ПНД (отходы упаковки, пакеты)" class="slider__img lazyload">
+                </picture>
+                <a href="#" class="slider__accia">Акция</a>
+            </div>
+            <figcaption class="slider__desc">
+                <a href="#">
+                    <h4 class="slider__title">На вторсырье ПНД снижена цена</h4>
+                </a>
+                <small class="slider__subtitle">На отходы ПНД снижена цена на 2% при покупке...</small>
+            </figcaption>
+        </figure>
+        <figure class="slider__item">
+            <div>
+                <picture>
+                    <source data-srcset="img/images/slide-1.webp 1x, img/images/slide-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhEwALAIAAAP///wAAACH5BAEAAAEALAAAAAATAAsAAAIMjI+py+0Po5y02nsLADs=" type="image/webp">
+                    <img data-src="img/images/slide-1.png" data-srcset="img/images/slide-1-2x.png 2x" src="data:image/gif;base64,R0lGODlhEwALAIAAAP///wAAACH5BAEAAAEALAAAAAATAAsAAAIMjI+py+0Po5y02nsLADs=" alt="Груда ПНД тары (канистры, бутылки и др.)" class="slider__img lazyload">
+                </picture>
+                <a href="#" class="slider__accia">Акция</a>
+            </div>
+            <figcaption class="slider__desc">
+                <a href="#">
+                    <h4 class="slider__title">В продажу поступила ПНД тара </h4>
+                </a>
+                <small class="slider__subtitle">ПНД канистры различных цветов будут отсортированы и спресованы... </small>
+            </figcaption>
+        </figure>
+    </div>
+</div>
+    </section>
+
+    <section class="catalog">
+        <div class="wrapper">
+            <h2 class="title-section">
+                Отходы в наличии
+            </h2>
+            <div class="catalog__content">
+                <figure class="card">
+                    <picture>
+                        <source data-srcset="img/images/card-1.webp 1x, img/images/card-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" type="image/webp">
+                        <img data-src="img/images/card-1.png" data-srcset="img/images/card-1-2x.png 2x" src="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" alt="Отходы ПВХ" class="card__img lazyload">
+                    </picture>
+                    <figcaption class="card__desc">
+                        <a href="#">
+                            <h4 class="card__title">Отходы ПВХ<span>PET 01</span></h4>
+                        </a>
+                        <p class="card__price">от 11 ₽/кг</p>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <picture>
+                        <source data-srcset="img/images/card-2.webp 1x, img/images/card-2-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" type="image/webp">
+                        <img data-src="img/images/card-2.png" data-srcset="img/images/card-2-2x.png 2x" src="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" alt="Отходы АБС" class="card__img lazyload">
+                    </picture>
+                    <figcaption class="card__desc">
+                        <a href="#">
+                            <h4 class="card__title">Отходы АБС и аналоги<span>PP 5</span></h4>
+                        </a>
+                        <p class="card__price">от 15 ₽/кг</p>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <picture>
+                        <source data-srcset="img/images/card-3.webp 1x, img/images/card-3-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" type="image/webp">
+                        <img data-src="img/images/card-3.png" data-srcset="img/images/card-3-2x.png 2x" src="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" alt="Отходы ПС" class="card__img lazyload">
+                    </picture>
+                    <figcaption class="card__desc">
+                        <a href="#">
+                            <h4 class="card__title">Отходы ПС<span>PP 5</span></h4>
+                        </a>
+                        <p class="card__price">от 15 ₽/кг</p>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <picture>
+                        <source data-srcset="img/images/card-4.webp 1x, img/images/card-4-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" type="image/webp">
+                        <img data-src="img/images/card-4.png" data-srcset="img/images/card-4-2x.png 2x" src="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" alt="Отходы ПК" class="card__img lazyload">
+                    </picture>
+                    <figcaption class="card__desc">
+                        <a href="#">
+                            <h4 class="card__title">Отходы ПК<span>PET 01</span></h4>
+                        </a>
+                        <p class="card__price">от 20 ₽/кг</p>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <picture>
+                        <source data-srcset="img/images/card-5.webp 1x, img/images/card-5-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" type="image/webp">
+                        <img data-src="img/images/card-5.png" data-srcset="img/images/card-5-2x.png 2x" src="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" alt="Стрейч пленка" class="card__img lazyload">
+                    </picture>
+                    <figcaption class="card__desc">
+                        <a href="#">
+                            <h4 class="card__title">Стрейч пленка<span>PET 01</span></h4>
+                        </a>
+                        <p class="card__price">от 17 ₽/кг</p>
+                    </figcaption>
+                </figure>
+                <figure class="card card--none-xxs">
+                    <picture>
+                        <source data-srcset="img/images/card-6.webp 1x, img/images/card-6-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" type="image/webp">
+                        <img data-src="img/images/card-6.png" data-srcset="img/images/card-6-2x.png 2x" src="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" alt="Отходы ПНД" class="card__img lazyload">
+                    </picture>
+                    <figcaption class="card__desc">
+                        <a href="#">
+                            <h4 class="card__title">Отходы ПНД<span>PET 01</span></h4>
+                        </a>
+                        <p class="card__price">от 19 ₽/кг</p>
+                    </figcaption>
+                </figure>
+                <figure class="card card--none">
+                    <picture>
+                        <source data-srcset="img/images/card-7.webp 1x, img/images/card-7-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" type="image/webp">
+                        <img data-src="img/images/card-7.png" data-srcset="img/images/card-7-2x.png 2x" src="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" alt="Отходы полиолефина" class="card__img lazyload">
+                    </picture>
+                    <figcaption class="card__desc">
+                        <a href="#">
+                            <h4 class="card__title">Отходы полиолефина<span>PP 5</span></h4>
+                        </a>
+                        <p class="card__price">от 22 ₽/кг</p>
+                    </figcaption>
+                </figure>
+                <figure class="card card--none">
+                    <picture>
+                        <source data-srcset="img/images/card-8.webp 1x, img/images/card-8-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" type="image/webp">
+                        <img data-src="img/images/card-8.png" data-srcset="img/images/card-8-2x.png 2x" src="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" alt="Отходы ПВД" class="card__img lazyload">
+                    </picture>
+                    <figcaption class="card__desc">
+                        <a href="#">
+                            <h4 class="card__title">Отходы ПВД<span>PET 01</span></h4>
+                        </a>
+                        <p class="card__price">от 11 ₽/кг</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="order">
+        <div class="wrapper">
+            <form id="form" class="form">
+                <h3 class="form__title form__title--call">Заказать обратный звонок</h3>
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="http://f0315577.xsph.ru/othodov">
+                <input type="hidden" name="admin_email" value="43reiter@gmail.com">
+                <!-- <input type="hidden" name="email_from" value="info@f0315577.xsph.ru"> -->
+                <input type="hidden" name="form_subject" value="Сайт Полимерные отходы. Заказ обратного звонка с формы на главной">
+                <!-- END Hidden Required Fields -->
+                <div>
+                    <label for="form__tel--call" class="visually-hidden">Телефон(обязательное поле)</label>
+                    <input id="form__tel--call" type="tel" class="form__elem form__elem-tel" name="Телефон" placeholder="Телефон" required>
+                    <label for="form__email--cal" class="visually-hidden">Электронная почта(обязательное поле)</label>
+                    <input id="form__email--cal" type="email" class="form__elem" name="Электронная почта" placeholder="Электронная почта" required>
+                    <button class="btn-base btn-base--form">
                         <span class="btn-base__content">
-                            <img src="img/images/arrow-right.png" alt="" aria-hidden="true">
-                            Перейти в каталог
+                            <img src="img/images/smartphone.png" alt="" aria-hidden="true">
+                            <span>Отправить заявку</span>
+                        </span>
+
+                    </button>
+                </div>
+                <input id="form__sub" type="checkbox" class="form__sub" name="Рассылка">
+                <label for="form__sub" class="form__sub-label">Подписаться на рассылку и узнать 12 способов экономии своих средств и получить наш фирменный календарь</label>
+            </form>
+        </div>
+    </section>
+
+    <section class="menegers">
+        <div class="wrapper">
+            <h2 class="title-section title-section--menegers">С вами свяжутся наши менеджеры</h2>
+            <div class="menegers__content">
+                <figure class="menegers__item">
+                    <picture>
+                        <source data-srcset="img/images/meneger-1.webp 1x, img/images/meneger-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" type="image/webp">
+                        <img data-src="img/images/meneger-1.jpg" data-srcset="img/images/meneger-1-2x.jpg 2x" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="Фото менеджера Швакина Виктора" class="menegers__img lazyload">
+                    </picture>
+                    <figcaption class="menegers__desc">
+                        <h4 class="menegers__name">Швакин Виктор
+                            <span class="menegers__profession">Менеджер <br> по продажам</span>
+                        </h4>
+                    </figcaption>
+                </figure>
+                <figure class="menegers__item">
+                    <picture>
+                        <source data-srcset="img/images/meneger-2.webp 1x, img/images/meneger-2-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" type="image/webp">
+                        <img data-src="img/images/meneger-2.jpg" data-srcset="img/images/meneger-2-2x.jpg 2x" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="Фото менеджера Иванова Алексея" class="menegers__img lazyload">
+                    </picture>
+                    <figcaption class="menegers__desc">
+                        <h4 class="menegers__name">Иванов Алексей<span class="menegers__profession">Менеджер <br> по продажам</span></h4>
+                    </figcaption>
+                </figure>
+                <figure class="menegers__item">
+                    <picture>
+                        <source data-srcset="img/images/meneger-3.webp 1x, img/images/meneger-3-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" type="image/webp">
+                        <img data-src="img/images/meneger-3.jpg" data-srcset="img/images/meneger-3-2x.jpg 2x" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="Фото менеджера Горевой Кристины" class="menegers__img lazyload">
+                    </picture>
+                    <figcaption class="menegers__desc">
+                        <h4 class="menegers__name">Горева Кристина<span class="menegers__profession">Менеджер <br> по продажам</span></h4>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="pluses">
+        <div class="wrapper">
+            <h2 class="title-section visually-hidden">Преимущества</h2>
+            <div class="pluses__content">
+                <figure class="pluses__item">
+                    <div>
+                        <img src="img/images/pluses-icon-1.png" alt="" class="pluses__img">
+                    </div>
+                    <figcaption class="pluses__desc">Цены ниже, <br> чем у конкурентов</figcaption>
+                </figure>
+                <figure class="pluses__item pluses__item--btn">
+                    <div>
+                        <img src="img/images/pluses-icon-2.png" alt="" class="pluses__img">
+                    </div>
+                    <figcaption>
+                        <div class="pluses__desc">Большой выбор сырья</div>
+                        <button class="btn-base btn-base--cat pluses__btn">
+                            <span class="btn-base__content">
+                                <img src="img/images/arrow-right.png" alt="" aria-hidden="true">
+                                Перейти в каталог
+                            </span>
+                        </button>
+                    </figcaption>
+                </figure>
+                <figure class="pluses__item">
+                    <div>
+                        <img src="img/images/pluses-icon-3.png" alt="" class="pluses__img">
+                    </div>
+                    <figcaption class="pluses__desc">Доставляем <br> до клиента</figcaption>
+                </figure>
+                <figure class="pluses__item">
+                    <div>
+                        <img src="img/images/pluses-icon-4.png" alt="" class="pluses__img">
+                    </div>
+                    <figcaption class="pluses__desc">Удобное расположение склада для самовывоза <span>Недалеко от магистрали М2</span> </figcaption>
+                </figure>
+                <figure class="pluses__item">
+                    <div>
+                        <img src="img/images/pluses-icon-5.png" alt="" class="pluses__img">
+                    </div>
+                    <figcaption class="pluses__desc">Однородность состава <br> и постоянство качества</figcaption>
+                </figure>
+                <figure class="pluses__item">
+                    <div>
+                        <img src="img/images/pluses-icon-6.png" alt="" class="pluses__img">
+                    </div>
+                    <figcaption class="pluses__desc">Сезонные акции и скидки постоянным клиентам</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="dipploms">
+        <div class="container-controls dipploms__container-controls">
+            <button id="dipploms__arrow-left" class="btn-control btn-control--white" aria-label="Стрелка перелистывания слайдера назад" aria-controls="slider--dipploms">
+                <svg>
+                    <use xlink:href="img/svg/sprite.svg#left"></use>
+                </svg>
+            </button>
+            <button id="dipploms__arrow-rigth" class="btn-control btn-control--white" aria-label="Стрелка перелистывания слайдера вперед" aria-controls="slider--dipploms">
+                <svg>
+                    <use xlink:href="img/svg/sprite.svg#next"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="wrapper">
+            <h2 class="title-section title-section--dipploms">Нас благодарят</h2>
+            <div id="slider--dipploms" class="dipploms__container owl-carousel">
+                <div class="dipploms__item">
+                    <picture>
+                        <source data-srcset="img/images/dipplom-1.webp 1x, img/images/dipplom-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhMgBFAIAAAP///wAAACH5BAEAAAEALAAAAAAyAEUAAAI+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kp1VgAAOw==" type="image/webp">
+                        <img data-src="img/image/dipplom-1.jpg" data-srcset="img/images/dipplom-1-2x.jpg 2x" src="data:image/gif;base64,R0lGODlhMgBFAIAAAP///wAAACH5BAEAAAEALAAAAAAyAEUAAAI+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kp1VgAAOw==" alt="Благодарность от фирмы" class="dipploms__img lazyload">
+                    </picture>
+                </div>
+                <div class="dipploms__item">
+                    <picture>
+                        <source data-srcset="img/images/dipplom-1.webp 1x, img/images/dipplom-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhMgBFAIAAAP///wAAACH5BAEAAAEALAAAAAAyAEUAAAI+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kp1VgAAOw==" type="image/webp">
+                        <img data-src="img/image/dipplom-1.jpg" data-srcset="img/images/dipplom-1-2x.jpg 2x" src="data:image/gif;base64,R0lGODlhMgBFAIAAAP///wAAACH5BAEAAAEALAAAAAAyAEUAAAI+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kp1VgAAOw==" alt="Благодарность от фирмы" class="dipploms__img lazyload">
+                    </picture>
+                </div>
+                <div class="dipploms__item">
+                    <picture>
+                        <source data-srcset="img/images/dipplom-1.webp 1x, img/images/dipplom-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhMgBFAIAAAP///wAAACH5BAEAAAEALAAAAAAyAEUAAAI+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kp1VgAAOw==" type="image/webp">
+                        <img data-src="img/image/dipplom-1.jpg" data-srcset="img/images/dipplom-1-2x.jpg 2x" src="data:image/gif;base64,R0lGODlhMgBFAIAAAP///wAAACH5BAEAAAEALAAAAAAyAEUAAAI+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kp1VgAAOw==" alt="Благодарность от фирмы" class="dipploms__img lazyload">
+                    </picture>
+                </div>
+                <div class="dipploms__item">
+                    <picture>
+                        <source data-srcset="img/images/dipplom-1.webp 1x, img/images/dipplom-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhMgBFAIAAAP///wAAACH5BAEAAAEALAAAAAAyAEUAAAI+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kp1VgAAOw==" type="image/webp">
+                        <img data-src="img/image/dipplom-1.jpg" data-srcset="img/images/dipplom-1-2x.jpg 2x" src="data:image/gif;base64,R0lGODlhMgBFAIAAAP///wAAACH5BAEAAAEALAAAAAAyAEUAAAI+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kp1VgAAOw==" alt="Благодарность от фирмы" class="dipploms__img lazyload">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+        <h2 class="title-section visually-hidden">Компания на карте</h2>
+        <iframe class="lazyload" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9054.00948636325!2d37.574146170784616!3d55.4364718324463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414aa61c01327cd1%3A0xcd25d009cacb105e!2z0JTQvtC80L7QtNC10LTQvtCy0YHQutC-0LUg0YguLCDQn9C-0LTQvtC70YzRgdC6LCDQnNC-0YHQutC-0LLRgdC60LDRjyDQvtCx0Lsu!5e0!3m2!1sru!2sru!4v1580221418740!5m2!1sru!2sru" src="data:image/gif;base64,R0lGODlhYAAZAIAAAP///wAAACH5BAEAAAEALAAAAABgABkAAAIyjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YjUFQAAOw==" width="800" height="500" title="Адрес компании на карте" allowfullscreen=""></iframe>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrapper">
+        <address class="footer__top-line">
+            <div class="footer__block footer__block1">
+                <a href="#" class="logo">
+                    <picture>
+                        <source media="(max-width: 440px)" srcset="img/images/logo-footer-320.webp 1x, img/images/logo-footer-320-2x.webp 2x" type="image/webp">
+                        <source media="(max-width: 700px)" srcset="img/images/logo-footer-480.webp 1x, img/images/logo-footer-480-2x.webp 2x" type="image/webp">
+                        <source media="(max-width: 1000px)" srcset="img/images/logo-footer-1000.webp 1x, img/images/logo-footer-1000-2x.webp 2x" type="image/webp">
+                        <source media="(max-width: 440px)" srcset="img/images/logo-footer-320.png 1x, img/images/logo-footer-320-2x.png 2x">
+                        <source media="(max-width: 480px)" srcset="img/images/logo-footer-480.png 1x, img/images/logo-footer-480-2x.png 2x">
+                        <source media="(max-width: 1000px)" srcset="img/images/logo-footer-1000.png 1x, img/images/logo-footer-1000-2x.png 2x">
+                        <source srcset="img/images/logo-hd.webp 1x, img/images/logo-hd-2x.webp 2x" type="image/webp">
+                        <img src="img/images/logo-hd.png" srcset="img/images/logo-hd-2x.png 2x" alt="Логотип компании" class="logo__img">
+                    </picture>
+                    <p class="logo__title logo__title--footer">Продажа полимерных отходов</p>
+                </a>
+                <div class="footer__socnetwork-box">
+                    <a href="#" class="footer__socnework-item footer__socnework-item--ok" aria-label="Ссылка на профиль в соцсети Одноклассники">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#ok"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__socnework-item footer__socnework-item--vk" aria-label="Ссылка на профиль в соцсети ВКонтакте">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#vk"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__socnework-item footer__socnework-item--fb" aria-label="Ссылка на профиль в соцсети Фэйсбук">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#fb"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__socnework-item footer__socnework-item--in" aria-label="Ссылка на профиль в соцсети Инстаграм">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#in"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__block footer__block2">
+                <p class="adress footer__adress">МО г.Подольск, Домодедовское шоссе 00</p>
+                <div>
+                    <div>
+                        <a href="mailto:info@kupi-xxxxxxx.ru" class="email footer__email">info@kupi-xxxxxxx.ru</a>
+                        <a href="tel:+7495542XXXX" class="tel footer__tel">+7 495 542-XX-XX</a>
+                    </div>
+                    <button class="btn-base btn-base--call footer__btn-base--call">
+                        <span class="btn-base__content">
+                            <img src="img/images/smartphone.png" alt="" aria-hidden="true">
+                            Обратный звонок
                         </span>
                     </button>
                 </div>
-            </div>
-        </section>
 
-        <section class="slider">
-            <div class="container-controls  slider__container-controls">
-                <button id="slider__arrow-left" class="btn-control" aria-label="Стрелка перелистывания слайдера назад" aria-controls="slider">
-                    <svg>
-                        <use xlink:href="img/svg/sprite.svg#left"></use>
-                    </svg>
-                </button>
-                <button id="slider__arrow-rigth" class="btn-control" aria-label="Стрелка перелистывания слайдера вперед" aria-controls="slider">
-                    <svg>
-                        <use xlink:href="img/svg/sprite.svg#next"></use>
-                    </svg>
-                </button>
             </div>
-            <div class="wrapper">
-                <div id="slider" class="slider__container owl-carousel">
-                    <figure class="slider__item">
-                        <div>
-                            <picture>
-                                <source data-srcset="img/images/slide-1.webp 1x, img/images/slide-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhEwALAIAAAP///wAAACH5BAEAAAEALAAAAAATAAsAAAIMjI+py+0Po5y02nsLADs=" type="image/webp">
-                                <img data-src="img/images/slide-1.png" data-srcset="img/images/slide-1-2x.png 2x" src="data:image/gif;base64,R0lGODlhEwALAIAAAP///wAAACH5BAEAAAEALAAAAAATAAsAAAIMjI+py+0Po5y02nsLADs=" alt="Груда ПНД тары (канистры, бутылки и др.)" class="slider__img lazyload">
-                            </picture>
-                            <a href="#" class="slider__accia">Акция</a>
-                        </div>
-                        <figcaption class="slider__desc">
-                            <a href="#">
-                                <h4 class="slider__title">В продажу поступила ПНД тара </h4>
-                            </a>
-                            <small class="slider__subtitle">ПНД канистры различных цветов будут отсортированы и спресованы... </small>
-                        </figcaption>
-                    </figure>
-                    <figure class="slider__item">
-                        <div>
-                            <picture>
-                                <source data-srcset="img/images/slide-2.webp 1x, img/images/slide-2-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhEwALAIAAAP///wAAACH5BAEAAAEALAAAAAATAAsAAAIMjI+py+0Po5y02nsLADs=" type="image/webp">
-                                <img data-src="img/images/slide-2.png" data-rcset="img/images/slide-2-2x.png 2x" src="data:image/gif;base64,R0lGODlhEwALAIAAAP///wAAACH5BAEAAAEALAAAAAATAAsAAAIMjI+py+0Po5y02nsLADs=" alt="Различные литники из ПВХ" class="slider__img lazyload">
-                            </picture>
-                            <a href="#" class="slider__accia">Акция</a>
-                        </div>
-                        <figcaption class="slider__desc">
-                            <a href="#">
-                                <h4 class="slider__title">Акция на литники ПВХ</h4>
-                            </a>
-                            <small class="slider__subtitle">На этот товар действует скидка 10% при покупке...</small>
-                        </figcaption>
-                    </figure>
-                    <figure class="slider__item">
-                        <div>
-                            <picture>
-                                <source data-srcset="img/images/slide-3.webp 1x, img/images/slide-3-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhEwALAIAAAP///wAAACH5BAEAAAEALAAAAAATAAsAAAIMjI+py+0Po5y02nsLADs=" type="image/webp">
-                                <img data-src="img/images/slide-3.png" data-srcset="img/images/slide-3-2x.png 2x" src="data:image/gif;base64,R0lGODlhEwALAIAAAP///wAAACH5BAEAAAEALAAAAAATAAsAAAIMjI+py+0Po5y02nsLADs=" alt="Отходы ПНД (отходы упаковки, пакеты)" class="slider__img lazyload">
-                            </picture>
-                            <a href="#" class="slider__accia">Акция</a>
-                        </div>
-                        <figcaption class="slider__desc">
-                            <a href="#">
-                                <h4 class="slider__title">На вторсырье ПНД снижена цена</h4>
-                            </a>
-                            <small class="slider__subtitle">На отходы ПНД снижена цена на 2% при покупке...</small>
-                        </figcaption>
-                    </figure>
-                    <figure class="slider__item">
-                        <div>
-                            <picture>
-                                <source data-srcset="img/images/slide-1.webp 1x, img/images/slide-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhEwALAIAAAP///wAAACH5BAEAAAEALAAAAAATAAsAAAIMjI+py+0Po5y02nsLADs=" type="image/webp">
-                                <img data-src="img/images/slide-1.png" data-srcset="img/images/slide-1-2x.png 2x" src="data:image/gif;base64,R0lGODlhEwALAIAAAP///wAAACH5BAEAAAEALAAAAAATAAsAAAIMjI+py+0Po5y02nsLADs=" alt="Груда ПНД тары (канистры, бутылки и др.)" class="slider__img lazyload">
-                            </picture>
-                            <a href="#" class="slider__accia">Акция</a>
-                        </div>
-                        <figcaption class="slider__desc">
-                            <a href="#">
-                                <h4 class="slider__title">В продажу поступила ПНД тара </h4>
-                            </a>
-                            <small class="slider__subtitle">ПНД канистры различных цветов будут отсортированы и спресованы... </small>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
-
-        <section class="catalog">
-            <div class="wrapper">
-                <h2 class="title-section">
-                    Отходы в наличии
-                </h2>
-                <div class="catalog__content">
-                    <figure class="card">
-                        <picture>
-                            <source data-srcset="img/images/card-1.webp 1x, img/images/card-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" type="image/webp">
-                            <img data-src="img/images/card-1.png" data-srcset="img/images/card-1-2x.png 2x" src="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" alt="Отходы ПВХ" class="card__img lazyload">
-                        </picture>
-                        <figcaption class="card__desc">
-                            <a href="#">
-                                <h4 class="card__title">Отходы ПВХ<span>PET 01</span></h4>
-                            </a>
-                            <p class="card__price">от 11 ₽/кг</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="card">
-                        <picture>
-                            <source data-srcset="img/images/card-2.webp 1x, img/images/card-2-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" type="image/webp">
-                            <img data-src="img/images/card-2.png" data-srcset="img/images/card-2-2x.png 2x" src="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" alt="Отходы АБС" class="card__img lazyload">
-                        </picture>
-                        <figcaption class="card__desc">
-                            <a href="#">
-                                <h4 class="card__title">Отходы АБС и аналоги<span>PP 5</span></h4>
-                            </a>
-                            <p class="card__price">от 15 ₽/кг</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="card">
-                        <picture>
-                            <source data-srcset="img/images/card-3.webp 1x, img/images/card-3-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" type="image/webp">
-                            <img data-src="img/images/card-3.png" data-srcset="img/images/card-3-2x.png 2x" src="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" alt="Отходы ПС" class="card__img lazyload">
-                        </picture>
-                        <figcaption class="card__desc">
-                            <a href="#">
-                                <h4 class="card__title">Отходы ПС<span>PP 5</span></h4>
-                            </a>
-                            <p class="card__price">от 15 ₽/кг</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="card">
-                        <picture>
-                            <source data-srcset="img/images/card-4.webp 1x, img/images/card-4-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" type="image/webp">
-                            <img data-src="img/images/card-4.png" data-srcset="img/images/card-4-2x.png 2x" src="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" alt="Отходы ПК" class="card__img lazyload">
-                        </picture>
-                        <figcaption class="card__desc">
-                            <a href="#">
-                                <h4 class="card__title">Отходы ПК<span>PET 01</span></h4>
-                            </a>
-                            <p class="card__price">от 20 ₽/кг</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="card">
-                        <picture>
-                            <source data-srcset="img/images/card-5.webp 1x, img/images/card-5-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" type="image/webp">
-                            <img data-src="img/images/card-5.png" data-srcset="img/images/card-5-2x.png 2x" src="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" alt="Стрейч пленка" class="card__img lazyload">
-                        </picture>
-                        <figcaption class="card__desc">
-                            <a href="#">
-                                <h4 class="card__title">Стрейч пленка<span>PET 01</span></h4>
-                            </a>
-                            <p class="card__price">от 17 ₽/кг</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="card card--none-xxs">
-                        <picture>
-                            <source data-srcset="img/images/card-6.webp 1x, img/images/card-6-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" type="image/webp">
-                            <img data-src="img/images/card-6.png" data-srcset="img/images/card-6-2x.png 2x" src="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" alt="Отходы ПНД" class="card__img lazyload">
-                        </picture>
-                        <figcaption class="card__desc">
-                            <a href="#">
-                                <h4 class="card__title">Отходы ПНД<span>PET 01</span></h4>
-                            </a>
-                            <p class="card__price">от 19 ₽/кг</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="card card--none">
-                        <picture>
-                            <source data-srcset="img/images/card-7.webp 1x, img/images/card-7-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" type="image/webp">
-                            <img data-src="img/images/card-7.png" data-srcset="img/images/card-7-2x.png 2x" src="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" alt="Отходы полиолефина" class="card__img lazyload">
-                        </picture>
-                        <figcaption class="card__desc">
-                            <a href="#">
-                                <h4 class="card__title">Отходы полиолефина<span>PP 5</span></h4>
-                            </a>
-                            <p class="card__price">от 22 ₽/кг</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="card card--none">
-                        <picture>
-                            <source data-srcset="img/images/card-8.webp 1x, img/images/card-8-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" type="image/webp">
-                            <img data-src="img/images/card-8.png" data-srcset="img/images/card-8-2x.png 2x" src="data:image/gif;base64,R0lGODlhHQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAdABQAAAIWjI+py+0Po5y02ouz3rz7D4biSJZXAQA7" alt="Отходы ПВД" class="card__img lazyload">
-                        </picture>
-                        <figcaption class="card__desc">
-                            <a href="#">
-                                <h4 class="card__title">Отходы ПВД<span>PET 01</span></h4>
-                            </a>
-                            <p class="card__price">от 11 ₽/кг</p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="order">
-            <div class="wrapper">
-                <form id="form" class="form">
-                    <h3 class="form__title form__title--call">Заказать обратный звонок</h3>
-                    <!-- Hidden Required Fields -->
-                    <input type="hidden" name="project_name" value="http://f0315577.xsph.ru/othodov">
-                    <input type="hidden" name="admin_email" value="43reiter@gmail.com">
-                    <!-- <input type="hidden" name="email_from" value="info@f0315577.xsph.ru"> -->
-                    <input type="hidden" name="form_subject" value="Сайт Полимерные отходы. Заказ обратного звонка с формы на главной">
-                    <!-- END Hidden Required Fields -->
-                    <div>
-                        <label for="form__tel--call" class="visually-hidden">Телефон(обязательное поле)</label>
-                        <input id="form__tel--call" type="tel" class="form__elem form__elem-tel" name="Телефон" placeholder="Телефон" required>
-                        <label for="form__email--cal" class="visually-hidden">Электронная почта(обязательное поле)</label>
-                        <input id="form__email--cal" type="email" class="form__elem" name="Электронная почта" placeholder="Электронная почта" required>
-                        <button class="btn-base btn-base--form">
-                            <span class="btn-base__content">
-                                <img src="img/images/smartphone.png" alt="" aria-hidden="true">
-                                <span>Отправить заявку</span>
-                            </span>
-
-                        </button>
-                    </div>
-                    <input id="form__sub" type="checkbox" class="form__sub" name="Рассылка">
-                    <label for="form__sub" class="form__sub-label">Подписаться на рассылку и узнать 12 способов экономии своих средств и получить наш фирменный календарь</label>
-                </form>
-            </div>
-        </section>
-
-        <section class="menegers">
-            <div class="wrapper">
-                <h2 class="title-section title-section--menegers">С вами свяжутся наши менеджеры</h2>
-                <div class="menegers__content">
-                    <figure class="menegers__item">
-                        <picture>
-                            <source data-srcset="img/images/meneger-1.webp 1x, img/images/meneger-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" type="image/webp">
-                            <img data-src="img/images/meneger-1.jpg" data-srcset="img/images/meneger-1-2x.jpg 2x" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="Фото менеджера Швакина Виктора" class="menegers__img lazyload">
-                        </picture>
-                        <figcaption class="menegers__desc">
-                            <h4 class="menegers__name">Швакин Виктор
-                                <span class="menegers__profession">Менеджер <br> по продажам</span>
-                            </h4>
-                        </figcaption>
-                    </figure>
-                    <figure class="menegers__item">
-                        <picture>
-                            <source data-srcset="img/images/meneger-2.webp 1x, img/images/meneger-2-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" type="image/webp">
-                            <img data-src="img/images/meneger-2.jpg" data-srcset="img/images/meneger-2-2x.jpg 2x" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="Фото менеджера Иванова Алексея" class="menegers__img lazyload">
-                        </picture>
-                        <figcaption class="menegers__desc">
-                            <h4 class="menegers__name">Иванов Алексей<span class="menegers__profession">Менеджер <br> по продажам</span></h4>
-                        </figcaption>
-                    </figure>
-                    <figure class="menegers__item">
-                        <picture>
-                            <source data-srcset="img/images/meneger-3.webp 1x, img/images/meneger-3-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" type="image/webp">
-                            <img data-src="img/images/meneger-3.jpg" data-srcset="img/images/meneger-3-2x.jpg 2x" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="Фото менеджера Горевой Кристины" class="menegers__img lazyload">
-                        </picture>
-                        <figcaption class="menegers__desc">
-                            <h4 class="menegers__name">Горева Кристина<span class="menegers__profession">Менеджер <br> по продажам</span></h4>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
-
-        <section class="pluses">
-            <div class="wrapper">
-                <h2 class="title-section visually-hidden">Преимущества</h2>
-                <div class="pluses__content">
-                    <figure class="pluses__item">
-                        <div>
-                            <img src="img/images/pluses-icon-1.png" alt="" class="pluses__img">
-                        </div>
-                        <figcaption class="pluses__desc">Цены ниже, <br> чем у конкурентов</figcaption>
-                    </figure>
-                    <figure class="pluses__item pluses__item--btn">
-                        <div>
-                            <img src="img/images/pluses-icon-2.png" alt="" class="pluses__img">
-                        </div>
-                        <figcaption>
-                            <div class="pluses__desc">Большой выбор сырья</div>
-                            <button class="btn-base btn-base--cat pluses__btn">
-                                <span class="btn-base__content">
-                                    <img src="img/images/arrow-right.png" alt="" aria-hidden="true">
-                                    Перейти в каталог
-                                </span>
-                            </button>
-                        </figcaption>
-                    </figure>
-                    <figure class="pluses__item">
-                        <div>
-                            <img src="img/images/pluses-icon-3.png" alt="" class="pluses__img">
-                        </div>
-                        <figcaption class="pluses__desc">Доставляем <br> до клиента</figcaption>
-                    </figure>
-                    <figure class="pluses__item">
-                        <div>
-                            <img src="img/images/pluses-icon-4.png" alt="" class="pluses__img">
-                        </div>
-                        <figcaption class="pluses__desc">Удобное расположение склада для самовывоза <span>Недалеко от магистрали М2</span> </figcaption>
-                    </figure>
-                    <figure class="pluses__item">
-                        <div>
-                            <img src="img/images/pluses-icon-5.png" alt="" class="pluses__img">
-                        </div>
-                        <figcaption class="pluses__desc">Однородность состава <br> и постоянство качества</figcaption>
-                    </figure>
-                    <figure class="pluses__item">
-                        <div>
-                            <img src="img/images/pluses-icon-6.png" alt="" class="pluses__img">
-                        </div>
-                        <figcaption class="pluses__desc">Сезонные акции и скидки постоянным клиентам</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
-
-        <section class="dipploms">
-            <div class="container-controls dipploms__container-controls">
-                <button id="dipploms__arrow-left" class="btn-control btn-control--white" aria-label="Стрелка перелистывания слайдера назад" aria-controls="slider--dipploms">
-                    <svg>
-                        <use xlink:href="img/svg/sprite.svg#left"></use>
-                    </svg>
-                </button>
-                <button id="dipploms__arrow-rigth" class="btn-control btn-control--white" aria-label="Стрелка перелистывания слайдера вперед" aria-controls="slider--dipploms">
-                    <svg>
-                        <use xlink:href="img/svg/sprite.svg#next"></use>
-                    </svg>
-                </button>
-            </div>
-            <div class="wrapper">
-                <h2 class="title-section title-section--dipploms">Нас благодарят</h2>
-                <div id="slider--dipploms" class="dipploms__container owl-carousel">
-                    <div class="dipploms__item">
-                        <picture>
-                            <source data-srcset="img/images/dipplom-1.webp 1x, img/images/dipplom-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhMgBFAIAAAP///wAAACH5BAEAAAEALAAAAAAyAEUAAAI+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kp1VgAAOw==" type="image/webp">
-                            <img data-src="img/image/dipplom-1.jpg" data-srcset="img/images/dipplom-1-2x.jpg 2x" src="data:image/gif;base64,R0lGODlhMgBFAIAAAP///wAAACH5BAEAAAEALAAAAAAyAEUAAAI+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kp1VgAAOw==" alt="Благодарность от фирмы" class="dipploms__img lazyload">
-                        </picture>
-                    </div>
-                    <div class="dipploms__item">
-                        <picture>
-                            <source data-srcset="img/images/dipplom-1.webp 1x, img/images/dipplom-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhMgBFAIAAAP///wAAACH5BAEAAAEALAAAAAAyAEUAAAI+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kp1VgAAOw==" type="image/webp">
-                            <img data-src="img/image/dipplom-1.jpg" data-srcset="img/images/dipplom-1-2x.jpg 2x" src="data:image/gif;base64,R0lGODlhMgBFAIAAAP///wAAACH5BAEAAAEALAAAAAAyAEUAAAI+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kp1VgAAOw==" alt="Благодарность от фирмы" class="dipploms__img lazyload">
-                        </picture>
-                    </div>
-                    <div class="dipploms__item">
-                        <picture>
-                            <source data-srcset="img/images/dipplom-1.webp 1x, img/images/dipplom-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhMgBFAIAAAP///wAAACH5BAEAAAEALAAAAAAyAEUAAAI+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kp1VgAAOw==" type="image/webp">
-                            <img data-src="img/image/dipplom-1.jpg" data-srcset="img/images/dipplom-1-2x.jpg 2x" src="data:image/gif;base64,R0lGODlhMgBFAIAAAP///wAAACH5BAEAAAEALAAAAAAyAEUAAAI+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kp1VgAAOw==" alt="Благодарность от фирмы" class="dipploms__img lazyload">
-                        </picture>
-                    </div>
-                    <div class="dipploms__item">
-                        <picture>
-                            <source data-srcset="img/images/dipplom-1.webp 1x, img/images/dipplom-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhMgBFAIAAAP///wAAACH5BAEAAAEALAAAAAAyAEUAAAI+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kp1VgAAOw==" type="image/webp">
-                            <img data-src="img/image/dipplom-1.jpg" data-srcset="img/images/dipplom-1-2x.jpg 2x" src="data:image/gif;base64,R0lGODlhMgBFAIAAAP///wAAACH5BAEAAAEALAAAAAAyAEUAAAI+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kp1VgAAOw==" alt="Благодарность от фирмы" class="dipploms__img lazyload">
-                        </picture>
+            <div class="footer__block footer__block3">
+                <p>Хотите быть в курсе Акций и новых предложений? Напишите «да» в вотсап или вайбер!
+                    <small>Не забудьте добавить этот номер в контакты</small>
+                </p>
+                <div>
+                    <a href="tel:+7968800XXXX" class="tel footer__tel">+7 968 800 XX XX</a>
+                    <div class="social-box footer__social-box">
+                        <a href="whatsapp://send?phone=+7968800XXXX" class="icon-watsapp">
+                            <img src="img/images/watsapp.png" alt="Иконка звонка ватсап">
+                        </a>
+                        <a href="viber://chat?number=+7968800XXXX" class="icon-viber">
+                            <img src="img/images/viber.png" alt="Иконка звонка вайбер">
+                        </a>
+                        <a href="viber://add?number=+796880044XX" class="icon-viber icon-viber--mob">
+                            <img src="img/images/viber.png" alt="Иконка звонка вайбер">
+                        </a>
                     </div>
                 </div>
+                <div>
+                    <a href="tel:8800700XXXX" class="tel footer__tel">8 800 700-XX-XX</a>
+                    <p class="footer__mode">работаем с 9 до 18</p>
+                </div>
             </div>
-        </section>
-
-        <section class="map">
-            <h2 class="title-section visually-hidden">Компания на карте</h2>
-            <iframe class="lazyload" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9054.00948636325!2d37.574146170784616!3d55.4364718324463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414aa61c01327cd1%3A0xcd25d009cacb105e!2z0JTQvtC80L7QtNC10LTQvtCy0YHQutC-0LUg0YguLCDQn9C-0LTQvtC70YzRgdC6LCDQnNC-0YHQutC-0LLRgdC60LDRjyDQvtCx0Lsu!5e0!3m2!1sru!2sru!4v1580221418740!5m2!1sru!2sru" src="data:image/gif;base64,R0lGODlhYAAZAIAAAP///wAAACH5BAEAAAEALAAAAABgABkAAAIyjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YjUFQAAOw==" width="800" height="500" title="Адрес компании на карте" allowfullscreen=""></iframe>
-        </section>
-
-    </main>
-
-    <footer class="footer">
+        </address>
+    </div>
+    <div class="footer__copy">
         <div class="wrapper">
-            <address class="footer__top-line">
-                <div class="footer__block footer__block1">
-                    <a href="#" class="logo">
-                        <picture>
-                            <source media="(max-width: 440px)" srcset="img/images/logo-footer-320.webp 1x, img/images/logo-footer-320-2x.webp 2x" type="image/webp">
-                            <source media="(max-width: 700px)" srcset="img/images/logo-footer-480.webp 1x, img/images/logo-footer-480-2x.webp 2x" type="image/webp">
-                            <source media="(max-width: 1000px)" srcset="img/images/logo-footer-1000.webp 1x, img/images/logo-footer-1000-2x.webp 2x" type="image/webp">
-                            <source media="(max-width: 440px)" srcset="img/images/logo-footer-320.png 1x, img/images/logo-footer-320-2x.png 2x">
-                            <source media="(max-width: 480px)" srcset="img/images/logo-footer-480.png 1x, img/images/logo-footer-480-2x.png 2x">
-                            <source media="(max-width: 1000px)" srcset="img/images/logo-footer-1000.png 1x, img/images/logo-footer-1000-2x.png 2x">
-                            <source srcset="img/images/logo-hd.webp 1x, img/images/logo-hd-2x.webp 2x" type="image/webp">
-                            <img src="img/images/logo-hd.png" srcset="img/images/logo-hd-2x.png 2x" alt="Логотип компании" class="logo__img">
-                        </picture>
-                        <p class="logo__title logo__title--footer">Продажа полимерных отходов</p>
-                    </a>
-                    <div class="footer__socnetwork-box">
-                        <a href="#" class="footer__socnework-item footer__socnework-item--ok" aria-label="Ссылка на профиль в соцсети Одноклассники">
-                            <svg>
-                                <use xlink:href="img/svg/sprite.svg#ok"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="footer__socnework-item footer__socnework-item--vk" aria-label="Ссылка на профиль в соцсети ВКонтакте">
-                            <svg>
-                                <use xlink:href="img/svg/sprite.svg#vk"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="footer__socnework-item footer__socnework-item--fb" aria-label="Ссылка на профиль в соцсети Фэйсбук">
-                            <svg>
-                                <use xlink:href="img/svg/sprite.svg#fb"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="footer__socnework-item footer__socnework-item--in" aria-label="Ссылка на профиль в соцсети Инстаграм">
-                            <svg>
-                                <use xlink:href="img/svg/sprite.svg#in"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer__block footer__block2">
-                    <p class="adress footer__adress">МО г.Подольск, Домодедовское шоссе 00</p>
-                    <div>
-                        <div>
-                            <a href="mailto:info@kupi-xxxxxxx.ru" class="email footer__email">info@kupi-xxxxxxx.ru</a>
-                            <a href="tel:+7495542XXXX" class="tel footer__tel">+7 495 542-XX-XX</a>
-                        </div>
-                        <button class="btn-base btn-base--call footer__btn-base--call">
-                            <span class="btn-base__content">
-                                <img src="img/images/smartphone.png" alt="" aria-hidden="true">
-                                Обратный звонок
-                            </span>
-                        </button>
-                    </div>
-
-                </div>
-                <div class="footer__block footer__block3">
-                    <p>Хотите быть в курсе Акций и новых предложений? Напишите «да» в вотсап или вайбер!
-                        <small>Не забудьте добавить этот номер в контакты</small>
-                    </p>
-                    <div>
-                        <a href="tel:+7968800XXXX" class="tel footer__tel">+7 968 800 XX XX</a>
-                        <div class="social-box footer__social-box">
-                            <a href="whatsapp://send?phone=+7968800XXXX" class="icon-watsapp">
-                                <img src="img/images/watsapp.png" alt="Иконка звонка ватсап">
-                            </a>
-                            <a href="viber://chat?number=+7968800XXXX" class="icon-viber">
-                                <img src="img/images/viber.png" alt="Иконка звонка вайбер">
-                            </a>
-                            <a href="viber://add?number=+796880044XX" class="icon-viber icon-viber--mob">
-                                <img src="img/images/viber.png" alt="Иконка звонка вайбер">
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="tel:8800700XXXX" class="tel footer__tel">8 800 700-XX-XX</a>
-                        <p class="footer__mode">работаем с 9 до 18</p>
-                    </div>
-                </div>
-            </address>
+            <p>&copy; 2001-2019 Пользовательское соглашение</p>
         </div>
-        <div class="footer__copy">
-            <div class="wrapper">
-                <p>&copy; 2001-2019 Пользовательское соглашение</p>
-            </div>
-        </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="js/all.js"></script>
-    <script src="js/scripts.js"></script>
+<script src="js/all.js"></script>
+<script src="js/scripts.js"></script>
+
 
 </body>
 
 </html>
+

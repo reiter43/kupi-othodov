@@ -5,6 +5,247 @@
 /*---------------------------------------------
   Секция catalog
 ---------------------------------------------*/
+.catalog {
+    &__wrapper {
+        display: flex;
+        margin-top: 1.5*$gat;
+    }
 
+    &__aside {
+        min-width: 286px;
+        margin-right: 23px;
+
+        @include lg-block {
+            min-width: 224px;
+        }
+
+        @media screen and (max-width: 890px) {
+            display: none;
+        }
+    }
+
+    &__content--catalog {
+        flex-grow: 1;
+        margin-top: 0;
+
+        @include md-block {
+            margin-top: 0;
+        }
+    }
+
+    &__pagination {
+        margin-left: 300px;
+
+        @media screen and (max-width: 890px) {
+            margin: 0 auto;
+        }
+    }
+}
+
+.card {
+
+    &--catalog {
+        @include size(4);
+    }
+
+    &__info {
+        text-align: center;
+        font-size: 14px;
+        color: lighten($c-accent, 60%);
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 4px;
+        background-color: $c-base;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+
+        &:hover {
+            background-color: lighten($c-normal, 10%);
+
+            .pagination__link {
+                color: $c-base;
+            }
+        }
+
+        @media screen and (max-width: 440px) {
+            width: 40px;
+            height: 40px;
+        }
+
+        &.active {
+            background-color: $c-normal;
+
+            .pagination__link {
+                color: $c-base;
+            }
+        }
+    }
+
+    &__item+&__item {
+        margin-left: 15px;
+    }
+
+    &__link {
+        font-size: 20px;
+        line-height: 140%;
+        color: $c-accent;
+
+        @media screen and (max-width: 440px) {
+            font-size: 15px;
+        }
+    }
+}
+
+.nav-catalog {
+    &__list {
+        list-style-type: none;
+    }
+
+    &__item {
+        position: relative;
+        padding: 14px 14px 15px 20px;
+        border-radius: 4px;
+        background: $c-base;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+        transition: background-color ease 0.5s;
+
+        &:hover,
+        &.active {
+            background-color: $c-normal;
+
+            .nav-catalog__link {
+                color: $c-base;
+            }
+
+            svg {
+                fill: $c-base;
+            }
+        }
+    }
+
+    &__item:not(:last-child) {
+        border-bottom: 1px solid #ccc;
+    }
+
+    &__item-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        &>button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        svg {
+            @include svg (12px, 24px, #CCCCCC);
+        }
+    }
+
+    &__link {
+        font-size: 17px;
+        line-height: 125.19%;
+        color: $c-accent;
+
+        @include lg-block {
+            font-size: 15px;
+        }
+    }
+
+    &__link.disabled {
+        @include disa;
+    }
+
+    &__submenu {
+        position: absolute;
+        z-index: 10;
+        top: -20px;
+        left: 100%;
+        box-sizing: border-box;
+        padding: 23px 7px 23px 28px;
+        border: 2px solid $c-normal;
+        border-radius: 4px;
+        background: $c-base;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+        list-style-type: none;
+    }
+
+    &__sublink {
+        white-space: nowrap;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 17px;
+        line-height: 20px;
+        font-weight: 500;
+        font-style: normal;
+        color: $c-accent;
+        transition: color ease 0.5s;
+
+        &:hover {
+            color: $c-normal;
+        }
+    }
+
+    &__sublink.disabled {
+        @include disa;
+    }
+}
+
+/*---------------------------------------------*/
+
+/*---------------------------------------------
+  Секция shipments
+---------------------------------------------*/
+.shipments {
+    padding-bottom: 2.5*$gat;
+
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1.5*$gat;
+
+        @include xs-block {
+            margin-top: 0.85*$gat;
+        }
+
+        a {
+            margin: 0 10px 10px 0;
+
+            @include xs-block {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+/*---------------------------------------------*/
+
+/*---------------------------------------------
+  Секция video
+---------------------------------------------*/
+.video {
+    padding-bottom: 0.5*$gat;
+
+    @include sm-block {
+        padding-bottom: 0;
+    }
+
+    &__img {
+        @include img;
+    }
+}
 
 /*---------------------------------------------*/
