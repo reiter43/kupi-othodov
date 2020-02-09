@@ -52,6 +52,24 @@ if (window.location.pathname == "/othodov/" || window.location.pathname == "/oth
 	}
 }
 
+let formModal = document.querySelector('#form--modal');
+
+formModal.onsubmit = function (event) {
+	event.preventDefault();
+
+	let formData = new FormData(formModal);
+
+	let xhttp = new XMLHttpRequest();
+	xhttp.open('POST', 'mail.php');
+	xhttp.send(formData);
+
+	xhttp.onreadystatechange = function () {
+		if (this.readyState == 4 && this.status == 200) {
+			formModal.reset();
+			alert('Спасибо за обращение! <br> В ближайшее время мы с вами свяжемся');
+		}
+	}
+}
 
 //Скрипт для маски ввода телефона
 window.addEventListener("DOMContentLoaded", function () {
@@ -95,8 +113,8 @@ window.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-// document.querySelector('button.owl-dot').setAttribute("aria-label", "Кнопки пагинации");
-// console.log(document.querySelector('button.owl-dot'));
+
+
 
 
 

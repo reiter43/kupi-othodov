@@ -515,7 +515,6 @@
                             <img src="img/images/smartphone.png" alt="" aria-hidden="true">
                             <span>Отправить заявку</span>
                         </span>
-
                     </button>
                 </div>
                 <input id="form__sub" type="checkbox" class="form__sub" name="Рассылка">
@@ -718,7 +717,6 @@
                         </span>
                     </button>
                 </div>
-
             </div>
             <div class="footer__block footer__block3">
                 <p>Хотите быть в курсе Акций и новых предложений? Напишите «да» в вотсап или вайбер!
@@ -752,6 +750,36 @@
     </div>
 </footer>
 
+<div id="modal" class="modal hide" role="dialog" aria-label="Форма отправки заявки">
+
+    <div class="modal__content"> 
+        <button type="button" class="btn-close modal__btn-close" tabindex="0" aria-label="Закрыть окно"><span></span></button>
+        <form id="form--modal" class="form form--modal" aria-labelledby="form__title--modal">            
+            <h3 id="form__title--modal" class="form__title form__title--modal">Оставить заявку</h3>
+            <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="http://f0315577.xsph.ru/othodov">
+            <input type="hidden" name="admin_email" value="43reiter@gmail.com">
+            <!-- <input type="hidden" name="email_from" value="info@f0315577.xsph.ru"> -->
+            <input type="hidden" name="form_subject" value="Сайт Полимерные отходы. Заказ обратного звонка с формы в модальном окне">
+            <!-- END Hidden Required Fields -->
+            <div>
+                <label for="form__tel--modal" class="visually-hidden">Телефон(обязательное поле)</label>
+                <input id="form__tel--modal" type="tel" class="form__elem form__elem--modal form__elem-tel" name="Телефон" placeholder="Телефон" tabindex="0" required>
+                <label for="form__email--modal" class="visually-hidden">Электронная почта(обязательное поле)</label>
+                <input id="form__email--modal" type="email" class="form__elem form__elem--modal" name="Электронная почта" placeholder="Электронная почта" tabindex="0" required>
+                <label for="form__email--comments" class="visually-hidden">Комментарий(необязательное поле)</label>
+                <textarea id="form__email--comments" class="form__elem form__elem--modal form__elem--comments" name="Комментарий" placeholder="Комментарий к заказу" tabindex="0"></textarea>
+                <button class="btn-base btn-base--form modal__btn-submit" tabindex="0">
+                    <span class="btn-base__content">
+                        <img src="img/images/smartphone.png" alt="" aria-hidden="true">
+                        <span>Отправить заявку</span>
+                    </span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
 <script src="js/all.js"></script>
 <script src="js/scripts.js"></script>
 
@@ -759,4 +787,6 @@
 </body>
 
 </html>
+
+
 

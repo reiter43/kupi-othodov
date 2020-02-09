@@ -259,6 +259,48 @@ address {
     }
 }
 
+.btn-close {
+    border: none;
+    background: none;
+
+    span {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        display: block;
+        cursor: pointer;
+
+        &:hover {
+
+            &::before,
+            &::after {
+                background: $c-base;
+            }
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            display: block;
+            width: 26px;
+            height: 3px;
+            background: #5C5C5C;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+
+
 /*--------------------------------------------*/
 
 
@@ -319,10 +361,12 @@ address {
     }
 }
 
+
+
 /*--------------------------------------------*/
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 .visually-hidden {
@@ -1078,7 +1122,7 @@ h1 {
         }
     }
 
-    div {
+    &>div {
         display: flex;
         justify-content: space-between;
         margin: 2*$gat 0 $gat;
@@ -1904,6 +1948,9 @@ h1 {
 /*=============================================*/
 
 @import 'catalog.scss';
+@import 'modal.scss';
+
+
 
 
 /*=============================================

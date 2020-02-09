@@ -76,7 +76,7 @@ btnSublinks.forEach(elem => {
                 elem.setAttribute("tabindex", "-1");
             }
 
-            if (elem.classList.contains('nav__link2--disabled')) {
+            if (elem.classList.contains('disabled')) {
                 elem.setAttribute("tabindex", "-1");
             }
         })
@@ -115,6 +115,10 @@ btnCatLink.addEventListener('click', event => {
             elem.setAttribute("tabindex", "-1");
         }
 
+        if (elem.classList.contains('disabled')) {
+            elem.setAttribute("tabindex", "-1");
+        }
+
         elem.addEventListener('focus', event => {
             if (document.documentElement.clientWidth <= 700) {
                 elem.parentNode.parentNode.style.background = '#B7000E';
@@ -131,6 +135,10 @@ btnCatLink.addEventListener('click', event => {
         if (elem.getAttribute("tabindex") == "-1") {
             elem.setAttribute("tabindex", "0");
         } else {
+            elem.setAttribute("tabindex", "-1");
+        }
+
+        if (elem.parentElement.parentElement.querySelector('nav-sublink').classList.contains('disabled')) {
             elem.setAttribute("tabindex", "-1");
         }
     })

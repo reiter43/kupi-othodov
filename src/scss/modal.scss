@@ -1,0 +1,106 @@
+/*=============================================
+        МОДАЛЬНОЕ ОКНО
+=============================================*/
+.modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(17, 17, 17, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+
+    &__content {
+        position: relative;
+        animation-name: animatetop;
+        animation-duration: 1s;
+
+        div {
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 350px;
+            margin: 0;
+
+            @media screen and (max-width: 700px) {
+                flex-direction: row;
+            }
+
+            @include xs-block {
+                max-width: 275px;
+            }
+        }
+    }
+
+    &__btn-close {
+        position: absolute;
+        top: 35px;
+        right: 25px;
+
+    }
+
+    &__btn-submit {
+        width: 100%;
+        padding: 10px 23%;
+
+        @include lg-block {
+            padding: 10px 23%;
+        }
+
+        @include sm-block {
+            padding: 10px 23%;
+        }
+
+        @media screen and (max-width: 700px) {
+            padding: 10px 23%;
+        }
+
+        @include xs-block {
+            padding: 10px 15%;
+        }
+    }
+}
+
+@keyframes animatetop {
+    from {
+        transform: scale(0);
+        opacity: 0
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+.form {
+
+    &__title--modal {
+        font-size: 32px;
+        line-height: 38px;
+        text-align: left;
+        margin-bottom: 27px;
+    }
+
+    &--modal {
+        padding: 37px 65px 52px;
+    }
+
+    &__elem--modal {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        @media screen and (max-width: 700px) {
+            width: 100%;
+        }
+    }
+
+    &__elem--comments {
+        height: 200px;
+    }
+}
