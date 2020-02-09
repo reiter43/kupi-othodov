@@ -10,8 +10,9 @@
     background: rgba(17, 17, 17, 0.8);
     display: flex;
     justify-content: center;
-    align-items: center;
-    z-index: 100;
+    padding-top: 40px;
+    z-index: 100;    
+    overflow-y: scroll;
 
     &__content {
         position: relative;
@@ -30,6 +31,9 @@
 
             @include xs-block {
                 max-width: 275px;
+            }
+            @include xxs-block {
+                margin-bottom: 0;
             }
         }
     }
@@ -82,10 +86,23 @@
         line-height: 38px;
         text-align: left;
         margin-bottom: 27px;
+
+        @include xs-block {
+            margin-bottom: 20px;
+        }
     }
 
     &--modal {
         padding: 37px 65px 52px;
+
+        @include xs-block {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        @include xxs-block {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
     }
 
     &__elem--modal {

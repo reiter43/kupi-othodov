@@ -142,24 +142,7 @@ btnCatLink.addEventListener('click', event => {
             elem.setAttribute("tabindex", "-1");
         }
     })
-
 })
-
-
-// // Показ субменю при получении фокуса табированием
-
-// if (document.documentElement.clientWidth > 700) {
-
-//     // document.querySelector('.nav__link--drop').addEventListener('focus', event => {
-//     //     document.querySelector('.nav__submenu').classList.remove('visual');
-//     // });
-//     // document.querySelector('.nav__link--drop').addEventListener('click', event => {
-//     //     document.querySelector('.nav__submenu').classList.remove('visual');
-//     // });
-//     // document.querySelector('.nav__link--drop').addEventListener('blur', event => {
-//     //     document.querySelector('.nav__submenu').classList.add('visual');
-//     // });
-// }
 
 // Страница каталог
 // Показ/скрытие субменю при наведении мыши
