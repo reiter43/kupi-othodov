@@ -33,7 +33,7 @@ body {
     width: 100%;
     font-family: $ff-base;
     font-size: 20px;
-    line-height: 1.375;
+    line-height: 1.4;
     font-weight: 400;
     color: $c-accent;
 }
@@ -135,6 +135,14 @@ address {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        &--anons {
+            justify-content: center;
+
+            img {
+                margin-right: $gat;
+            }
+        }
     }
 
     &--call {
@@ -299,7 +307,13 @@ address {
     }
 }
 
+.btn-submit {
+    &--anons {
+        padding: 20px;
+        width: 100%;
 
+    }
+}
 
 /*--------------------------------------------*/
 
@@ -864,16 +878,16 @@ h1 {
         }
     }
 
-    a:hover h4 {
-        color: $c-normal;
-    }
-
     &__title {
         margin: 0 0 $gat;
         font-size: 24px;
         line-height: 140%;
         font-weight: 400;
         color: $c-accent;
+
+        &:hover {
+            color: $c-normal;
+        }
 
         @include xxs-block {
             margin-bottom: 1.25*$gat;
@@ -1120,6 +1134,11 @@ h1 {
                 padding: 0 25px;
             }
         }
+
+        &--anons {
+            color: $c-accent;
+            text-align: left;
+        }
     }
 
     &>div {
@@ -1164,6 +1183,16 @@ h1 {
         @include xxs-block {
             padding: $gat 0;
             text-align: center;
+        }
+
+        &--anons {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 10px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #CCCCCC;
+            border-radius: 4px;
         }
     }
 
@@ -1949,6 +1978,7 @@ h1 {
 
 @import 'catalog.scss';
 @import 'modal.scss';
+@import 'news.scss';
 
 
 

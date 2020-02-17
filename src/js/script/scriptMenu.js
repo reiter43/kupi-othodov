@@ -1,185 +1,125 @@
-let btnCatalog = document.querySelector('.nav__item--drop');
-let submenu = document.querySelector('.nav__submenu');
-let burger = document.querySelector('.burger');
-let menu = document.querySelector('.nav__list');
-let btnSublinks = document.querySelectorAll('.nav__btn--submenu');
-let btnCatLink = document.querySelector('.nav__link--drop');
-
-
-// Показ элемента бургер для скринридера в мобильных экранах
-
-if (document.documentElement.clientWidth <= 700) {
-    document.querySelector('.nav__burger').removeAttribute("aria-hidden");
-}
-
-// Показ/скрытие субменю при наведении мыши
-
-if (window.location.pathname != "/catalog.html" || (window.location.pathname == "/catalog.html" && document.documentElement.clientWidth <= 890) ) {
-    btnCatalog.addEventListener("mouseenter", showSub, false);
-    btnCatalog.addEventListener("mouseleave", hideSub, false);
-
-    function showSub(e) {
-        if (document.documentElement.clientWidth > 700) {
-            submenu.classList.remove('visual');
-        }
-    }
-    function hideSub(e) {
-        if (document.documentElement.clientWidth > 700) {
-            submenu.classList.add('visual');
-        }
-    }
-}
-
-// Скрыть/показать меню
-
-burger.addEventListener('click', event => {
-    if (document.documentElement.clientWidth <= 700) {
-        document.querySelector('.burger__icon').classList.toggle('burger__icon--active');
-
-        if (burger.getAttribute("aria-expanded") == "false") {
-            burger.setAttribute("aria-expanded", "true");
-        } else {
-            burger.setAttribute("aria-expanded", "false")
-        }
-
-        if (document.querySelector('.burger__icon').classList.contains('burger__icon--active')) {
-            menu.classList.remove('nav__list--visial');
-            menu.style.zIndex = "10";
-        } else {
-            menu.classList.add('nav__list--visial');
-            menu.style.zIndex = "0";
-        }
-
-        document.querySelector('.head__wrap').classList.toggle('head__wrap--active');
-    }
-}
-);
-
-// Показ/скрытие субменю
-
-btnSublinks.forEach(elem => {
-    elem.addEventListener('click', event => {
-        if (elem.getAttribute("aria-expanded") == "false") {
-            elem.setAttribute("aria-expanded", "true");
-        } else {
-            elem.setAttribute("aria-expanded", "false")
-        }
-
-        elem.parentNode.nextElementSibling.classList.toggle('nav__submenu2--visial');
-
-        let sublinks2 = document.querySelectorAll('.nav__link2');
-
-        sublinks2.forEach(elem => {
-            if (elem.getAttribute("tabindex") == "-1") {
-                elem.setAttribute("tabindex", "0");
-            } else {
-                elem.setAttribute("tabindex", "-1");
-            }
-
-            if (elem.classList.contains('disabled')) {
-                elem.setAttribute("tabindex", "-1");
-            }
-        })
-
-        elem.firstElementChild.classList.toggle('active');
-    })
-
-    elem.addEventListener('focus', event => {
-        if (document.documentElement.clientWidth <= 700) {
-            elem.parentNode.parentNode.style.background = '#B7000E';
-        }
-    })
-    elem.addEventListener('blur', event => {
-        if (document.documentElement.clientWidth <= 700) {
-            elem.parentNode.parentNode.style.background = '#ffffff';
-        }
-    })
-});
-
-btnCatLink.addEventListener('click', event => {
-    if (btnCatLink.getAttribute("aria-expanded") == "false") {
-        btnCatLink.setAttribute("aria-expanded", "true");
-    } else {
-        btnCatLink.setAttribute("aria-expanded", "false")
-    }
-
-    submenu.classList.toggle('visual');
-    document.querySelector('.svg__drop').classList.toggle('active');
-
+window.addEventListener('DOMContentLoaded', function () {
+    let btnCatalog = document.querySelector('.nav__item--drop');
+    let submenu = document.querySelector('.nav__submenu');
+    let burger = document.querySelector('.burger');
+    let burgerIcon = document.querySelector('.burger__icon');
+    let menu = document.querySelector('.nav__list');
+    let btnSublinks = document.querySelectorAll('.nav__btn--submenu');
     let sublinks = document.querySelectorAll('.nav__sublink');
+    let sublinks2 = document.querySelectorAll('.nav__link2');
+    let btnCatLink = document.querySelector('.nav__link--drop');
+    let widht = document.documentElement.clientWidth;
+    let pathName = window.location.pathname;
 
-    sublinks.forEach(elem => {
-        if (elem.getAttribute("tabindex") == "-1") {
-            elem.setAttribute("tabindex", "0");
-        } else {
-            elem.setAttribute("tabindex", "-1");
-        }
 
-        if (elem.classList.contains('disabled')) {
-            elem.setAttribute("tabindex", "-1");
-        }
+    // Показ элемента бургер для скринридера в мобильных экранах    
+    if (widht <= 700) {
+        document.querySelector('.nav__burger').removeAttribute("aria-hidden");
+    }
 
-        elem.addEventListener('focus', event => {
-            if (document.documentElement.clientWidth <= 700) {
-                elem.parentNode.parentNode.style.background = '#B7000E';
-            }
-        })
-        elem.addEventListener('blur', event => {
-            if (document.documentElement.clientWidth <= 700) {
-                elem.parentNode.parentNode.style.background = '#ffffff';
-            }
-        })
-    })
+    // Показ/скрытие субменю при наведении мыши    
+    if (pathName != "/catalog.html" || (pathName == "/catalog.html" && widht <= 890)) {
+        btnCatalog.addEventListener("mouseenter", event => {
+            if (widht > 700) { submenu.classList.remove('visual') }
+        });
 
-    btnSublinks.forEach(elem => {
-        if (elem.getAttribute("tabindex") == "-1") {
-            elem.setAttribute("tabindex", "0");
-        } else {
-            elem.setAttribute("tabindex", "-1");
-        }
+        btnCatalog.addEventListener("mouseleave", event => {
+            if (widht > 700) { submenu.classList.add('visual') }
+        });
+    }
 
-        if (elem.parentElement.parentElement.querySelector('nav-sublink').classList.contains('disabled')) {
-            elem.setAttribute("tabindex", "-1");
-        }
-    })
-})
+    // Скрыть/показать меню
+    burger.addEventListener('click', event => {
+        if (widht <= 700) {
+            burgerIcon.classList.toggle('burger__icon--active');
 
-// Страница каталог
-// Показ/скрытие субменю при наведении мыши
+            expanded(burger);
 
-document.querySelectorAll('.nav-catalog__item-content>button').forEach(elem => {
-    elem.addEventListener('click', event => {
-        event.preventDefault();
-
-        let submenuCat = elem.parentElement.parentElement.querySelector('.nav-catalog__submenu')
-        
-        if (submenuCat) {
-            submenuCat.classList.toggle('visual');
-            if (elem.getAttribute("aria-expanded") == "false") {
-                elem.setAttribute("aria-expanded", "true");
+            if (burgerIcon.classList.contains('burger__icon--active')) {
+                menu.classList.remove('nav__list--visial');
+                menu.style.zIndex = "10";
             } else {
-                elem.setAttribute("aria-expanded", "false")
-            }
-            if (submenuCat.classList.contains('visual')) {
-                submenuCat.querySelectorAll('.nav-catalog__sublink ').forEach(link => {
-                    link.setAttribute("tabindex", "-1");
-                })
-            }
-            else {
-                submenuCat.querySelectorAll('.nav-catalog__sublink ').forEach(link => {
-                    link.setAttribute("tabindex", "0");
-                })
+                menu.classList.add('nav__list--visial');
+                menu.style.zIndex = "0";
             }
         }
+    });
+
+    // Показ/скрытие субменю
+    btnSublinks.forEach(elem => {
+        elem.addEventListener('click', event => {
+            expanded(elem);
+
+            elem.parentNode.nextElementSibling.classList.toggle('nav__submenu2--visial');
+            elem.firstElementChild.classList.toggle('active');
+
+            sublinks2.forEach(elem => {
+                tabIndex(elem, elem);
+            });
+        });
+
+        inFocus(elem, 'focus', '#B7000E');
+        inFocus(elem, 'blur', '#ffffff');
+    });
+
+    btnCatLink.addEventListener('click', event => {
+        expanded(btnCatLink);
+
+        submenu.classList.toggle('visual');
+        document.querySelector('.svg__drop').classList.toggle('active');
+
+        sublinks.forEach(elem => {
+            tabIndex(elem, elem);
+
+            inFocus(elem, 'focus', '#B7000E');
+            inFocus(elem, 'blur', '#ffffff');
+        })
+
+        btnSublinks.forEach(elem => {
+            tabIndex(elem, elem.parentNode.parentNode.querySelector('.nav__sublink'));
+        })
+    });
+
+    // Страница каталог
+    // Показ/скрытие субменю при наведении мыши
+
+    document.querySelectorAll('.nav-catalog__item-content>button').forEach(elem => {
+        elem.addEventListener('click', event => {
+            event.preventDefault();
+
+            let submenuCat = elem.parentNode.parentNode.querySelector('.nav-catalog__submenu');
+
+            if (submenuCat) {
+                submenuCat.classList.toggle('visual');
+
+                expanded(elem);
+
+                submenuCat.querySelectorAll('.nav-catalog__sublink ').forEach(link => {
+                    submenuCat.classList.contains('visual') ? link.setAttribute("tabindex", "-1") :
+                        link.setAttribute("tabindex", "0");
+                });
+            }
+        })
     })
+
+    // Функции назначения аргументов и стилей
+    function expanded(element) {
+        element.getAttribute("aria-expanded") == "false" ? element.setAttribute("aria-expanded", "true") :
+            element.setAttribute("aria-expanded", "false")
+    }
+
+    function tabIndex(tabindex, dis) {
+        tabindex.getAttribute("tabindex") == "-1" ? tabindex.setAttribute("tabindex", "0") :
+            tabindex.setAttribute("tabindex", "-1")
+
+        if (dis.classList.contains('disabled')) {
+            tabindex.setAttribute("tabindex", "-1");
+        }
+    }
+
+    function inFocus(el, ev, color) {
+        el.addEventListener(ev, event => {
+            if (widht <= 700) { el.parentNode.parentNode.style.background = color }
+        });
+    }
 })
-
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,172 @@
+/*=============================================
+        СТРАНИЦА NEWS
+=============================================*/
+main {
+    background: url(../img/images/bg-catalog.svg) no-repeat;
+    background-size: cover;
+}
+
+/*---------------------------------------------
+  Секция catalog news
+---------------------------------------------*/
+.news {
+    padding-top: 30px;
+
+    &__content {
+        padding-top: 30px;
+        @include row-flex();
+    }
+
+    &--title-section {
+        font-weight: 700;
+    }
+
+    &__pagination {
+        margin-top: 2*$gat;
+        padding-bottom: 5*$gat;
+    }
+}
+
+.news-item {
+    @include col();
+    @include size(4);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $gat;
+    padding-bottom: 2*$gat;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+
+    &__content {
+        div {
+            position: relative;
+        }
+    }
+
+    &__img {
+        @include img();
+        background-color: #eee;
+    }
+
+    &__desc {
+        padding: $gat;
+        margin-bottom: 0.5*$gat;
+    }
+
+    &__title {
+        margin: 0 0 8px;
+        font-size: 24px;
+        line-height: 140%;
+        font-weight: 400;
+        color: $c-accent;
+
+        &:hover {
+            color: $c-normal;
+        }
+    }
+
+    &__subtitle {
+        display: inline-block;
+        margin-top: auto;
+        color: lighten($c-accent, 60%);
+    }
+
+    &__more {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+        margin-left: 20px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 20px;
+        color: $c-normal;
+
+        &:hover {
+            color: lighten($c-normal, 10%);
+
+            svg {
+                stroke: lighten($c-normal, 10%);
+            }
+        }
+
+        svg {
+            margin-left: 12px;
+            stroke: $c-normal;
+            stroke-width: 2px;
+            @include svg(20px, 20px, $c-base);
+        }
+    }
+
+    &__accia {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: inline-block;
+        padding: 7px 45px 9px 27px;
+        border-radius: 0 45px 0 0;
+        background: $c-normal;
+        font-family: $ff-base;
+        font-size: 17px;
+        line-height: 140%;
+        font-weight: 500;
+        color: $c-base;
+        transition: background-color ease 0.5s;
+
+        &:hover {
+            background-color: lighten($c-normal, 10%);
+        }
+    }
+}
+
+/*---------------------------------------------*/
+
+/*---------------------------------------------
+  Секция anons
+---------------------------------------------*/
+.anons {
+    margin-top: $gat;
+
+    &__content {
+        display: flex;
+        background: $c-base;
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+
+        &>div {
+            min-width: 392px;
+        }
+    }    
+
+    &__img {
+        @include img;
+    }
+
+    &__form {
+        flex-grow: 1;
+        padding: 30px 30px 50px;
+    }
+
+    &__form-wrap {
+        display: flex;
+        margin-top: 26px;
+
+        fieldset {
+            border: none;
+            padding: 0;
+            flex: 0 0 50%;
+        }
+
+        aside {
+            padding-left: 30px;
+        }
+    }
+
+    &__social-box {
+        display: flex;
+        margin-top: 15px;
+    }
+}
+/*---------------------------------------------*/

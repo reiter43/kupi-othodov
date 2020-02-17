@@ -1,78 +1,35 @@
-// // Фильтрация по категориям
+window.addEventListener('DOMContentLoaded', function () {
+	// Аякс-запрос формы обратной связи
+	function formSend(formSelector) {
+		let form = document.querySelector(formSelector);
 
-// let buttons = document.querySelectorAll('.buttonCat');
+		form.onsubmit = function (event) {
+			event.preventDefault();
 
-// buttons.forEach(elem => {
-//     elem.onclick = (event) => {
-// 		event.preventDefault();
+			let formData = new FormData(form);
 
-// 		buttons.forEach(elem => {
-// 			elem.classList.remove('buttonCat--active');
-// 			event.target.classList.add('buttonCat--active');
-//         });
+			let xhttp = new XMLHttpRequest();
+			xhttp.open('POST', 'mail.php');
+			xhttp.send(formData);
 
-//         let buttonFilter = elem.getAttribute('data-filter');        
-
-//         let portfolioItems = document.querySelectorAll('.portfolio__item');
-
-//         portfolioItems.forEach(elem => {
-//             elem.style.display = 'none';
-
-//             if(buttonFilter == 'all') {
-//                 elem.style.display = 'block';
-//             }
-
-//             if(elem.classList.contains(buttonFilter)) {                
-//                 elem.style.display = 'block';
-//             }                
-//         })
-//     }
-// }); 	
-
-
-// Аякс-запрос формы обратной связи
-if (window.location.pathname == "/othodov/" || window.location.pathname == "/othodov/index.html" || window.location.pathname == "/") {
-	let form = document.querySelector('#form');
-
-	form.onsubmit = function (event) {
-		event.preventDefault();
-
-		let formData = new FormData(form);
-
-		let xhttp = new XMLHttpRequest();
-		xhttp.open('POST', 'mail.php');
-		xhttp.send(formData);
-
-		xhttp.onreadystatechange = function () {
-			if (this.readyState == 4 && this.status == 200) {
-				form.reset();
-				alert('Спасибо за обращение! <br> В ближайшее время мы с вами свяжемся');
+			xhttp.onreadystatechange = function () {
+				if (this.readyState == 4 && this.status == 200) {
+					form.reset();
+					alert('Спасибо за обращение! <br> В ближайшее время мы с вами свяжемся');
+				}
 			}
 		}
 	}
-}
 
-let formModal = document.querySelector('#form--modal');
-
-formModal.onsubmit = function (event) {
-	event.preventDefault();
-
-	let formData = new FormData(formModal);
-
-	let xhttp = new XMLHttpRequest();
-	xhttp.open('POST', 'mail.php');
-	xhttp.send(formData);
-
-	xhttp.onreadystatechange = function () {
-		if (this.readyState == 4 && this.status == 200) {
-			formModal.reset();
-			alert('Спасибо за обращение! <br> В ближайшее время мы с вами свяжемся');
-		}
+	if (window.location.pathname == "/othodov/" || window.location.pathname == "/othodov/index.html" || window.location.pathname == "/") {
+		formSend('#form');
 	}
-}
 
-//Скрипт для маски ввода телефона
-window.addEventListener("DOMContentLoaded", function () {
+	formSend('#form--modal');
+
+
+
+	//Скрипт для маски ввода телефона
 	[].forEach.call(document.querySelectorAll('.form__elem-tel'), function (input) {
 		let keyCode;
 
@@ -111,7 +68,14 @@ window.addEventListener("DOMContentLoaded", function () {
 		input.addEventListener("blur", mask, false);
 		input.addEventListener("keydown", mask, false)
 	});
-});
+
+
+})
+
+
+
+
+
 
 
 
