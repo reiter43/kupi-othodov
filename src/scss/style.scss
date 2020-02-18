@@ -142,6 +142,14 @@ address {
             img {
                 margin-right: $gat;
             }
+
+            span {
+                span {
+                    @media screen and (max-width: 440px) {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 
@@ -309,9 +317,32 @@ address {
 
 .btn-submit {
     &--anons {
-        padding: 20px;
+        padding: 22px;
         width: 100%;
 
+        @include lg-block {
+            padding: 22px;
+        }
+
+        @include sm-block {
+            padding: 22px;
+        }
+
+        @media screen and (max-width: 700px) {
+            padding: 22px;
+        }
+
+        @include xs-block {
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 440px) {
+            padding: 20px;
+        }
+
+        @include xxs-block {
+            padding: 20px;
+        }
     }
 }
 
@@ -845,27 +876,7 @@ h1 {
     &__img {
         @include img();
         background-color: #eee;
-    }
-
-    &__accia {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        display: inline-block;
-        padding: 7px 45px 9px 27px;
-        border-radius: 0 45px 0 0;
-        background: $c-normal;
-        font-family: $ff-base;
-        font-size: 17px;
-        line-height: 140%;
-        font-weight: 500;
-        color: $c-base;
-        transition: background-color ease 0.5s;
-
-        &:hover {
-            background-color: lighten($c-normal, 10%);
-        }
-    }
+    }    
 
     &__desc {
         display: flex;
@@ -905,6 +916,26 @@ h1 {
             margin-top: (-0.5) *$gat;
             font-size: 15px;
         }
+    }
+}
+
+.accia {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
+    padding: 7px 45px 9px 27px;
+    border-radius: 0 45px 0 0;
+    background: $c-normal;
+    font-family: $ff-base;
+    font-size: 17px;
+    line-height: 140%;
+    font-weight: 500;
+    color: $c-base;
+    transition: background-color ease 0.5s;
+
+    &:hover {
+        background-color: lighten($c-normal, 10%);
     }
 }
 
@@ -1138,6 +1169,25 @@ h1 {
         &--anons {
             color: $c-accent;
             text-align: left;
+
+            @include lg-block {
+                font-size: 32px;
+                line-height: 38px;
+            }
+
+            @include md-block {
+                text-align: center;
+            }
+
+            @include xs-block {
+                font-size: 28px;
+                line-height: 33px;
+            }
+
+            @include xxs-block {
+                font-size: 24px;
+                line-height: 28px;
+            }
         }
     }
 
@@ -1193,6 +1243,10 @@ h1 {
             text-align: center;
             border: 1px solid #CCCCCC;
             border-radius: 4px;
+
+            @media screen and (max-width: 700px) {
+                width: 100%;
+            }
         }
     }
 

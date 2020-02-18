@@ -27,6 +27,10 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	formSend('#form--modal');
 
+	if (window.location.pathname == "/news.html" || window.location.pathname == "/othodov/news.html" || window.location.pathname == "/") {
+		formSend('.anons__form');
+	}
+
 
 
 	//Скрипт для маски ввода телефона

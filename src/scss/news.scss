@@ -24,12 +24,28 @@ main {
     &__pagination {
         margin-top: 2*$gat;
         padding-bottom: 5*$gat;
+
+        @include md-block {
+            padding-bottom: 4.5*$gat;
+        }
+
+        @include sm-block {
+            padding-bottom: 4*$gat;
+        }
+
+        @include xxs-block {
+            padding-bottom: 3*$gat;
+        }
     }
 }
 
 .news-item {
     @include col();
     @include size(4);
+
+    @include size-sm(6);
+    @include size-xs(12);
+
     display: flex;
     flex-direction: column;
     margin-bottom: $gat;
@@ -64,12 +80,24 @@ main {
         &:hover {
             color: $c-normal;
         }
+
+        @include md-block {
+            font-size: 20px;
+        }
+
+        @include xxs-block {
+            font-size: 17px;
+        }
     }
 
     &__subtitle {
         display: inline-block;
         margin-top: auto;
         color: lighten($c-accent, 60%);
+
+        @include md-block {
+            font-size: 15px;
+        }
     }
 
     &__more {
@@ -99,26 +127,6 @@ main {
             @include svg(20px, 20px, $c-base);
         }
     }
-
-    &__accia {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        display: inline-block;
-        padding: 7px 45px 9px 27px;
-        border-radius: 0 45px 0 0;
-        background: $c-normal;
-        font-family: $ff-base;
-        font-size: 17px;
-        line-height: 140%;
-        font-weight: 500;
-        color: $c-base;
-        transition: background-color ease 0.5s;
-
-        &:hover {
-            background-color: lighten($c-normal, 10%);
-        }
-    }
 }
 
 /*---------------------------------------------*/
@@ -136,22 +144,32 @@ main {
         border-radius: 10px;
 
         &>div {
-            min-width: 392px;
+            @include md-block {
+                display: none;
+            }
         }
-    }    
+    }
 
     &__img {
         @include img;
     }
 
     &__form {
-        flex-grow: 1;
-        padding: 30px 30px 50px;
+        width: 67%;
+        padding: 28px 30px 48px;
+
+        @include md-block {
+            width: 100%;
+        }
     }
 
     &__form-wrap {
         display: flex;
         margin-top: 26px;
+
+        @media screen and (max-width: 700px) {
+            flex-direction: column;
+        }
 
         fieldset {
             border: none;
@@ -161,12 +179,33 @@ main {
 
         aside {
             padding-left: 30px;
+
+            @media screen and (max-width: 700px) {
+                padding-left: 0;
+                margin-top: 25px;
+                text-align: center;
+            }
+
+            p {
+                @include lg-block {
+                    font-size: 17px;
+                }
+
+                @media screen and (max-width: 440px) {
+                    font-size: 15px;
+                }
+            }
         }
     }
 
     &__social-box {
         display: flex;
         margin-top: 15px;
+
+        @media screen and (max-width: 700px) {
+            justify-content: center;
+        }
     }
 }
+
 /*---------------------------------------------*/
