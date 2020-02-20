@@ -1,0 +1,142 @@
+@include('./components/header.html', {"title": "Статьи"})
+
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link active">Главная</a></li>
+        <li class="breadcrumbs__item"><a href="./news.html" class="breadcrumbs__link active">Новости</a></li>
+        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link disabled">Появилось сырье для гранул ПВХ</a></li>
+    </ol>
+</nav>
+
+<main class="main-article">
+    <div class="wrapper">
+        <article class="article">
+            <h1 class="title-section article__title-section">Появилось сырье для гранулы ПВХ</h1>
+            <div class="article__content">
+                <p>Полимерные материалы применяются во многих отраслях производства, в том числе и в инновационных, поэтому данных вид сырья приобрел за последние несколько лет значительную популярность. Полимеры не боятся влаги, могут долго храниться и просты в транспортировке, так как большинство видов производители выпускают в виде мелких гранул. Даже при длительном хранении сырье не теряет физико-химические характеристики, не расслаивается и не крошится.</p>
+                <h3 class="title-section title-section--h3">Виды полимерного сырья</h3>
+                <p>Полимерное сырье – общий термин, который включает в себя три вида синтетических пластиков</p>
+                <ol class="article__list">
+                    <li class="article__item"><span>Полимеры – высокомолекулярные вещества с различными добавками: стабилизаторами, ингибиторами, пластификаторами, смазками и прочими включениями.</span> </li>
+                    <li class="article__item"><span>Пластмассы-композиты на базе полимеров, включающие в себя различные наполнители, пигменты и прочие компоненты. В свою очередь, подразделяются на две группы: термопластические и термореактивные. Первые могут быть расплавлены и сформованы многократно, а вторые – только один раз, после затвердения изменить форму термореактивной пластмассы уже невозможно. Практически все виды пластмасс относятся к первой группе – это полиэтилен, поливинилхлорид (ПВХ), нейлон или капрон, поликарбонат и другие.</span>  </li>
+                    <li class="article__item"><span>Полимерные композиционные материалы, которые также именуются армированным пластиком – это разновидности пластмасс с содержанием усиливающих компонентов – различных волокон, войлока, тканей, лент, кристаллов. Такие наполнители позволяют получить высокопрочный пластик, обладающий акустическими, деформационно-прочностными и другими электро-физическими характеристиками, которые соответствуют самым высоким стандартам.</span> </li>
+                </ol>
+                <div class="article__images">
+                    <div>
+                        <picture>
+                            <source data-srcset="img/images/article-1.webp 1x, img/images/article-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhIQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAhABQAAAIXjI+py+0Po5y02ouz3rz7D4biSJbmKRYAOw==" type="image/webp">
+                            <img class="slider__img lazyload" data-src="img/images/article-1.png" data-srcset="img/images/article-1-2x.png 2x" src="data:image/gif;base64,R0lGODlhIQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAhABQAAAIXjI+py+0Po5y02ouz3rz7D4biSJbmKRYAOw==" alt="Бухты с полимерным сырьем">
+                        </picture>
+                    </div>
+                    <div>
+                        <picture>
+                            <source data-srcset="img/images/article-2.webp 1x, img/images/article-2-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhIQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAhABQAAAIXjI+py+0Po5y02ouz3rz7D4biSJbmKRYAOw==" type="image/webp">
+                            <img data-src="img/images/article-2.png" data-srcset="img/images/article-2-2x.png 2x" src="data:image/gif;base64,R0lGODlhIQAUAIAAAP///wAAACH5BAEAAAEALAAAAAAhABQAAAIXjI+py+0Po5y02ouz3rz7D4biSJbmKRYAOw==" alt="Бухты с полимерным сырьем" class="slider__img lazyload">
+                        </picture>
+                    </div>
+                </div>
+                <p>Полимеры применяются практически во всех отраслях производства. Благодаря свойству некоторых видов сырья возвращать первоначальные характеристики после переработки, существует отдельная сфера промышленности, которая занимается выпуском вторичного полимерного сырья.</p>
+                <p>Такое сырьё применяется для тех же задач, что и первичное, но имеет некоторые ограничения, которые относятся к пищевой и медицинской промышленности.</p>
+                <div class="article__socnetwork-box footer__socnetwork-box">
+                    <a href="#" class="footer__socnework-item footer__socnework-item--ok" aria-label="Ссылка на профиль в соцсети Одноклассники">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#ok"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__socnework-item footer__socnework-item--vk" aria-label="Ссылка на профиль в соцсети ВКонтакте">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#vk"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__socnework-item footer__socnework-item--fb" aria-label="Ссылка на профиль в соцсети Фэйсбук">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#fb"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__socnework-item footer__socnework-item--in" aria-label="Ссылка на профиль в соцсети Инстаграм">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#in"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+         
+            <aside class="article__other">
+                <h2 class="title-section">Похожие статьи</h2>
+                <div>
+                    <div class="news-item">
+                        <figure class="news-item__content">
+                            <div>
+                                <picture>
+                                    <source data-srcset="img/images/news-1.webp 1x, img/images/news-1-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhDQAJAIAAAP///wAAACH5BAEAAAEALAAAAAANAAkAAAIJjI+py+0Po4QFADs=" type="image/webp">
+                                    <img data-src="img/images/news-1.png" data-srcset="img/images/news-1-2x.png 2x" src="data:image/gif;base64,R0lGODlhDQAJAIAAAP///wAAACH5BAEAAAEALAAAAAANAAkAAAIJjI+py+0Po4QFADs=" alt="Груда ПНД тары (канистры, бутылки и др.)" class="slider__img lazyload">
+                                </picture>
+                            </div>
+                            <figcaption class="news-item__desc">
+                                <a href="#">
+                                    <h4 class="news-item__title">В продажу поступила ПНД тара </h4>
+                                </a>
+                                <small class="news-item__subtitle">ПНД канистры различных цветов будут отсортированы и спресованы... </small>
+                            </figcaption>
+                        </figure>
+                        <a href="#" class="news-item__more">
+                            Подробнее
+                            <svg>
+                                <use xlink:href="img/svg/sprite.svg#shipments-arrow-btn"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="news-item">
+                        <figure class="news-item__content">
+                            <div>
+                                <picture>
+                                    <source data-srcset="img/images/news-2.webp 1x, img/images/news-2-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhDQAJAIAAAP///wAAACH5BAEAAAEALAAAAAANAAkAAAIJjI+py+0Po4QFADs=" type="image/webp">
+                                    <img data-src="img/images/news-2.png" data-srcset="img/images/news-2-2x.png 2x" src="data:image/gif;base64,R0lGODlhDQAJAIAAAP///wAAACH5BAEAAAEALAAAAAANAAkAAAIJjI+py+0Po4QFADs=" alt="Груда ПНД тары (канистры, бутылки и др.)" class="slider__img lazyload">
+                                </picture>
+                            </div>
+                            <figcaption class="news-item__desc">
+                                <a href="#">
+                                    <h4 class="news-item__title">Акция на литники ПВХ</h4>
+                                </a>
+                                <small class="news-item__subtitle">ПНД канистры различных цветов будут отсортированы и спресованы... </small>
+                            </figcaption>
+                        </figure>
+                        <a href="#" class="news-item__more">
+                            Подробнее
+                            <svg>
+                                <use xlink:href="img/svg/sprite.svg#shipments-arrow-btn"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="news-item card--none-sm">
+                        <figure class="news-item__content">
+                            <div>
+                                <picture>
+                                    <source data-srcset="img/images/news-3.webp 1x, img/images/news-3-2x.webp 2x" srcset="data:image/gif;base64,R0lGODlhDQAJAIAAAP///wAAACH5BAEAAAEALAAAAAANAAkAAAIJjI+py+0Po4QFADs=" type="image/webp">
+                                    <img data-src="img/images/news-3.png" data-srcset="img/images/news-3-2x.png 2x" src="data:image/gif;base64,R0lGODlhDQAJAIAAAP///wAAACH5BAEAAAEALAAAAAANAAkAAAIJjI+py+0Po4QFADs=" alt="Груда ПНД тары (канистры, бутылки и др.)" class="slider__img lazyload">
+                                </picture>
+                            </div>
+                            <figcaption class="news-item__desc">
+                                <a href="#">
+                                    <h4 class="news-item__title">На вторсырье ПНД снижена цена</h4>
+                                </a>
+                                <small class="news-item__subtitle">ПНД канистры различных цветов будут отсортированы и спресованы... </small>
+                            </figcaption>
+                        </figure>
+                        <a href="#" class="news-item__more">
+                            Подробнее
+                            <svg>
+                                <use xlink:href="img/svg/sprite.svg#shipments-arrow-btn"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </article>
+    </div>
+
+</main>
+
+
+
+@include('./components/footer.html', {"jQ": ""})

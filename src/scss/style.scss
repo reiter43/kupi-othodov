@@ -1025,6 +1025,11 @@ h1 {
     flex-direction: column;
     margin-bottom: $gat;
 
+    &--none-sm {
+        @include sm-block {
+            display: none;
+        }
+    }
     &--none-xxs {
         @include xxs-block {
             display: none;
@@ -2033,6 +2038,7 @@ h1 {
 @import 'catalog.scss';
 @import 'modal.scss';
 @import 'news.scss';
+@import 'article.scss';
 
 
 
