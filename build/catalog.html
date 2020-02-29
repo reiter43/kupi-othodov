@@ -279,8 +279,8 @@
                             <li class="nav__item" role="none presentation"><a href="/" class="nav__link" role="menuitem">О компании</a></li>
                             <li class="nav__item" role="none presentation"><a href="./news.html" class="nav__link" role="menuitem">Новости</a></li>
                             <li class="nav__item" role="none presentation"><a href="./article.html" class="nav__link" role="menuitem">Акции</a></li>
-                            <li class="nav__item" role="none presentation"><a href="#" class="nav__link" role="menuitem">Доставка</a></li>
-                            <li class="nav__item" role="none presentation"><a href="#" class="nav__link" role="menuitem">Контакты</a></li>
+                            <li class="nav__item" role="none presentation"><a href="./delivery.html" class="nav__link" role="menuitem">Доставка</a></li>
+                            <li class="nav__item" role="none presentation"><a href="./contacts.html" class="nav__link" role="menuitem">Контакты</a></li>
                         </ul>
                     </nav>
                     <button class="btn-base btn-base--call">
@@ -827,16 +827,18 @@
             <!-- Hidden Required Fields -->
             <input type="hidden" name="project_name" value="http://f0315577.xsph.ru/othodov">
             <input type="hidden" name="admin_email" value="43reiter@gmail.com">
-            <!-- <input type="hidden" name="email_from" value="info@f0315577.xsph.ru"> -->
             <input type="hidden" name="form_subject" value="Сайт Полимерные отходы. Заказ обратного звонка с формы в модальном окне">
             <!-- END Hidden Required Fields -->
-            <div>
+            <div class="form__block1">
                 <label for="form__tel--modal" class="visually-hidden">Телефон(обязательное поле)</label>
-                <input id="form__tel--modal" type="tel" class="form__elem form__elem--modal form__elem-tel" name="Телефон" placeholder="Телефон" tabindex="0" required>
+                <input id="form__tel--modal" type="tel" class="form-elem form-elem--modal" name="Телефон" placeholder="Телефон" tabindex="0" required>
+
                 <label for="form__email--modal" class="visually-hidden">Электронная почта(обязательное поле)</label>
-                <input id="form__email--modal" type="email" class="form__elem form__elem--modal" name="Электронная почта" placeholder="Электронная почта" tabindex="0" required>
+                <input id="form__email--modal" type="email" class="form-elem form-elem--modal" name="Электронная почта" placeholder="Электронная почта" tabindex="0" required>
+
                 <label for="form__email--comments" class="visually-hidden">Комментарий(необязательное поле)</label>
-                <textarea id="form__email--comments" class="form__elem form__elem--modal form__elem--comments" name="Комментарий" placeholder="Комментарий к заказу" tabindex="0"></textarea>
+                <textarea id="form__email--comments" class="form-elem form-elem--modal form-elem--comments" name="Комментарий" placeholder="Комментарий к заказу" tabindex="0"></textarea>
+
                 <button class="btn-base btn-base--form modal__btn-submit" tabindex="0">
                     <span class="btn-base__content">
                         <img src="img/images/smartphone.png" alt="" aria-hidden="true">
