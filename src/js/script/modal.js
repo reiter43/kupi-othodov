@@ -22,6 +22,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
             modal.classList.remove('hide');
             body.style.overflow = 'hidden';
+            body.style.marginRight = '17px';
             modalElem.focus();
 
             modal.addEventListener('keydown', function (e) {
@@ -39,7 +40,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
         function closeModal() {
             modal.classList.add('hide');
-            body.style.overflow = 'auto';
+            body.style.overflow = '';
+            body.style.marginRight = '0px';
+            modalElem.focus();
             lastFocus.focus();
             document.onkeydown = null;
         }

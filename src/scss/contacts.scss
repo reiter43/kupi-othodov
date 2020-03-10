@@ -1,0 +1,250 @@
+/*=============================================
+        СТРАНИЦА КОНТАКТОВ
+=============================================*/
+.contacts {
+    padding-top: 1.5*$gat;
+    padding-bottom: 5*$gat;
+    background: url(../img/images/bg-catalog.svg) no-repeat;
+    background-size: cover;
+
+    @include md-block {
+        padding-bottom: 4*$gat;
+    }
+
+    @include xs-block {
+        padding-bottom: 3*$gat;
+    }
+
+    &__content {
+        display: flex;
+        margin-top: 1.75*$gat;
+        border-radius: 10px;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+
+        @media screen and (max-width: 890px) {
+            flex-direction: column;
+        }
+    }
+
+    &__adres {
+        width: 50%;
+        padding: 2*$gat 0;
+        background: $c-base;
+
+        @include md-block {
+            min-width: 480px;
+        }
+
+        @media screen and (max-width: 890px) {
+            width: 100%;
+        }
+
+        @include sm-block {
+            min-width: 200px;
+        }
+
+        h4 {
+            margin: 0;
+            margin-bottom: $gat;
+            font-size: 24px;
+            font-weight: 500;
+
+            @media screen and (max-width: 440px) {
+                margin-bottom: 0.5*$gat;
+                font-size: 20px;
+            }
+        }
+
+        p {
+            margin-bottom: 1.5*$gat;
+            font-size: 15px;
+
+            @media screen and (max-width: 440px) {
+                margin-bottom: 0.7*$gat;
+            }
+        }
+    }
+
+    &__block1 {
+        padding: 0 4*$gat;
+        border-bottom: 1px solid #cccccc;
+
+        @include lg-block {
+            padding: 0 1.75*$gat;
+        }
+    }
+
+    &__block2 {
+        padding: 2*$gat 4*$gat 0;
+
+        @include lg-block {
+            padding: 2*$gat 1.75*$gat 0;
+        }
+
+        @include sm-block {
+            padding: 2*$gat 1.25*$gat 0;
+        }
+
+        @media screen and (max-width: 440px) {
+            padding: $gat 1.25*$gat 0;
+        }
+    }
+
+    &__wrap-tel {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 890px) {
+            justify-content: space-around;
+        }
+
+        @include xs-block {
+            justify-content: space-between;
+        }
+
+        @media screen and (max-width: 440px) {
+            flex-direction: column;
+        }
+
+        span {
+            font-size: 13px;
+        }
+    }
+
+    .contacts__tel1 {
+        @media screen and (max-width: 440px) {
+            margin-bottom: 1.5*$gat;
+        }
+    }
+
+    &__tel {
+        @include md-block {
+            font-size: 20px;
+        }
+
+        @include xs-block {
+            font-size: 17px;
+        }
+    }
+
+    &__email {
+        display: block;
+        margin: 1.5*$gat 0;
+        font-size: 20px;
+
+        @include md-block {
+            font-size: 20px;
+        }
+
+        @include xs-block {
+            font-size: 17px;
+        }
+    }
+
+    &__socnework {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2*$gat;
+
+        @media screen and (max-width: 890px) {
+            justify-content: space-around;
+        }
+
+        @include xs-block {
+            justify-content: space-between;
+            margin-top: 0.8*$gat;
+            margin-bottom: $gat;
+        }
+
+        @media screen and (max-width: 440px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__socnework-box {
+        margin-top: 0;
+
+        @media screen and (max-width: 440px) {
+            margin-top: 0;
+        }
+    }
+
+    &__socnetwork-slogan {
+        font-size: 20px;
+        font-weight: 500;
+
+        @include lg-block {
+            font-size: 17px;
+        }
+
+        @include sm-block {
+            margin-left: $gat;
+        }
+
+        @media screen and (max-width: 440px) {
+            margin-top: 0.5*$gat;
+            margin-left: 0;
+        }
+    }
+
+    small {
+        font-size: 13px;
+        color: lighten($c-accent, 60%);
+    }
+
+    &__map {
+        position: relative;
+        width: 50%;
+        background: url(../img/images/bg-map.jpg) no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        @include md-block {
+            background-image: url(../img/images/bg-map-1000.jpg);
+        }
+
+        @media screen and (max-width: 890px) {
+            display: none;
+        }
+
+        img {
+            position: absolute;
+            top: 54%;
+            left: 58%;
+            display: block;
+
+            @media screen and (max-width: 890px) {
+                display: none;
+            }
+
+            @include md-block {
+                top: 66%;
+            }
+        }
+
+        &--adres {
+            display: none;
+
+            @media screen and (max-width: 890px) {
+                display: block;
+                width: 100%;
+                height: 350px;
+                margin-bottom: 1.5*$gat;
+                background: url(../img/images/bg-map-480.jpg) no-repeat;
+                background-position: center center;
+                background-size: 100% 100%;
+            }
+
+            img {
+                display: none;
+
+                @media screen and (max-width: 890px) {
+                    top: 50%;
+                    display: block;
+                }
+            }
+        }
+    }
+}

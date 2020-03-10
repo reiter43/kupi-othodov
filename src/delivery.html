@@ -1,0 +1,142 @@
+@include('./components/header.html', {"title": "Доставка"})
+
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link active">Главная</a></li>
+        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link disabled">Доставка</a></li>
+    </ol>
+</nav>
+
+<main>
+    <section class="delivery">
+        <div class="wrapper delivery__wrapper">
+            <h1 id="title-section--delivery" class="title-section">Доставка</h1>
+            <form class="form form--delivery" aria-labelledby="title-section--delivery">
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="http://f0315577.xsph.ru/othodov">
+                <input type="hidden" name="admin_email" value="43reiter@gmail.com">
+                <input type="hidden" name="form_subject" value="Сайт Полимерные отходы. Заказ расчета стоимости доставки">
+                <!-- END Hidden Required Fields -->
+
+                <div class="form__block1--delivery">
+                    <label for="form__category-delivery" class="label">Категория
+                        <select id="form__category-delivery" class="form-elem form-elem--delivery" name="Категория">
+                            <option class="form-option" selected>Выбрать</option>
+                            <option class="form-option" value="Полиолефиновая пленка">Полиолефиновая пленка</option>
+                            <option class="form-option" value="Отходы ПНД">Отходы ПНД</option>
+                            <option class="form-option" value="Отходы ПВХ">Отходы ПВХ</option>
+                            <option class="form-option" value="Отходы АБС">Отходы АБС</option>
+                            <option class="form-option" value="Стрейч пленка">Стрейч пленка</option>
+                            <option class="form-option" value="Отходы пластика">Отходы пластика</option>
+                            <option class="form-option" value="Отходы полиамида">Отходы полиамида</option>
+                            <option class="form-option" value="Отходы Эва (Сэвилен)">Отходы Эва (Сэвилен)</option>
+                        </select>
+                    </label>
+
+                    <label for="form__subcategory-delivery" class="label">Подкатегория
+                        <select id="form__subcategory-delivery" class="form-elem form-elem--delivery" name="Подкатегория">
+                            <option class="form-option" selected>Выбрать</option>
+                            <option class="form-option" value="Подкатегория1">Подкатегория1</option>
+                            <option class="form-option" value="Подкатегория2">Подкатегория2</option>
+                            <option class="form-option" value="Подкатегория3">Подкатегория3</option>
+                        </select>
+                    </label>
+
+                    <label for="form__city-delivery" class="label">Город доставки
+                        <input id="form__city-delivery" type="text" class="form-elem form-elem--delivery" name="Город доставки" placeholder="Москва" required>
+                    </label>
+
+                    <label for="form__quan-delivery" class="label">Количество продукции, тн
+                        <input id="form__quan-delivery" type="number" class="form-elem form-elem--delivery" name="Количество продукции, тн" required>
+                    </label>
+
+                    <label for="form__tel-delivery" class="label">Номер телефона
+                        <input id="form__tel-delivery" type="tel" class="form-elem form-elem--delivery" name="Телефон" required>
+                    </label>
+
+                    <button class="btn-base btn-base--form delivery__btn-submit">
+                        <span class="btn-base__content">
+                            <img src="img/images/smartphone.png" alt="" aria-hidden="true">
+                            <span>Запросить стоимость</span>
+                        </span>
+                    </button>
+                </div>
+
+                <input id="form__sub--delivery" type="checkbox" class="form__sub" name="Доставка">
+                <label for="form__sub--delivery" class="form__sub-label form__sub-label--delivery">Нужна доставка</label>
+
+                <div class="form-radio__wrapper">
+                    <div class="form-radio__item">
+                        <input id="radio-1" type="radio" class="form-radio" name="Время связи" value="Утро">
+                        <label for="radio-1" class="form-radio__label">Связаться утром</label>
+                    </div>
+                    <div class="form-radio__item">
+                        <input id="radio-2" type="radio" class="form-radio" name="Время связи" value="День">
+                        <label for="radio-2" class="form-radio__label">Связаться днем</label>
+                    </div>
+                    <div class="form-radio__item">
+                        <input id="radio-3" type="radio" class="form-radio" name="Время связи" value="Вечер">
+                        <label for="radio-3" class="form-radio__label">Связаться вечером</label>
+                    </div>
+                </div>
+            </form>
+            <div class="delivery__content">
+                <p>Нaшa кoмпaния гoтoвa oкaзaть пoкупaтeлям пoмoщь в дocтaвкe гpузa в любую тoчку Poccии и ближнeгo зapубeжья. Дocтaвкa мoжeт быть ocущecтвлeнa aвтoмoбильным тpaнcпopтoм гpyзoпoдъeмнocтью oт 1 дo 20 тoнн. Нaличиe бoльшoй пocтoяннoй бaзы пepeвoзчикoв пoзвoляeт ocущecтвлять дocтaвку в кpaтчaйшиe cpoки и пo нaибoлee выгoдным тapифaм.</p>
+                <div class="delivery__services">
+                    <div class="delivery-item">
+                        <h3 class="title-section--delivery-h3">Самовывоз</h3>
+                        <img src="img/images/delivery-icon-1.png" alt="">
+                        <p>На складе есть вся необходимая погрузочная техника. От 1-20 тонн</p>
+                    </div>
+                    <div class="delivery-item">
+                        <h3 class="title-section--delivery-h3">Расчет маршрута</h3>
+                        <img src="img/images/delivery-icon-2.png" alt="">
+                        <p>Индивидуальный порядок подбора маршрута для быстрой доставки груза с учетом характеристики груза, расстояния, загруженностью на дорогах.</p>
+                    </div>
+                    <div class="delivery-item">
+                        <h3 class="title-section--delivery-h3">Оплата</h3>
+                        <img src="img/images/delivery-icon-3.png" alt="">
+                        <p>Безналичный расчет по договору, оплата наличными в нашем офисе</p>
+                    </div>
+                </div>
+                <p>В наше время отходы пластика используются практически везде. Его широко применяют на производстве гранул, при изготовлении изделий. Ведь из него очень просто изготавливать необходимые детали.</p>
+                <h4>Существует различное множество видов пластиковых отходов</h4>
+                <p>Б.у. пластмас очень востребован, так как имеет незначительную стоимость, прекрасную прочность и долговечность. Без него многие отрасли попросту не могут существовать. Наша реализует не только б.у. полимеры, но и различные отходы стрейч пленки, а так же осуществляет услуги по доставке товара заказчику собственным транспортом. Любой вид продукции будет доставлен точно в оговоренные сроки.</p>
+                <h4>Поставка полимерных отходов собственным автотранспортом</h4>
+                <p>Автомобилями нашей компании доставка любого необходимого товара осуществляется в сжатые сроки. Компания имеет автомобили разных габаритов, которые без задержек подвезут приобретенную продукцию по адресу. Выгодное сотрудничество с компанией.</p>
+                <p>Оперативный подвоз собственным транспортом. Автомобили всегда в наличии. Габаритный груз, который еще и очень тяжелый, прибудет к заказчику без проблем;</p>
+                <ul>
+                    <li>помощь в оформлении заказа и доставке менеджером компании; </li>
+                    <li>приемлемые цены на транспортировку нашим транспортом отходов пленки.</li>
+                </ul>
+                <p>Компания предлагает выгодные цены на доставку по Москве, а также по всей России и ближнему зарубежью. Стоимость услуги рассчитывается индивидуально и зависит от веса груза и конечного пункта прибытия.</p>
+                <p>Чистое вторсырье можно приобрести в компании по самым выгодным ценам. Существенно упрощает приобретение товара его доступность для транспортировки. Услуги нашей компании по доставке полимерных отходов уже многие оценили, ведь об этом беспокоится не покупатель, а продавец, а это очень удобно для покупателя. Компания АМД старается упростить покупки, делая быструю доставку приобретенного товара.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-delivery">       
+        <div class="map-delivery__img">
+            <picture>
+                <source media="(max-width: 320px)" srcset="img/images/pins-320.webp 1x, img/images/pins-320-2x.webp 2x" type="image/webp">
+                <source media="(max-width: 320px)" srcset="img/images/pins-320.png 1x, img/images/pins-320-2x.png 2x">
+                <source media="(max-width: 480px)" srcset="img/images/pins-480.webp 1x, img/images/pins-480-2x.webp 2x" type="image/webp">
+                <source media="(max-width: 480px)" srcset="img/images/pins-480.png 1x, img/images/pins-480-2x.png 2x">
+                <source media="(max-width: 768px)" srcset="img/images/pins-768.webp 1x, img/images/pins-768-2x.webp 2x" type="image/webp">
+                <source media="(max-width: 768px)" srcset="img/images/pins-768.png 1x, img/images/pins-768-2x.png 2x">
+                <source media="(max-width: 1000px)" srcset="img/images/pins-1000.webp 1x, img/images/pins-1000-2x.webp 2x" type="image/webp">
+                <source media="(max-width: 1000px)" srcset="img/images/pins-1000.png 1x, img/images/pins-1000-2x.png 2x">
+                <source srcset="img/images/pins.webp 1x, img/images/pins-2x.webp 2x" type="image/webp">
+                <img src="img/images/pins.png" srcset="img/images/pins-2x.png 2x" alt="Флажки на карте в местах осуществления доставки">
+            </picture>
+            
+        </div> 
+        <div class="wrapper">
+            <h2 class="map-delivery__title">Доставка по всей России и ближнему зарубежью</h2>
+        </div>
+    </section>
+
+
+</main>
+
+@include('./components/footer.html', {"jQ": "js/all.js"})

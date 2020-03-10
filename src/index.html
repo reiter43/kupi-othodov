@@ -1,8 +1,7 @@
-@include('./components/header.html', {
-"title": "Полимерные отходы"
-})
+@include('./components/header.html', {"title": "Полимерные отходы"})
 
 <main>
+
     <section class="head">
         <div class="head__wrap">
             <div class="head__content">
@@ -138,11 +137,11 @@
                 <!-- <input type="hidden" name="email_from" value="info@f0315577.xsph.ru"> -->
                 <input type="hidden" name="form_subject" value="Сайт Полимерные отходы. Заказ обратного звонка с формы на главной">
                 <!-- END Hidden Required Fields -->
-                <div>
+                <div class="form__block1">
                     <label for="form__tel--call" class="visually-hidden">Телефон(обязательное поле)</label>
-                    <input id="form__tel--call" type="tel" class="form__elem form__elem-tel" name="Телефон" placeholder="Телефон" required>
+                    <input id="form__tel--call" type="tel" class="form-elem" name="Телефон" placeholder="Телефон" required>
                     <label for="form__email--cal" class="visually-hidden">Электронная почта(обязательное поле)</label>
-                    <input id="form__email--cal" type="email" class="form__elem" name="Электронная почта" placeholder="Электронная почта" required>
+                    <input id="form__email--cal" type="email" class="form-elem" name="Электронная почта" placeholder="Электронная почта" required>
                     <button class="btn-base btn-base--form">
                         <span class="btn-base__content">
                             <img src="img/images/smartphone.png" alt="" aria-hidden="true">
@@ -296,6 +295,4 @@
 
 </main>
 
-@include('./components/footer.html', {
-    "jQ": "js/all.js"
-})
+@include('./components/footer.html', {"jQ": "js/all.js"})

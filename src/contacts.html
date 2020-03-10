@@ -1,0 +1,88 @@
+@include('./components/header.html', {"title": "Контакты"})
+
+<main>
+
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link active">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link disabled">Контакты</a></li>
+        </ol>
+    </nav>
+
+    <section class="contacts">
+        <div class="wrapper">
+            <h1 class="title-section">Наши контакты</h1>
+            <div class="contacts__content">
+                <div class="contacts__adres">
+                    <div class="contacts__block1">
+                        <h4>Склад и сортировочная база</h4>
+                        <p>МО г.Подольск Домодедовское шоссе 00</p>
+                    </div>
+
+                    <div class="contacts__block2">
+                        <h4>Офис</h4>
+                        <p>МО г. Подольск, Домодедовское шоссе, д. 14</p>
+
+                        <div class="contacts__wrap-tel">
+                            <div class="contacts__tel1">
+                                <a href="tel:+7495542XXXX" class="tel contacts__tel">+7 495 542-XX-XX</a>
+                                <span>многоканальный телефон</span>
+                            </div>
+                            <div class="contacts__tel2">
+                                <a href="tel:8800700XXXX" class="tel contacts__tel">8 800 700-XX-XX</a>
+                                <span>бесплатный звонок</span>
+                            </div>
+                        </div>
+
+                        <a href="mailto:info@kupi-xxxxxxx.ru" class="email contacts__email">info@kupi-xxxxxxx.ru</a>
+                        <div class="contacts__map contacts__map--adres">
+                            <picture>
+                                <source srcset="img/images/marker-map.webp 1x, img/images/marker-map-2x.webp 2x" type="image/webp">
+                                <img src="img/images/marker-map.png" srcset="img/images/marker-map-2x.png 2x" alt="Флажок-маркер для обозначения адреса на карте">
+                            </picture>
+                        </div>
+                        <p>Проезд по симферопольскому шоссе в направлении от Москвы в г. Тула на расстояние 13 км от Мкад съезд на параллельную дорогу (по указателю:Подольск). После поста ГАИ (на расстоянии 16 км.от МКАД) поворот на право. Через 1 км серовато-голубое офисное здание, это наш офис.</p>
+
+                        <div class="contacts__socnework">
+                            <div class="socnework-box contacts__socnework-box">
+                                <a href="#" class="socnework-item socnework-item--ok" aria-label="Ссылка на профиль в соцсети Одноклассники">
+                                    <svg>
+                                        <use xlink:href="img/svg/sprite.svg#ok"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="socnework-item socnework-item--vk" aria-label="Ссылка на профиль в соцсети ВКонтакте">
+                                    <svg>
+                                        <use xlink:href="img/svg/sprite.svg#vk"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="socnework-item socnework-item--fb" aria-label="Ссылка на профиль в соцсети Фэйсбук">
+                                    <svg>
+                                        <use xlink:href="img/svg/sprite.svg#fb"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="socnework-item socnework-item--in" aria-label="Ссылка на профиль в соцсети Инстаграм">
+                                    <svg>
+                                        <use xlink:href="img/svg/sprite.svg#in"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <span class="contacts__socnetwork-slogan">Присоединяйтесь к нам!</span>
+                        </div>
+
+                        <small>Юридическое лицо <br> ООО "АМД" <br> ОГРН 1117746522398 <br> Почтовый адрес: Российская Федерация, Московская область, <br> г. Подольск, Домодедовское шоссе, индекс 142116, д. 14</small>
+                    </div>
+                </div>
+
+                <div class="contacts__map">
+                    <picture>
+                        <source srcset="img/images/marker-map.webp 1x, img/images/marker-map-2x.webp 2x" type="image/webp">
+                        <img src="img/images/marker-map.png" srcset="img/images/marker-map-2x.png 2x" alt="Флажок-маркер для обозначения адреса на карте">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@include('./components/footer.html', {"jQ": "js/all.js"})

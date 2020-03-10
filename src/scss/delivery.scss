@@ -1,0 +1,339 @@
+/*=============================================
+        СТРАНИЦА DELIVERY
+=============================================*/
+.delivery {
+    padding-top: 1.5*$gat;
+    padding-bottom: 4*$gat;
+    background: url(../img/images/bg-catalog.svg) no-repeat;
+    background-size: cover;
+
+    &__wrapper {
+        @media screen and (max-width: 440px) {
+            padding: 0;
+        }
+
+        @include xxs-block {
+            padding: 0;
+        }
+    }
+
+    &__content {
+        margin-top: $gat;
+        padding: $gat 1.5*$gat 1.75*$gat;
+        border-radius: 10px;
+        background: $c-base;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+
+        @include sm-block {
+            padding: $gat;
+        }
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 140%;
+        color: $c-accent;
+
+        @include xxs-block {
+            font-size: 13px;
+        }
+    }
+
+    p:not(:last-child) {
+        margin-bottom: 1.5*$gat;
+    }
+
+    &__services {
+        @include row-flex;
+        margin: 0 0 1.5*$gat 0;
+    }
+
+    h4 {
+        margin-bottom: 1.5*$gat;
+        font-size: 24px;
+        line-height: 140%;
+        font-weight: 500;
+        color: $c-accent;
+
+        @include xs-block {
+            font-size: 20px;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        position: relative;
+        margin-bottom: 1.5*$gat;
+        padding-left: 35px;
+        font-size: 15px;
+        line-height: 140%;
+        color: $c-accent;
+
+        @include xxs-block {
+            font-size: 13px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 20px;
+            height: 2px;
+            background: $c-normal;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.form__block1--delivery {
+    @include row-flex;
+    margin-top: 1.5*$gat;
+}
+
+.form-elem--delivery {
+    width: 100%;
+
+    @media screen and (max-width: 700px) {
+        width: 100%;
+    }
+
+    @include xxs-block {
+        padding-left: $gat;
+    }
+}
+
+.label {
+    @include col;
+    @include size(4);
+    @include size-md(6);
+
+    @media screen and (max-width: 700px) {
+        @include size(12);
+    }
+    font-size: 17px;
+    line-height: 20px;
+
+    color: $c-base;
+}
+
+.delivery__btn-submit {
+    @include col;
+    @include size(4);
+    @include size-md(6);
+
+    @media screen and (max-width: 700px) {
+        @include size(12);
+    }
+
+    @include size-xs(12);
+    align-self: center;
+    margin-top: 0.5*$gat;
+    padding: 0.5*$gat 0;
+
+    span {
+        justify-content: center;
+    }
+}
+
+#form__subcategory-delivery,
+#form__category-delivery {
+    appearance: none;
+    background: $c-base url(../img/images/arrow-select.png) no-repeat;
+    background-position: right 20px top 50%;
+}
+
+.form-radio__wrapper {
+    @include row-flex;
+    margin-top: $gat;
+}
+
+.form-radio {
+    opacity: 0;
+
+    &__item {
+        @include col;
+        @include size(4);
+        @include size-sm(6);
+        margin-top: $gat;
+
+        @media screen and (max-width: 440px) {
+            @include size(12);
+        }
+    }
+
+    &__item:last-child {
+        @include sm-block {
+            width: 100%;
+        }
+    }
+
+    &__label {
+        position: relative;
+        padding-left: 1.25*$gat;
+        font-size: 17px;
+        line-height: 20px;
+        color: $c-base;
+        transition: 0.5s ease color;
+        cursor: pointer;
+
+        @media screen and (max-width: 700px) {
+            font-size: 15px;
+            line-height: 18px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: $c-base;
+            transition: 0.5s ease background-color;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: -11px;
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: $c-base;
+
+            @media screen and (max-width: 700px) {
+                top: 3px;
+            }
+        }
+    }
+}
+
+.form-radio:checked+.form-radio__label::before {
+    background: $c-normal;
+}
+
+.form-radio:focus+.form-radio__label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+}
+
+.form-radio:focus+.form-radio__label {
+    color: $c-normal;
+}
+
+.delivery-item {
+    @include col;
+    @include size(4);
+
+    @media screen and (max-width: 890px) {
+        @include size(12);
+        margin-bottom: 0.5*$gat;
+    }
+    position: relative;
+
+    padding: $gat;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+
+    img {
+        position: absolute;
+        top: 17px;
+        right: 20px;
+    }
+}
+
+.map-delivery {
+    position: relative;
+    min-height: 850px;
+    background: url(../img/images/bg-delivery.jpg) no-repeat center;
+    background-size: 100% 100%;
+
+    @include md-block {
+        min-height: 650px;
+        background-image: url(../img/images/bg-delivery-1000.jpg);
+    }
+
+    @include sm-block {
+        background-image: url(../img/images/bg-delivery-768.jpg);
+    }
+
+    @include xs-block {
+        background-image: url(../img/images/bg-delivery-480.jpg);
+    }
+
+    @include xxs-block {
+        background-image: url(../img/images/bg-delivery-320.jpg);
+    }
+
+    &__img {
+        position: absolute;
+        top: 90px;
+        left: 93px;
+        max-width: 1768px;
+        margin: 0 auto;
+
+        @media screen and (max-width: 1600px) {
+            left: 70px;
+        }
+
+        @include lg-block {
+            left: 45px;
+        }
+
+        @include md-block {
+            left: 0;
+        }
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        min-height: 690px;
+
+        @include md-block {
+            min-height: 560px;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        padding-top: 4.5*$gat;
+        font-size: 32px;
+        line-height: 140%;
+        font-weight: 500;
+        color: $c-accent;
+
+        @media screen and (max-width: 1600px) {
+            padding-top: 1.25*$gat;
+        }
+
+        @include md-block {
+            padding-top: 2.25*$gat;
+        }
+
+        @media screen and (max-width: 890px) {
+            font-size: 28px;
+        }
+
+        @include sm-block {
+            max-width: 420px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 32px;
+        }
+
+        @include xs-block {
+            font-size: 28px;
+        }
+
+        @include xxs-block {
+            font-size: 24px;
+        }
+    }
+}

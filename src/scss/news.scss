@@ -50,9 +50,9 @@
     flex-direction: column;
     margin-bottom: $gat;
     padding-bottom: 2*$gat;
-    background: #FFFFFF;
     border-radius: 10px;
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
 
     &__content {
         div {
@@ -66,8 +66,8 @@
     }
 
     &__desc {
-        padding: $gat;
         margin-bottom: 0.5*$gat;
+        padding: $gat;
     }
 
     &__title {
@@ -105,11 +105,11 @@
         align-items: center;
         margin-top: auto;
         margin-left: 20px;
-        font-family: Rubik;
-        font-style: normal;
-        font-weight: 500;
+        font-family: Rubik, Arial, sans-serif;
         font-size: 17px;
         line-height: 20px;
+        font-weight: 500;
+        font-style: normal;
         color: $c-normal;
 
         &:hover {
@@ -139,9 +139,9 @@
 
     &__content {
         display: flex;
-        background: $c-base;
-        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
         border-radius: 10px;
+        background: $c-base;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
 
         &>div {
             @include md-block {
@@ -172,17 +172,17 @@
         }
 
         fieldset {
-            border: none;
-            padding: 0;
             flex: 0 0 50%;
+            padding: 0;
+            border: none;
         }
 
         aside {
             padding-left: 30px;
 
             @media screen and (max-width: 700px) {
-                padding-left: 0;
                 margin-top: 25px;
+                padding-left: 0;
                 text-align: center;
             }
 
