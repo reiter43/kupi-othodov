@@ -99,10 +99,10 @@
 //Кнопка-гамбургер для меню
 
 @mixin burger ($widthButton, $heightButton, $widthLine, $heightLine, $gat, $colorLine, $colorButton) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
     width: $widthButton;
     height: $heightButton;
     padding: 0;

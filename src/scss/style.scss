@@ -377,7 +377,7 @@ address {
 ---------------------------------------------*/
 .breadcrumbs {
     margin: 0 auto;
-    padding: 21px 0;
+    padding: $gat;
 
     &__list {
         display: flex;
@@ -429,8 +429,6 @@ address {
         color: $c-normal;
     }
 }
-
-
 
 /*--------------------------------------------*/
 
