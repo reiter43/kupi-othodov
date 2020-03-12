@@ -1,0 +1,329 @@
+/*=============================================
+        ПОДВАЛ
+=============================================*/
+.footer {
+    padding-top: 2.85*$gat;
+
+    @include xs-block {
+        padding-top: 2.25*$gat;
+    }
+
+    &__top-line {
+        @include row-flex();
+        padding-bottom: 2.85*$gat;
+
+        @media screen and (max-width: 950px) {
+            justify-content: flex-end;
+        }
+
+        @media screen and (max-width: 700px) {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        @include xs-block {
+            padding-bottom: 1.2*$gat;
+        }
+    }
+
+    &__block {
+        @include col();
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__block1 {
+        @include size(4);
+        @include size-lg(3);
+
+        @media screen and (max-width: 950px) {
+            @include size(5);
+        }
+
+        @media screen and (max-width: 890px) {
+            @include size(4);
+        }
+
+        @media screen and (max-width: 700px) {
+            @include size-lg(12);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2*$gat;
+        }
+
+        @media screen and (max-width: 440px) {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5*$gat;
+        }
+    }
+
+    &__block2 {
+        @include size(3);
+        align-items: flex-start;
+
+        @media screen and (max-width: 950px) {
+            @include size(7);
+            display: block;
+        }
+
+        @media screen and (max-width: 890px) {
+            @include size(8);
+        }
+
+        @media screen and (max-width: 700px) {
+            @include size-lg(12);
+        }
+
+        &>div {
+            @media screen and (max-width: 950px) {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            @media screen and (max-width: 440px) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__block3 {
+        @include size(5);
+        @include size-lg(6);
+
+        @media screen and (max-width: 950px) {
+            @include size(7);
+        }
+
+        @media screen and (max-width: 890px) {
+            @include size(8);
+        }
+
+        @media screen and (max-width: 700px) {
+            @include size-lg(12);
+        }
+
+        p {
+            max-width: 503px;
+            margin: 0 0 0.75*$gat 0;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 400;
+
+            @include lg-block {
+                font-size: 17px;
+                line-height: 20px;
+            }
+
+            @media screen and (max-width: 950px) {
+                max-width: 463px;
+            }
+
+            @include xxs-block {
+                max-width: 225px;
+            }
+        }
+
+        small {
+            display: block;
+            margin-top: $gat;
+            color: lighten($c-accent, 60%);
+
+            @include sm-block {
+                font-size: 17px;
+            }
+        }
+
+        &>div {
+            display: flex;
+            align-items: center;
+        }
+
+        &>div:last-child {
+            margin-top: 1.7*$gat;
+
+            @media screen and (max-width: 440px) {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 1.25*$gat;
+            }
+
+            p {
+                margin-bottom: 0;
+                margin-left: 1.25*$gat;
+
+                @media screen and (max-width: 440px) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+
+
+    &__adress {
+        @include lg-block {
+            font-size: 17px;
+            line-height: 20px;
+        }
+    }
+
+    &__email {
+        display: block;
+        margin: 15px 0 15px;
+
+        @include md-block {
+            font-size: 17px;
+        }
+
+        @media screen and (max-width: 950px) {
+            margin: 12px 0 12px;
+        }
+    }
+
+    &__tel {
+        font-size: 24px;
+        line-height: 28px;
+
+        @include md-block {
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        @include xs-block {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+
+    &__btn-base--call {
+        margin-top: $gat;
+        padding-top: 0.25*$gat;
+        padding-bottom: 0.25*$gat;
+
+        img {
+            @media screen and (max-width: 890px) {
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 950px) {
+            margin-right: $gat;
+        }
+
+        @media screen and (max-width: 890px) {
+            padding: 5px 22px 5px 7px;
+            font-size: 15px;
+            line-height: 18px;
+        }
+
+        @media screen and (max-width: 700px) {
+            margin-right: 0;
+            margin-bottom: 1.75*$gat;
+            padding: 5px 22px 5px 7px;
+        }
+
+        @media screen and (max-width: 440px) {
+            align-self: flex-start;
+        }
+    }
+
+    &__mode {
+        font-size: 17px;
+        line-height: 20px;
+        font-weight: 400;
+        color: lighten($c-accent, 60%);
+    }
+
+    &__copy {
+        padding: 1.5*$gat 0;
+        background: $c-accent;
+
+        p {
+            font-size: 17px;
+            line-height: 20px;
+            color: lighten($c-accent, 60%);
+        }
+    }
+}
+
+.socnework-box {
+    display: flex;
+    margin-top: 1.5*$gat;
+
+    @media screen and (max-width: 700px) {
+        margin-top: 0;
+    }
+
+    @media screen and (max-width: 440px) {
+        margin-top: 1.25*$gat;
+    }
+}
+
+.socnework-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform ease 0.5s;
+
+    &--ok {
+        background: #f79a38;
+
+        svg {
+            @include svg(14px, 22px, $c-base);
+        }
+    }
+
+    &--vk {
+        background: #7294c7;
+
+        svg {
+            @include svg(21px, 12px, $c-base);
+        }
+    }
+
+    &--fb {
+        background: #4e6297;
+
+
+        svg {
+            @include svg(17px, 17px, $c-base);
+        }
+    }
+
+    &--in {
+        background: linear-gradient(43.94deg, #eea054 16.16%, #d64763 50.11%, #b62a99 83.68%);
+
+        svg {
+            @include svg(17px, 17px, $c-base);
+        }
+    }
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.socnework-item+.socnework-item {
+    margin-left: 0.5*$gat;
+}
+
+.logo__title.logo__title--footer {
+    text-align-last: left;
+
+    @include md-block {
+        font-size: 14px;
+    }
+
+    @media screen and (max-width: 440px) {
+        font-size: 18px;
+        line-height: 14px;
+    }
+}
+
+/*=============================================*/

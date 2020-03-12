@@ -1,0 +1,448 @@
+/*=============================================
+      ОБЩИЕ ПРАВИЛА
+=============================================*/
+
+$ff-base: Rubik, Arial, sans-serif;
+
+$c-accent: #111111;
+$c-base: #ffffff;
+$c-normal: #b7000e;
+
+$gat: 20px;
+
+.clearfix:after {
+    @include clearfix;
+}
+
+.wrapper {
+    @include wrapper;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    width: 100%;
+    font-family: $ff-base;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: $c-accent;
+}
+
+p,
+ul,
+ol,
+li,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+address {
+    font-style: normal;
+}
+
+
+/*Заголовки 
+---------------------------------------------*/
+
+.title-section {
+    margin: 0 auto;
+    text-align: center;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 42px;
+    line-height: 49px;
+    font-weight: 500;
+    font-style: normal;
+    color: $c-accent;
+
+    @include sm-block {
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    @include xs-block {
+        font-size: 32px;
+        line-height: 37px;
+    }
+
+    @include xxs-block {
+        font-size: 28px;
+        line-height: 33px;
+    }
+
+    &--menegers {
+        @include sm-block {
+            max-width: 336px;
+        }
+
+        @include xxs-block {
+            max-width: 240px;
+        }
+    }
+
+    &--dipploms {
+        color: $c-base;
+    }
+
+    &--h3 {
+        margin: 0;
+        text-align: left;
+        font-family: $ff-base;
+        font-size: 32px;
+        line-height: 38px;
+
+        @include xs-block {
+            font-size: 28px;
+            line-height: 33px;
+        }
+    }
+
+    &--delivery-h3 {
+        font-size: 24px;
+        line-height: 140%;
+        font-weight: 500;
+        color: $c-accent;
+
+        @include lg-block {
+            max-width: 200px;
+        }
+
+        @media screen and (max-width: 890px) {
+            max-width: 100%;
+            margin-top: 0;
+        }
+
+        @media screen and (max-width: 440px) {
+            max-width: 70%;
+        }
+
+        @include xxs-block {
+            font-size: 20px;
+        }
+    }
+}
+
+/*--------------------------------------------*/
+
+
+/*Кнопки
+---------------------------------------------*/
+.btn-base {
+    border: none;
+    background: $c-normal;
+    font-family: $ff-base;
+    font-weight: 500;
+    color: $c-base;
+    transition: background-color ease 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: lighten($c-normal, 10%);
+    }
+
+    &:active {
+        background: darken($c-normal, 10%);
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--anons {
+            justify-content: center;
+
+            img {
+                margin-right: $gat;
+            }
+
+            span {
+                span {
+                    @media screen and (max-width: 440px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &--call {
+        padding: 0 22px 0 7px;
+        border-radius: 4px;
+        font-size: 15px;
+        line-height: 18px;
+
+        @media screen and (max-width: 890px) {
+            padding: 11px 20px 13px 20px;
+            font-size: 13px;
+            line-height: 15px;
+        }
+
+        @media screen and (max-width: 700px) {
+            padding: 0 22px 0 7px;
+        }
+
+        img {
+            @media screen and (max-width: 890px) {
+                display: none;
+            }
+
+            @media screen and (max-width: 700px) {
+                display: flex;
+            }
+
+            @include xxs-block {
+                margin-right: -3px;
+            }
+        }
+    }
+
+    &--cat {
+        margin: 0 auto;
+        padding: 20px 28px;
+        border-radius: 6px;
+        font-size: 17px;
+        line-height: 20px;
+
+        img {
+            margin-right: 0.5*$gat;
+        }
+    }
+
+    &--form {
+        padding: 10px 7%;
+        white-space: nowrap;
+        border-radius: 4px;
+        font-size: 17px;
+        line-height: 20px;
+
+        @include lg-block {
+            padding: 10px 5%;
+        }
+
+        @include sm-block {
+            padding: 10px 2% 10px 1%;
+        }
+
+        @media screen and (max-width: 700px) {
+            padding: 10px 7%;
+        }
+
+        @include xs-block {
+            width: 100%;
+            padding: 10px 30% 10px 20%;
+        }
+
+        @media screen and (max-width: 440px) {
+            padding: 10px 20% 10px 10%;
+        }
+
+        @include xxs-block {
+            padding: 12px 20% 10px 15%;
+        }
+    }
+
+    &--shipments {
+        display: inline-block;
+        padding: 17px 20px 20px 29px;
+        border: 2px solid $c-normal;
+        border-radius: 10px;
+        background: $c-base;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 20px;
+        line-height: 23px;
+        font-weight: 400;
+        color: $c-accent;
+
+        &:hover {
+            color: $c-base;
+        }
+
+        svg {
+            margin-left: 12px;
+            stroke: $c-normal;
+            stroke-width: 2px;
+            @include svg(20px, 20px, $c-base);
+        }
+    }
+}
+
+.btn-control {
+    display: inline-block;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    svg {
+        @include svg(40px, 40px, $c-normal);
+
+        &:hover {
+            fill: lighten($c-normal, 10%);
+        }
+    }
+
+    &--white {
+        svg {
+            fill: $c-base;
+        }
+    }
+}
+
+.btn-close {
+    border: none;
+    background: none;
+
+    span {
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+
+        &:hover {
+
+            &::before,
+            &::after {
+                background: $c-base;
+            }
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            display: block;
+            width: 26px;
+            height: 3px;
+            background: #5c5c5c;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.btn-submit {
+    &--anons {
+        width: 100%;
+        padding: 22px;
+
+        @include lg-block {
+            padding: 22px;
+        }
+
+        @include sm-block {
+            padding: 22px;
+        }
+
+        @media screen and (max-width: 700px) {
+            padding: 22px;
+        }
+
+        @include xs-block {
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 440px) {
+            padding: 20px;
+        }
+
+        @include xxs-block {
+            padding: 20px;
+        }
+    }
+}
+
+/*--------------------------------------------*/
+
+
+/*Хлебные крошки 
+---------------------------------------------*/
+.breadcrumbs {
+    margin: 0 auto;
+    padding: $gat;
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    &__item {
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    &__item+&__item {
+        position: relative;
+        margin-left: 60px;
+
+        @media screen and (max-width: 440px) {
+            margin-left: 40px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            display: inline-block;
+            width: 1px;
+            height: 100%;
+            background-color: lighten($c-accent, 60%);
+            transform: rotate(20deg);
+
+            @media screen and (max-width: 440px) {
+                left: -20px;
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        color: $c-accent;
+    }
+
+    &__link.disabled {
+        @include disa;
+        color: $c-accent;
+    }
+
+    &__link.active {
+        color: $c-normal;
+    }
+}
+
+/*--------------------------------------------*/
+
+.hide {
+    display: none !important;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.visual {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.1s ease-in;
+}
+
+/*=============================================*/

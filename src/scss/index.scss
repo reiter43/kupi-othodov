@@ -1,0 +1,1004 @@
+/*=============================================
+        ОСНОВНОЙ КОНТЕНТ
+=============================================*/
+
+/*---------------------------------------------
+  Секция head
+---------------------------------------------*/
+.head {
+    width: 100%;
+    text-align: center;
+    background: url(../img/images/bg-head-hd.jpg) no-repeat;
+    background-position: center 0;
+    background-size: cover;
+
+    @include md-block {
+        background-image: url(../img/images/bg-head-1000.jpg);
+    }
+
+    @include sm-block {
+        min-height: 382px;
+        background-image: url(../img/images/bg-head-768.jpg);
+        background-size: cover;
+    }
+
+    @include xs-block {
+        background-image: url(../img/images/bg-head-480.jpg);
+    }
+
+    @include xxs-block {
+        background-image: url(../img/images/bg-head-320.jpg);
+    }
+
+    &__wrap {
+        position: relative;
+        width: 100%;
+        padding-bottom: 49.6%;
+
+        @include sm-block {
+            padding-bottom: 0;
+        }
+
+        &--active {
+            z-index: -1;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 222px 0 531px 0;
+
+        @include lg-block {
+            padding-top: 150px;
+        }
+
+        @include md-block {
+            padding: 148px 0 157px 0;
+        }
+
+        @include sm-block {
+            padding: 90px 0 120px 0;
+        }
+
+        @include xxs-block {
+            padding-top: 80px;
+        }
+    }
+}
+
+h1 {
+    max-width: 565px;
+    margin: 0 auto 28px;
+    text-align: center;
+    font-size: 48px;
+    line-height: 57px;
+    font-weight: 500;
+    color: #ffffff;
+
+    @include md-block {
+        font-size: 42px;
+        line-height: 50px;
+    }
+
+    @include sm-block {
+        font-size: 36px;
+        line-height: 43px;
+    }
+
+    @include xs-block {
+        max-width: 423px;
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    @include xxs-block {
+        max-width: 281px;
+        margin-bottom: 23px;
+        font-size: 28px;
+        line-height: 33px;
+    }
+}
+
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция slider
+---------------------------------------------*/
+.slider {
+    position: relative;
+    padding: 3*$gat 0 2.5*$gat;
+
+    @include md-block {
+        padding-top: 2.25*$gat;
+        padding-bottom: 3*$gat;
+    }
+
+    &__container-controls {
+        top: 33%;
+
+        @media screen and (max-width: 1450px) {
+            display: none;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: 0;
+
+        @include xxs-block {
+            padding-left: 0.25*$gat;
+        }
+
+        div {
+            position: relative;
+        }
+    }
+
+    &__img {
+        @include img();
+        background-color: #eee;
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-top: 1.25*$gat;
+
+        @include xxs-block {
+            margin-top: 1.25*$gat;
+        }
+    }
+
+    &__title {
+        margin: 0 0 $gat;
+        font-size: 24px;
+        line-height: 140%;
+        font-weight: 400;
+        color: $c-accent;
+
+        &:hover {
+            color: $c-normal;
+        }
+
+        @include xxs-block {
+            margin-bottom: 1.25*$gat;
+            font-size: 17px;
+            line-height: 140%;
+        }
+    }
+
+    &__subtitle {
+        display: inline-block;
+        margin-top: auto;
+        color: lighten($c-accent, 60%);
+
+        @include xxs-block {
+            margin-top: (-0.5) *$gat;
+            font-size: 15px;
+        }
+    }
+}
+
+.accia {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
+    padding: 7px 45px 9px 27px;
+    border-radius: 0 45px 0 0;
+    background: $c-normal;
+    font-family: $ff-base;
+    font-size: 17px;
+    line-height: 140%;
+    font-weight: 500;
+    color: $c-base;
+    transition: background-color ease 0.5s;
+
+    &:hover {
+        background-color: lighten($c-normal, 10%);
+    }
+}
+
+.container-controls {
+    position: absolute;
+    left: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1536px;
+    margin: 0 auto;
+    padding: 0 $gat;
+    transform: translateX(-50%);
+}
+
+.owl-carousel .owl-stage {
+    display: flex;
+    align-items: stretch;
+}
+
+/*Пагинация слайдера
+------------------------------------------------*/
+.owl-carousel {
+    .owl-dots {
+        width: 100%;
+        margin-top: 2*$gat;
+        margin-left: (-0.75) *$gat;
+        text-align: center;
+
+        @include xxs-block {
+            margin-top: 1.5*$gat;
+        }
+
+        .owl-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-left: 17px;
+            border-radius: 50%;
+            background-color: #eeeeee;
+            transition: all ease 0.5s;
+
+            &.active {
+                background-color: $c-normal;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+/*----------------------------------------------*/
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция catalog
+---------------------------------------------*/
+.catalog {
+    padding: 77px 0;
+    background: url(../img/images/bg-catalog.svg) no-repeat;
+    background-size: cover;
+
+    @include md-block {
+        padding: 2*$gat 0 3*$gat 0;
+    }
+
+    @include xxs-block {
+        padding-bottom: 2*$gat;
+    }
+
+    &__content {
+        @include row-flex();
+        justify-content: center;
+        align-items: stretch;
+        margin-top: 2*$gat;
+
+        @include md-block {
+            margin-top: 1.5*$gat;
+        }
+    }
+}
+
+.card {
+    @include col();
+    @include size(3);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $gat;
+
+    &--none-sm {
+        @include sm-block {
+            display: none;
+        }
+    }
+
+    &--none-xxs {
+        @include xxs-block {
+            display: none;
+        }
+    }
+
+    &__img {
+        @include img;
+        background-color: #eee;
+    }
+
+    &__desc {
+        // display: flex;
+        // flex-direction: column;
+        height: 100%;
+        padding: 20px 24px 32px;
+        border-radius: 0 0 0.5*$gat 0.5*$gat;
+        background: $c-base;
+
+        @include xxs-block {
+            padding-bottom: 0.5*$gat;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        text-align: center;
+        font-size: 24px;
+        line-height: 140%;
+        font-weight: 400;
+        color: $c-accent;
+
+        @include md-block {
+            font-size: 20px;
+        }
+
+        @include xxs-block {
+            font-size: 15px;
+            line-height: 185%;
+        }
+
+        span {
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            color: lighten($c-accent, 60%);
+
+            @include xxs-block {
+                font-size: 12px;
+            }
+        }
+    }
+
+    a:hover h4 {
+        font-weight: 500;
+        color: $c-normal;
+    }
+
+    &__price {
+        margin-top: auto;
+        text-align: center;
+        line-height: 30px;
+        font-weight: 500;
+        color: #b7000e;
+
+        @include xxs-block {
+            margin-top: 37px;
+            font-size: 28px;
+            line-height: 33px;
+        }
+    }
+}
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция order
+---------------------------------------------*/
+.order {
+    padding: 5*$gat 0;
+    background: url(../img/images/bg-order.jpg) no-repeat;
+    background-position: center 0;
+    background-size: cover;
+
+    @include sm-block {
+        padding: 3*$gat 0;
+        background-image: none;
+    }
+
+    @media screen and (max-width: 440px) {
+        padding: 0;
+    }
+}
+
+.form {
+    padding: 41px 57px 65px 69px;
+    border: 4px solid $c-base;
+    border-radius: 10px;
+    background: $c-accent;
+
+    @include md-block {
+        padding: 2*$gat 1.75*$gat;
+    }
+
+    @include sm-block {
+        padding: 2*$gat $gat;
+    }
+
+    @include xxs-block {
+        padding-bottom: 2.5*$gat;
+    }
+
+    &__title {
+        margin: 0;
+        text-align: center;
+        font-size: 36px;
+        line-height: 43px;
+        font-weight: 500;
+        color: $c-base;
+
+        @include sm-block {
+            font-size: 32px;
+            line-height: 38px;
+        }
+
+        @include xs-block {
+            font-size: 28px;
+            line-height: 33px;
+        }
+
+        @include xxs-block {
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        &--call {
+            @include xxs-block {
+                padding: 0 25px;
+            }
+        }
+
+        &--anons {
+            text-align: left;
+            color: $c-accent;
+
+            @include lg-block {
+                font-size: 32px;
+                line-height: 38px;
+            }
+
+            @include md-block {
+                text-align: center;
+            }
+
+            @include xs-block {
+                font-size: 28px;
+                line-height: 33px;
+            }
+
+            @include xxs-block {
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+    }
+
+
+    &--delivery {
+        margin-top: 1.5*$gat;
+    }
+
+    &__block1 {
+        display: flex;
+        justify-content: space-between;
+        margin: 2*$gat 0 $gat;
+
+        @media screen and (max-width: 700px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @include xxs-block {
+            margin-top: $gat;
+            margin-bottom: 1.6*$gat;
+        }
+    }
+
+
+    // Кастомный чекбокс
+    &__sub {
+        opacity: 0;
+    }
+
+    &__sub-label {
+        position: relative;
+        display: inline-block;
+        margin-left: $gat;
+        font-size: 17px;
+        line-height: 20px;
+        color: $c-base;
+        cursor: pointer;
+
+        @include lg-block {
+            max-width: 800px;
+        }
+
+        @include md-block {
+            max-width: 80vw;
+        }
+
+        @media screen and (max-width: 700px) {
+            max-width: 68vw;
+        }
+
+        @media screen and (max-width: 440px) {
+            max-width: 60vw;
+            font-size: 15px;
+        }
+
+        @include xxs-block {
+            margin-left: 25px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -40px;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            background: $c-normal;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: -32px;
+            display: inline-block;
+            width: 16px;
+            height: 11px;
+            border-left: 2px solid;
+            border-bottom: 2px solid;
+            transform: rotate(-45deg);
+        }
+
+        &--delivery {
+            margin-top: 1.5*$gat;
+        }
+    }
+
+    &__sub+&__sub-label::after {
+        content: none;
+    }
+
+    &__sub:checked+&__sub-label::after {
+        content: '';
+    }
+
+    &__sub:focus+&__sub-label::before {
+        outline: rgb(59, 153, 252) auto 5px;
+    }
+}
+
+.form-elem {
+    display: block;
+    width: calc(100% / 3 - 15px);
+    margin-right: $gat;
+    padding: 12px 10px 12px 24px;
+    border: none;
+    border-radius: 4px;
+    background: $c-base;
+    font-size: 17px;
+    line-height: 20px;
+    color: $c-accent;
+
+    @media screen and (max-width: 700px) {
+        width: 80%;
+        margin-right: 0;
+        margin-bottom: $gat;
+    }
+
+    @include xs-block {
+        width: 100%;
+    }
+
+    @include xxs-block {
+        padding: $gat 0;
+        text-align: center;
+    }
+
+    &--anons {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+
+        @media screen and (max-width: 700px) {
+            width: 100%;
+        }
+    }
+
+    &--modal {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        @media screen and (max-width: 700px) {
+            width: 100%;
+        }
+    }
+
+    &--delivery {
+        margin-top: 0.5*$gat;
+        margin-bottom: $gat;
+        padding-top: $gat;
+        padding-bottom: $gat;
+    }
+}
+
+@include input-placeholder {
+    font-family: $ff-base;
+    font-size: 17px;
+    line-height: 17px;
+    font-weight: 400;
+    font-style: normal;
+    color: #cccccc;
+}
+
+
+/*----------------------------------------------*/
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция menegers
+---------------------------------------------*/
+.menegers {
+    padding: 2.9*$gat 0 5.75*$gat;
+
+    @include md-block {
+        padding-top: 2*$gat;
+        padding-bottom: 4.5*$gat;
+    }
+
+    @media screen and (max-width: 890px) {
+        padding-bottom: 3.25*$gat;
+    }
+
+    @include sm-block {
+        padding-top: 0;
+    }
+
+    @include xs-block {
+        padding-top: 3.55*$gat;
+        padding-bottom: 2.9*$gat;
+    }
+
+    &__content {
+        @include row-flex();
+        margin-top: 1.85*$gat;
+
+        @include xs-block {
+            margin-top: 0.65*$gat;
+        }
+    }
+
+    &__item {
+        @include col();
+        @include size(4);
+        display: flex;
+
+        @media screen and (max-width: 890px) {
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 700px) {
+            @include size(12);
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: $gat;
+        }
+
+        @include xxs-block {
+            margin-bottom: (-0.8) *$gat;
+        }
+    }
+
+    picture {
+        width: 44%;
+    }
+
+    &__img {
+        @include img;
+        border-radius: 10px;
+        background-color: #eee;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+
+        @include xs-block {
+            box-shadow: none;
+        }
+    }
+
+    &__desc {
+        max-width: 163px;
+        margin-left: $gat;
+        padding-top: 0.25*$gat;
+
+        @include xxs-block {
+            margin-left: 0.5*$gat;
+        }
+    }
+
+    &__name {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 400;
+        color: $c-accent;
+
+        @include md-block {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        @media screen and (max-width: 700px) {
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        @media screen and (max-width: 440px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+
+    &__profession {
+        display: block;
+        margin-top: 0.65*$gat;
+        font-size: 17px;
+        line-height: 22px;
+        font-weight: 400;
+        color: lighten($c-accent, 60%);
+
+        @include md-block {
+            font-size: 15px;
+            line-height: 18px;
+        }
+
+        @media screen and (max-width: 700px) {
+            font-size: 17px;
+            line-height: 22px;
+        }
+
+        @media screen and (max-width: 440px) {
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+}
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция pluses
+---------------------------------------------*/
+.pluses {
+
+    @include xxs-block {
+        padding-bottom: $gat;
+    }
+
+    &__content {
+        @include row-flex();
+    }
+
+    &__item {
+        @include col();
+        @include size(4);
+        margin-bottom: 4.75*$gat;
+
+        @media screen and (max-width: 890px) {
+            @include size(6);
+            display: flex;
+            margin-bottom: 3.5*$gat;
+        }
+
+        @media screen and (max-width: 700px) {
+            @include size(12);
+        }
+
+        @media screen and (max-width: 440px) {
+            margin-bottom: 1.45*$gat;
+        }
+
+        @include xxs-block {
+            margin-right: 0;
+            margin-left: 0.75*$gat;
+        }
+
+        &--btn {
+            margin-bottom: 2.7*$gat;
+
+            @media screen and (max-width: 440px) {
+                margin-bottom: 2*$gat;
+            }
+
+            @include xxs-block {
+                margin-left: $gat;
+            }
+
+            .pluses__desc {
+                @include xxs-block {
+                    margin-left: 1.65*$gat;
+                }
+            }
+        }
+    }
+
+    &__item:first-child {
+        @media screen and (max-width: 440px) {
+            margin-bottom: 1.6*$gat;
+        }
+    }
+
+    &__img {
+        display: inline-block;
+    }
+
+    &__desc {
+        max-width: 336px;
+        margin-top: 0.35*$gat;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 500;
+
+        @include md-block {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        @media screen and (max-width: 890px) {
+            margin-left: $gat;
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        @include xs-block {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        @include xxs-block {
+            margin-top: 1px;
+            margin-left: 1.15*$gat;
+        }
+
+        span {
+            display: block;
+            margin-top: 0.5*$gat;
+            font-size: 17px;
+            line-height: 18px;
+            font-weight: 400;
+            color: lighten($c-accent, 60%);
+
+            @include md-block {
+                font-size: 15px;
+                line-height: 18px;
+            }
+
+            @include sm-block {
+                font-size: 17px;
+                line-height: 18px;
+            }
+        }
+    }
+
+    &__btn {
+        margin: $gat 0 0;
+
+        @media screen and (max-width: 890px) {
+            margin-left: $gat;
+        }
+
+        @media screen and (max-width: 440px) {
+            margin-top: 1.15*$gat;
+            margin-left: (-2.15) *$gat;
+            padding-right: 2.1*$gat;
+            padding-left: 2.5*$gat;
+        }
+
+        @include xxs-block {
+            margin-left: (-2.6) *$gat;
+        }
+    }
+}
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция dipploms
+---------------------------------------------*/
+.dipploms {
+    position: relative;
+    height: 490px;
+    padding-top: 70px;
+    background: url(../img/images/bg-dipplom.png) no-repeat center bottom;
+    background-color: $c-accent;
+
+    @include md-block {
+        height: 418px;
+        padding-top: 3*$gat;
+        background: url(../img/images/bg-dipplom-1000.png) no-repeat center bottom;
+        background-color: $c-accent;
+    }
+
+    @include sm-block {
+        background-image: url(../img/images/bg-dipplom-768.png);
+    }
+
+    @include xxs-block {
+        height: 323px;
+        padding-top: 2.3*$gat;
+        background-image: url(../img/images/bg-dipplom-320.png);
+    }
+
+    &__container-controls {
+        top: 61%;
+    }
+
+    &__container {
+        margin: 4.5*$gat auto 0;
+
+        @include md-block {
+            width: 82%;
+            margin-top: 1.65*$gat;
+        }
+
+        @include sm-block {
+            width: 69%;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        padding: 0 4*$gat;
+
+        @include md-block {
+            padding: 0 0.7*$gat;
+        }
+
+        @media screen and (max-width: 580px) {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 440px) {
+            width: 100%;
+        }
+
+        @include xxs-block {
+            padding: 0 0.3*$gat;
+        }
+    }
+
+    &__img {
+        @include img;
+        background-color: #eee;
+    }
+}
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция map
+---------------------------------------------*/
+.map {
+    position: relative;
+    min-height: 500px;
+
+    @include xs-block {
+        min-height: 400px;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: #eee;
+    }
+}
+
+/*----------------------------------------------*/
+
+/*=============================================*/
