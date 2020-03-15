@@ -1,14 +1,46 @@
 window.addEventListener('DOMContentLoaded', function () {
-	
+
 	// Аякс-запрос формы обратной связи
 	function formSend(formSelector) {
-		let form = document.querySelector(formSelector);
+		const form = document.querySelector(formSelector);
+
+		// const message = {
+		// 	loading: 'Загрузка...',
+		// 	success: 'Спасибо! Скоро мы с вами свяжемся',
+		// 	failure: 'Что-то пошло не так...'
+		// };
+
+		// const postData = async (url, data) => {
+		// 	document.querySelector('.status').textContent = message.loading;
+		// 	let res = await fetch(url, {
+		// 		method: "POST",
+		// 		body: data
+		// 	});
+
+		// 	return await res.text();
+		// };
 
 		if (form) {
 			form.onsubmit = function (event) {
 				event.preventDefault();
 
-				let formData = new FormData(form);
+				// let statusMessage = document.createElement('div');
+				// statusMessage.classList.add('status');
+				// form.appendChild(statusMessage);
+
+				const formData = new FormData(form);
+
+				// postData('mail.php', formData)
+				// 	.then(res => {
+				// 		statusMessage.textContent = message.success;
+				// 	})
+				// 	.catch(() => statusMessage.textContent = message.failure)
+				// 	.finally(() => {
+				// 		form.reset();
+				// 		setTimeout(() => {
+				// 			statusMessage.remove();
+				// 		}, 5000);
+				// 	});
 
 				let xhttp = new XMLHttpRequest();
 				xhttp.open('POST', 'mail.php');
@@ -17,7 +49,7 @@ window.addEventListener('DOMContentLoaded', function () {
 				xhttp.onreadystatechange = function () {
 					if (this.readyState == 4 && this.status == 200) {
 						form.reset();
-						alert('Спасибо за обращение! <br> В ближайшее время мы с вами свяжемся');
+						alert('Спасибо за обращение! В ближайшее время мы с вами свяжемся');
 					}
 				}
 			}
@@ -91,8 +123,8 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
-	rus ('textarea');
-	rus ('[type="text"');
+	rus('textarea');
+	rus('[type="text"');
 
 })
 
